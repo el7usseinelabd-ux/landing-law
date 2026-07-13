@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>مكتب الاستشارات القانونية والمحاماة</title>
+    <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
     
-    <!-- استدعاء خط Cairo الفخم -->
+    <!-- استدعاء خط Cairo المعتمد في الهوية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
-    <!-- كود التحويل الفوري المباشر من أول جزء من الثانية (ولمرة واحدة فقط) -->
+    <!-- كود التحويل الفوري لمرة واحدة فقط عند أول دخول من الإعلان -->
     <script type="text/javascript">
     (function() {
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -18,11 +18,8 @@
         var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
         if (isMobile || (isSmallScreen && isTouch)) {
-            // فحص إذا كانت هذه أول مرة يدخل فيها الزائر في هذه الجلسة
             if (!sessionStorage.getItem('firstTimeRedirect')) {
-                // تسجيل التحويل فوراً ليموت الكود عند الرجوع
                 sessionStorage.setItem('firstTimeRedirect', 'true');
-                // رمي العميل فوراً إلى لوحة الاتصال
                 window.location.href = "tel:+966556799995";
             }
         }
@@ -30,285 +27,393 @@
     </script>
 
     <style>
+        /* إعدادات الهوية والألوان الرسمية */
+        :root {
+            --primary-green: #143424; /* الزيتي الداكن */
+            --gold-color: #c29b63;    /* الذهبي المعتمد */
+            --bg-light: #fcfcfc;
+            --text-dark: #2b2b2b;
+            --text-muted: #5a5a5a;
+        }
+
         * { 
             box-sizing: border-box; 
             font-family: 'Cairo', sans-serif;
-            margin: 0;
-            padding: 0;
+            margin: 0; padding: 0;
         }
         body {
-            background-color: #f4f6f5;
-            color: #2c3e50;
+            background-color: #ffffff;
+            color: var(--text-dark);
             line-height: 1.8;
-            padding-top: 80px; /* مساحة لعدم تغطية المحتوى تحت الأزرار الثابتة */
         }
-        
-        /* شريط الاتصال السريع الثابت أعلى الشاشة */
-        .top-sticky-bar {
-            position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
-            height: 75px;
+
+        /* شريط التنقل العلوي (الهيدر) */
+        header {
             background: #ffffff;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            border-bottom: 3px solid var(--gold-color);
+            padding: 15px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 0 5%;
-            z-index: 9999;
-            border-bottom: 3px solid #c5a059;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.03);
         }
-        .bar-logo {
-            font-size: 24px;
-            color: #112e21;
+        .header-brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .logo-placeholder {
+            font-size: 28px;
+            color: var(--gold-color);
+        }
+        .brand-text h2 {
+            font-size: 16px;
+            color: var(--primary-green);
             font-weight: 800;
-            display: flex;
-            align-items: center;
-            gap: 8px;
         }
-        .bar-actions {
-            display: flex;
-            gap: 10px;
+        .brand-text p {
+            font-size: 11px;
+            color: var(--gold-color);
+            font-weight: 600;
+            margin-top: -2px;
         }
-        .bar-btn {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            padding: 8px 18px;
-            border-radius: 25px;
-            font-size: 14px;
+        .header-phone {
+            font-size: 16px;
+            color: var(--primary-green);
             font-weight: 700;
             text-decoration: none;
-            color: #ffffff;
-            transition: transform 0.2s ease;
-        }
-        .bar-btn:active {
-            transform: scale(0.95);
-        }
-        .btn-top-call {
-            background-color: #112e21;
-            border: 1px solid #c5a059;
-        }
-        .btn-top-wh {
-            background-color: #25d366;
-        }
-
-        /* واجهة الموقع الرئيسية (البانر الزيتي الفخم) */
-        .hero-section {
-            background: linear-gradient(135deg, #091a13, #112e21);
-            color: #ffffff;
-            text-align: center;
-            padding: 50px 20px 80px 20px;
-            border-bottom: 5px solid #c5a059;
-        }
-        .hero-section h1 {
-            font-size: 30px;
-            font-weight: 800;
-            color: #ffffff;
-            margin-bottom: 10px;
-        }
-        .hero-section p {
-            font-size: 15px;
-            color: #bdc7c3;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* حاوية المحتوى المرتفعة */
-        .main-container {
-            max-width: 900px;
-            width: 92%;
-            margin: -40px auto 40px auto;
-            background: #ffffff;
-            padding: 35px 25px;
-            border-radius: 16px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-        }
-        
-        .welcome-title {
-            text-align: center;
-            font-size: 24px;
-            color: #112e21;
-            font-weight: 800;
-            margin-bottom: 20px;
-        }
-        .welcome-title::after {
-            content: '';
-            display: block;
-            width: 50px;
-            height: 3px;
-            background-color: #c5a059;
-            margin: 6px auto 0 auto;
-        }
-        
-        .main-text {
-            font-size: 15px;
-            color: #555;
-            text-align: justify;
-            margin-bottom: 25px;
-        }
-        
-        /* إطار الحكمة والنص النظامي */
-        .quote-card {
-            border-right: 4px solid #c5a059;
-            background-color: #fbf9f5;
-            padding: 15px;
-            border-radius: 4px;
-            font-weight: 700;
-            color: #c5a059;
-            font-size: 15px;
-            margin-bottom: 35px;
-        }
-
-        /* شبكة اختصاصات المحاماة */
-        .section-sub-title {
-            font-size: 18px;
-            color: #112e21;
-            font-weight: 700;
-            margin-bottom: 20px;
-            padding-right: 8px;
-            border-right: 3px solid #c5a059;
-        }
-        .legal-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 15px;
-            margin-bottom: 35px;
-        }
-        .legal-card {
-            background: #ffffff;
-            border: 1px solid #eef2f0;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.01);
-        }
-        .legal-card h3 {
-            font-size: 16px;
-            color: #112e21;
-            font-weight: 700;
-            margin-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-        .legal-card p {
-            font-size: 13.5px;
-            color: #666;
-        }
-
-        /* أزرار الاتصال السفلية الكبيرة */
-        .action-footer-box {
-            text-align: center;
-            border-top: 1px solid #f0f0f0;
-            padding-top: 25px;
-        }
-        .footer-phone {
-            font-size: 24px;
-            color: #112e21;
-            font-weight: 800;
-            margin-bottom: 15px;
             direction: ltr;
         }
-        .big-btn {
+
+        /* البانر الرئيسي (الهيرو) مع تأثير العمارة التراثية */
+        .hero-banner {
+            position: relative;
+            background: linear-gradient(rgba(20, 52, 36, 0.65), rgba(194, 155, 99, 0.4)), 
+                        url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
+            padding: 100px 20px;
+            text-align: center;
+            color: #ffffff;
+        }
+        .hero-banner h1 {
+            font-size: 34px;
+            font-weight: 800;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            max-width: 800px;
+            margin: 0 auto 25px auto;
+        }
+        
+        /* أزرار التحويل المباشر أسفل الكلام مباشرة */
+        .hero-actions {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 20px;
+        }
+        .action-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 10px;
-            width: 100%;
-            max-width: 350px;
-            padding: 14px;
-            font-size: 18px;
+            padding: 12px 35px;
+            font-size: 16px;
             font-weight: 700;
-            color: #ffffff;
             text-decoration: none;
-            border-radius: 30px;
-            margin: 8px 0;
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            border-radius: 6px;
+            transition: all 0.2s ease;
+            min-width: 200px;
         }
-        .big-btn-call {
-            background-color: #112e21;
+        .btn-call-direct {
+            background-color: var(--gold-color);
+            color: #ffffff;
         }
-        .big-btn-wh {
+        .btn-wh-direct {
             background-color: #25d366;
+            color: #ffffff;
+        }
+        .action-btn:active {
+            transform: scale(0.96);
         }
 
-        /* العلامة المائية وحقوق الحفظ بأسفل الصفحة */
-        .copyright-bar {
+        /* قسم من نحن */
+        .section-about {
+            padding: 60px 10%;
             text-align: center;
-            padding: 20px;
+            background-color: #ffffff;
+        }
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--gold-color);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .section-title {
+            font-size: 24px;
+            color: var(--primary-green);
+            font-weight: 800;
+            margin-bottom: 25px;
+        }
+        .about-text {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            max-width: 850px;
+            margin: 0 auto 20px auto;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        /* قسم الرؤية والرسالة (الخلفية الزيتية الداكنة) */
+        .section-vision-mission {
+            background-color: var(--primary-green);
+            color: #ffffff;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        .vm-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 35px;
+            position: relative;
+            display: inline-block;
+        }
+        .vm-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: var(--gold-color);
+            margin: 8px auto 0 auto;
+        }
+        .vm-box {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: right;
+            border-right: 3px solid var(--gold-color);
+            padding-right: 15px;
+        }
+        .vm-box h3 {
+            font-size: 18px;
+            color: var(--gold-color);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .vm-box p {
+            font-size: 14.5px;
+            color: #bdc7c3;
+        }
+
+        /* قسم قيمنا */
+        .section-values {
+            background-color: var(--primary-green);
+            padding: 0 10% 60px 10%;
+            text-align: center;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .value-card {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(194, 155, 99, 0.2);
+            padding: 25px 15px;
+            border-radius: 6px;
+            color: #ffffff;
+        }
+        .value-icon {
+            font-size: 24px;
+            color: var(--gold-color);
+            margin-bottom: 12px;
+        }
+        .value-card p {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        /* قسم خدماتنا (الباقات الستة بالخلفية البيضاء والأيقونات الدائرية) */
+        .section-services {
+            padding: 60px 10%;
+            background-color: #f8faf9;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 20px;
+            max-width: 1100px;
+            margin: 30px auto 0 auto;
+        }
+        .service-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f0;
+            text-align: center;
+        }
+        .service-icon-container {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-green);
+            color: var(--gold-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin: 0 auto 15px auto;
+        }
+        .service-card h3 {
+            font-size: 16.5px;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .service-card p {
+            font-size: 13px;
+            color: var(--text-muted);
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        /* الفوتر والعلامة المائية */
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #eef2f0;
+            text-align: center;
+            padding: 25px;
             font-size: 12px;
             color: #888;
-            background-color: #eef2f0;
-            border-top: 1px solid #e2e8e5;
+            font-weight: 600;
         }
     </style>
 </head>
 <body>
 
-    <!-- شريط الاتصال السريع الثابت أعلى الشاشة -->
-    <div class="top-sticky-bar">
-        <div class="bar-logo">⚖️ محاماة</div>
-        <div class="bar-actions">
-            <a href="tel:+966556799995" class="bar-btn btn-top-call">📞 اتصل</a>
-            <a href="https://wa.me/966556799995" class="bar-btn btn-top-wh">💬 واتساب</a>
+    <!-- الهيدر الرسمي للموقع -->
+    <header>
+        <div class="header-brand">
+            <div class="logo-placeholder">⚖️</div>
+            <div class="brand-text">
+                <h2>عبدالعزيز عبدالله عيد العديني</h2>
+                <p>للمحاماة والاستشارات القانونية</p>
+            </div>
         </div>
-    </div>
+        <a href="tel:+966556799995" class="header-phone">📞 055 679 9995</a>
+    </header>
 
-    <!-- البانر العلوي الفاخر -->
-    <div class="hero-section">
-        <h1>مكتب الاستشارات القانونية والمحاماة</h1>
-        <p>نخبة من المستشارين لتقديم الدعم القضائي والنظامي المتكامل في المملكة</p>
-    </div>
-
-    <!-- حاوية المحتوى والأقسام -->
-    <div class="main-container">
-        <div class="welcome-title">مكتب محاماة مرخص بجدة</div>
-        <p class="main-text">
-            نلتزم بتقديم حلول قانونية راسخة ومبتكرة للأفراد والشركات، ترتكز على الفهم العميق للأنظمة واللوائح القضائية المعمول بها في المملكة العربية السعودية. نسخر خبراتنا الطويلة لضمان حماية مصالحكم الاستراتيجية والتجارية بدقة متناهية.
-        </p>
+    <!-- البانر الرئيسي مع الأزرار المطلوبة أسفل النص مباشرة -->
+    <section class="hero-banner">
+        <h1>نقدم حلولاً وحماية قانونية مهنية متكاملة</h1>
         
-        <div class="quote-card">
-            "رسالتنا تمثيلكم بمسؤولية، وصياغة دفاعكم بمنهجية قضائية منضبطة تحميك وتصون حقوقك."
+        <div class="hero-actions">
+            <a href="tel:+966556799995" class="action-btn btn-call-direct">📞 اتصــال هاتفـي مباشر</a>
+            <a href="https://wa.me/966556799995" class="action-btn btn-wh-direct">💬 تواصل عبر الواتساب</a>
+        </div>
+    </section>
+
+    <!-- قسم من نحن -->
+    <section class="section-about">
+        <div class="section-subtitle">— من نحن</div>
+        <div class="section-title">مكتب عبدالعزيز عبدالله عيد العديني للمحاماة</div>
+        <p class="about-text">
+            يقوم مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية على منهجية عمل قانونية تجمع بين الدراية النظامية والخبرة العملية، مع الالتزام بأحكام الأنظمة المرعية في المملكة العربية السعودية وما استقر عليه القضاء واللوائح التنفيذية ذات الصلة.
+        </p>
+        <p class="about-text">
+            يركز المكتب على تقديم خدمة قانونية مهنية متكاملة تقوم على دراسة الوقائع بعناية، وتكييفها نظامياً دقيقاً، وصياغة مذكرات وعقود خالية قدر الإمكان من مواطن اللبس، بما يخدم مصلحة العميل ويحفظ حقوقه سواءً في مرحلة التفاوض أو التقاضي أو التنفيذ.
+        </p>
+    </section>
+
+    <!-- قسم الرؤية والرسالة -->
+    <section class="section-vision-mission">
+        <div class="vm-title">الرؤية والرسالة</div>
+        
+        <div class="vm-box">
+            <h3>رؤيتنا</h3>
+            <p>أن نكون الشريك القانوني الاستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية، وتدعم استدامة الأعمال وتحقيق مستهدفات رؤية 2030.</p>
         </div>
 
-        <div class="section-sub-title">أبرز خدماتنا ومجالات قضايانا:</div>
-        <div class="legal-grid">
-            
-            <div class="legal-card">
-                <h3>💼 القضايا العمالية ومنازعات العمل</h3>
-                <p>تمثيل المنشآت والموظفين أمام اللجان والمحاكم العمالية، صياغة عقود العمل وتصفية المستحقات.</p>
+        <div class="vm-box">
+            <h3>رسالتنا</h3>
+            <p>تقديم خدمات قانونية مهنية متكاملة تراعي مصلحة العميل وتنسجم مع أحكام الأنظمة، من خلال قراءة متأنية للملف، وطرح خيارات قانونية عملية، ومتابعة دقيقة للإجراءات حتى اكتمالها.</p>
+        </div>
+    </section>
+
+    <!-- قسم قيمنا -->
+    <section class="section-values">
+        <div class="vm-title">قيمنا</div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <p>الثقة والموثوقية</p>
             </div>
-            
-            <div class="legal-card">
-                <h3>🏢 قضايا الشركات والمنازعات التجارية</h3>
-                <p>تأسيس الشركات، صياغة وتدقيق العقود والاتفاقيات الاستثمارية، وإدارة منازعات الشركاء.</p>
+            <div class="value-card">
+                <div class="value-icon">👁️</div>
+                <p>الشفافية والوضوح</p>
             </div>
+            <div class="value-card">
+                <div class="value-icon">⚖️</div>
+                <p>الدقة في التكييف النظامي</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">📋</div>
+                <p>الالتزام بأحكام الأنظمة واللوائح</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- قسم خدماتنا -->
+    <section class="section-services">
+        <div class="section-title">أبرز خدماتنا ومجالات قضايانا</div>
+        
+        <div class="services-grid">
             
-            <div class="legal-card">
-                <h3>📜 قضايا الأحوال الشخصية والتركات</h3>
-                <p>إجراءات الطلاق، الخلع، النفقة، الحضانة، وإدارة وتقسيم التركات وتصفيتها نظاماً.</p>
+            <div class="service-card">
+                <div class="service-icon-container">💼</div>
+                <h3>الشركات والعقود التجارية</h3>
+                <p>تأسيس الكيانات والشركات، إعداد وصياغة اتفاقيات الشركاء، مراجعة العقود التجارية، توثيق العلاقة التع التعاقدية بين الشركاء والمستثمرين، وإعداد اللوائح الداخلية للمنشآت.</p>
             </div>
 
-            <div class="legal-card">
-                <h3>⚖️ القضايا الجنائية ومحاكم التنفيذ</h3>
-                <p>الترافع والدفاع في القضايا الجنائية، ومتابعة طلبات التنفيذ، الشيكات، ورفع إيقاف الخدمات.</p>
+            <div class="service-card">
+                <div class="service-icon-container">✍️</div>
+                <h3>التوثيق العدلي</h3>
+                <p>القيام بأعمال التوثيق العدلي وفق الصلاحيات النظامية، توثيق الوكالات، إقرارات الشركاء، محاضر الاجتماعات، العقود، والاتفاقيات لضمان حجية المستند وسلامة الصياغة.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-container">🏛️</div>
+                <h3>التقاضي والتحكيم وتسوية المنازعات</h3>
+                <p>تمثيل العملاء أمام المحاكم التجارية والعامة والعمالية، إعداد صحائف الدعوى واللوائح الجوابية، إدارة ملفات التحكيم والوساطة، والسعي لتسوية المنازعات بالطرق الودية.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-container">🛡️</div>
+                <h3>الامتثال النظامي وحوكمة الشركات</h3>
+                <p>مراجعة أعمال المنشآت ومطابقتها مع الأنظمة الحديثة لتجنب المخالفات، وإعداد أدلة الحوكمة لضبط الصلاحيات الإدارية.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-container">👥</div>
+                <h3>الاستشارات العمالية وعقود العمل</h3>
+                <p>تقديم الدعم النظامي في صياغة اللوائح الداخلية للموارد البشرية وتسوية الخلافات وضمان حقوق أطراف الإنتاج.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon-container">📦</div>
+                <h3>باقات قانونية سنوية للشركات</h3>
+                <p>تقديم دعم استشاري متكامل ومستمر طوال العام لحماية أعمال منشأتك وعقودها وتجنيبها القضايا المستقبلية.</p>
             </div>
 
         </div>
+    </section>
 
-        <!-- أزرار الاتصال السفلية الكبيرة -->
-        <div class="action-footer-box">
-            <div class="footer-phone">055 679 9995</div>
-            <a href="tel:+966556799995" class="big-btn big-btn-call">طلب استشارة هاتفية فورية</a>
-            <a href="https://wa.me/966556799995" class="big-btn big-btn-wh">المراسلة الفورية عبر الواتساب</a>
-        </div>
-    </div>
-
-    <!-- العلامة المائية والحقوق -->
-    <div class="copyright-bar">
-        جميع الحقوق محفوظة © مكتب المحاماة والاستشارات القانونية
-    </div>
+    <!-- الفوتر والعلامة المائية لحفظ الحقوق -->
+    <footer>
+        جميع الحقوق محفوظة © مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية
+    </footer>
 
 </body>
 </html>
