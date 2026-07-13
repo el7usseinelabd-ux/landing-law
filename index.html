@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
+    <title>مكتب عبدالعزيز عبدالله عيد العديني للمحاماة</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
     
-    <!-- كود التحويل للاتصال في أول زيارة فقط -->
     <script type="text/javascript">
         (function() {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
@@ -18,48 +17,42 @@
     </script>
 
     <style>
-        :root {
-            --dark-green: #143424;
-            --gold: #e5c185;
-            --white: #ffffff;
-            --light-bg: #f9f9f9;
-        }
+        :root { --dark-green: #143424; --gold: #e5c185; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--white); color: #333; line-height: 1.8; }
+        body { background-color: var(--white); color: #333; line-height: 1.6; }
 
-        header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--dark-green); border-bottom: 3px solid var(--gold); }
-        .logo img { height: 80px; }
-        .header-btn { background: var(--gold); color: var(--dark-green); padding: 10px 20px; font-weight: 800; text-decoration: none; border-radius: 5px; }
+        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--dark-green); border-bottom: 3px solid var(--gold); }
+        .logo { height: 50px; }
+        .header-btn { background: var(--gold); color: var(--dark-green); padding: 8px 15px; font-weight: 800; text-decoration: none; border-radius: 5px; font-size: 14px; }
 
-        .hero { background: var(--dark-green); padding: 60px 20px; text-align: center; color: var(--white); }
-        .hero h2 { font-size: 28px; margin-bottom: 30px; }
-        .hero-btns a { display: block; width: 250px; margin: 10px auto; padding: 15px; text-decoration: none; font-weight: 700; border-radius: 5px; }
+        .hero { background: var(--dark-green); padding: 40px 20px; text-align: center; color: var(--white); }
+        .hero h2 { font-size: 22px; margin-bottom: 20px; }
+        .btn { display: block; width: 100%; max-width: 300px; margin: 10px auto; padding: 12px; text-decoration: none; font-weight: 700; border-radius: 5px; text-align: center; }
 
-        .section { padding: 60px 5%; }
-        .about-text, .vision-text, .values-list { text-align: justify; margin-bottom: 20px; }
-        
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
-        .card { padding: 20px; border: 1px solid #eee; border-radius: 10px; background: var(--light-bg); }
-        .card h3 { color: var(--dark-green); margin-bottom: 10px; }
+        .section { padding: 30px 5%; }
+        h2 { color: var(--dark-green); margin-bottom: 15px; }
+        p { margin-bottom: 15px; text-align: justify; }
 
-        .stats { display: flex; justify-content: space-around; flex-wrap: wrap; background: var(--dark-green); color: var(--white); padding: 40px; }
-        .stat-item { text-align: center; }
-        .stat-item div { font-size: 32px; font-weight: 800; color: var(--gold); }
+        .grid { display: grid; grid-template-columns: 1fr; gap: 15px; }
+        .card { padding: 20px; border: 1px solid #eee; border-radius: 8px; background: #f9f9f9; }
+        .card h3 { color: var(--dark-green); margin-bottom: 10px; font-size: 16px; }
+
+        .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 30px 5%; background: var(--dark-green); color: var(--white); }
+        .stat-item { text-align: center; padding: 10px; }
+        .stat-item div { font-size: 24px; font-weight: 800; color: var(--gold); }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo"><img src="12986110065457015009_2.jpeg" alt="شعار المكتب"></div>
+        <img src="12986110065457015009_2.jpeg" class="logo" alt="شعار المكتب">
         <a href="tel:+966556799995" class="header-btn">اتصل بنا الآن</a>
     </header>
 
     <section class="hero">
         <h2>نقدم حلولاً وحماية قانونية مهنية متكاملة</h2>
-        <div class="hero-btns">
-            <a href="tel:+966556799995" style="background: var(--gold); color: var(--dark-green);">اطلب استشارة</a>
-            <a href="#services" style="background: var(--white); color: var(--dark-green);">تصفح خدماتنا</a>
-        </div>
+        <a href="tel:+966556799995" class="btn" style="background: var(--gold); color: var(--dark-green);">اطلب استشارة</a>
+        <a href="#services" class="btn" style="background: var(--white); color: var(--dark-green);">تصفح خدماتنا</a>
     </section>
 
     <section class="section">
@@ -68,7 +61,7 @@
         <p>يقوم مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية على منهجية عمل قانونية تجمع بين الدراية النظامية والخبرة العملية، مع الالتزام بأحكام الأنظمة المرعية في المملكة العربية السعودية وما استقر عليه القضاء واللوائح التنفيذية ذات الصلة. يركّز المكتب على تقديم خدمة قانونية مهنية متكاملة تقوم على دراسة الوقائع بعناية، وتكييفها تكييفًا نظاميًا دقيقًا، وصياغة مذكرات وعقود خالية قدر الإمكان من مواطن اللبس، بما يخدم مصلحة العميل ويحفظ حقوقه عند النزاع، سواء في مرحلة التفاوض أو التقاضي أو التنفيذ.</p>
     </section>
 
-    <section class="section" style="background: var(--light-bg);">
+    <section class="section" style="background: #fdfdfd;">
         <h2>الرؤية والرسالة</h2>
         <h3>رؤيتنا</h3>
         <p>أن نكون الشريك القانوني الإستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية، وتدعم استدامة الأعمال وتحقيق مستهدفات رؤية 2030.</p>
@@ -78,14 +71,14 @@
 
     <section class="section" id="services">
         <h2>الخدمات القانونية</h2>
-        <p>نقدم حزمة متكاملة من الخدمات القانونية تغطي احتياجات الأفراد وروّاد الأعمال والمنشآت الصغيرة والمتوسطة والشركات.</p>
+        <p style="font-size: 14px;">نقدم حزمة متكاملة من الخدمات القانونية تغطي احتياجات الأفراد وروّاد الأعمال والمنشآت الصغيرة والمتوسطة والشركات.</p>
         <div class="grid">
             <div class="card"><h3>الشركات والعقود التجارية</h3><p>تأسيس الكيانات، إعداد وصياغة اتفاقيات الشركاء، مراجعة العقود التجارية.</p></div>
             <div class="card"><h3>التوثيق العدلي</h3><p>توثيق الوكالات، إقرارات الشركاء، محاضر الاجتماعات، والعقود.</p></div>
-            <div class="card"><h3>التقاضي والتحكيم</h3><p>تمثيل العملاء أمام المحاكم التجارية والعامة والعمالية.</p></div>
-            <div class="card"><h3>الامتثال وحوكمة الشركات</h3><p>إعداد أدلة الحوكمة، تقييم المخاطر النظامية، وضبط الامتثال.</p></div>
-            <div class="card"><h3>الاستشارات العمالية</h3><p>تقديم الاستشارات في نظام العمل، مراجعة عقود العمل، ومعالجة النزاعات.</p></div>
-            <div class="card"><h3>باقات الشركات</h3><p>توفير باقات اشتراك قانونية سنوية للمنشآت والمتابعة المستمرة.</p></div>
+            <div class="card"><h3>التقاضي والتحكيم وتسوية المنازعات</h3><p>تمثيل العملاء أمام المحاكم التجارية والعامة والعمالية، إدارة ملفات التحكيم.</p></div>
+            <div class="card"><h3>الامتثال النظامي وحوكمة الشركات</h3><p>مراجعة السياسات، إعداد أدلة الحوكمة، تقييم المخاطر النظامية.</p></div>
+            <div class="card"><h3>الاستشارات العمالية وعقود العمل</h3><p>الاستشارات في نظام العمل، مراجعة العقود، معالجة النزاعات العمالية.</p></div>
+            <div class="card"><h3>باقات قانونية سنوية للشركات</h3><p>توفير باقات اشتراك قانونية سنوية للمنشآت والمتابعة المستمرة.</p></div>
         </div>
     </section>
 
