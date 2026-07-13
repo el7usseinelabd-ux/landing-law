@@ -77,36 +77,47 @@
             font-weight: 600;
             margin-top: -2px;
         }
-        .header-phone {
-            font-size: 16px;
-            color: var(--primary-green);
+        
+        /* زر الاتصال العلوي داخل مربع احترافي وفخم */
+        .header-phone-box {
+            font-size: 14px;
+            color: #ffffff;
+            background-color: var(--primary-green);
+            border: 2px solid var(--gold-color);
             font-weight: 700;
             text-decoration: none;
             direction: ltr;
+            padding: 8px 16px;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px rgba(20, 52, 36, 0.15);
+            transition: all 0.2s ease;
+        }
+        .header-phone-box:active {
+            transform: scale(0.95);
         }
 
-        /* البانر الرئيسي (الهيرو) مع تأثير العمارة التراثية */
+        /* البانر الرئيسي (الهيرو) */
         .hero-banner {
             position: relative;
-            background: linear-gradient(rgba(20, 52, 36, 0.65), rgba(194, 155, 99, 0.4)), 
+            background: linear-gradient(rgba(20, 52, 36, 0.7), rgba(20, 52, 36, 0.5)), 
                         url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            padding: 100px 20px;
+            padding: 110px 20px;
             text-align: center;
             color: #ffffff;
         }
         .hero-banner h1 {
             font-size: 34px;
             font-weight: 800;
-            text-shadow: 0 2px 10px rgba(0,0,0,0.4);
+            text-shadow: 0 2px 12px rgba(0,0,0,0.5);
             max-width: 800px;
-            margin: 0 auto 25px auto;
+            margin: 0 auto 35px auto;
         }
         
-        /* أزرار التحويل المباشر أسفل الكلام مباشرة */
+        /* أزرار التحويل المباشر مع تأثير الإضاءة الفخم */
         .hero-actions {
             display: flex;
             justify-content: center;
-            gap: 15px;
+            gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
         }
@@ -114,25 +125,48 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px 35px;
+            gap: 12px;
+            padding: 14px 40px;
             font-size: 16px;
             font-weight: 700;
             text-decoration: none;
             border-radius: 6px;
-            transition: all 0.2s ease;
-            min-width: 200px;
+            transition: all 0.3s ease;
+            min-width: 230px;
+            position: relative;
+            overflow: hidden;
         }
-        .btn-call-direct {
+        
+        /* زر الاتصال المضيء بالذهبي */
+        .btn-call-glow {
             background-color: var(--gold-color);
             color: #ffffff;
+            box-shadow: 0 0 15px rgba(194, 155, 99, 0.6);
+            animation: goldPulse 2s infinite;
         }
-        .btn-wh-direct {
+        
+        /* زر الواتساب المضيء بالأخضر */
+        .btn-wh-glow {
             background-color: #25d366;
             color: #ffffff;
+            box-shadow: 0 0 15px rgba(37, 211, 102, 0.5);
+            animation: whatsPulse 2s infinite;
         }
+        
         .action-btn:active {
             transform: scale(0.96);
+        }
+
+        /* أنيميشن تأثير النبض والموجة المضيئة للأزرار */
+        @keyframes goldPulse {
+            0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.7); }
+            70% { box-shadow: 0 0 0 12px rgba(194, 155, 99, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); }
+        }
+        @keyframes whatsPulse {
+            0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.6); }
+            70% { box-shadow: 0 0 0 12px rgba(37, 211, 102, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
         }
 
         /* قسم من نحن */
@@ -233,7 +267,7 @@
             font-weight: 700;
         }
 
-        /* قسم خدماتنا (الباقات الستة بالخلفية البيضاء والأيقونات الدائرية) */
+        /* قسم خدماتنا */
         .section-services {
             padding: 60px 10%;
             background-color: #f8faf9;
@@ -302,16 +336,17 @@
                 <p>للمحاماة والاستشارات القانونية</p>
             </div>
         </div>
-        <a href="tel:+966556799995" class="header-phone">📞 055 679 9995</a>
+        <!-- زر الاتصال العلوي المحدث داخل مربع احترافي وفخم -->
+        <a href="tel:+966556799995" class="header-phone-box">📞 055 679 9995</a>
     </header>
 
-    <!-- البانر الرئيسي مع الأزرار المطلوبة أسفل النص مباشرة -->
+    <!-- البانر الرئيسي مع الأزرار المضيئة الاحترافية أسفل النص مباشرة -->
     <section class="hero-banner">
         <h1>نقدم حلولاً وحماية قانونية مهنية متكاملة</h1>
         
         <div class="hero-actions">
-            <a href="tel:+966556799995" class="action-btn btn-call-direct">📞 اتصــال هاتفـي مباشر</a>
-            <a href="https://wa.me/966556799995" class="action-btn btn-wh-direct">💬 تواصل عبر الواتساب</a>
+            <a href="tel:+966556799995" class="action-btn btn-call-glow">📞 اتصــال هاتفـي مباشر</a>
+            <a href="https://wa.me/966556799995" class="action-btn btn-wh-glow">💬 تواصل عبر الواتساب</a>
         </div>
     </section>
 
@@ -374,7 +409,7 @@
             <div class="service-card">
                 <div class="service-icon-container">💼</div>
                 <h3>الشركات والعقود التجارية</h3>
-                <p>تأسيس الكيانات والشركات، إعداد وصياغة اتفاقيات الشركاء، مراجعة العقود التجارية، توثيق العلاقة التع التعاقدية بين الشركاء والمستثمرين، وإعداد اللوائح الداخلية للمنشآت.</p>
+                <p>تأسيس الكيانات والشركات، إعداد وصياغة اتفاقيات الشركاء، مراجعة العقود التجارية، توثيق العلاقة التعاقدية بين الشركاء والمستثمرين، وإعداد اللوائح الداخلية للمنشآت.</p>
             </div>
 
             <div class="service-card">
