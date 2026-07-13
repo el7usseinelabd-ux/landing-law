@@ -4,48 +4,121 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مكتب الاستشارات القانونية والمحاماة</title>
+    
+    <!-- استدعاء خط Cairo الاحترافي من جوجل -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700&display=swap" rel="stylesheet">
+
     <style>
-        * { box-sizing: border-box; }
+        * { 
+            box-sizing: border-box; 
+            font-family: 'Cairo', sans-serif;
+        }
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            margin: 0; padding: 0; background-color: #f4f6f9; color: #333;
+            margin: 0; padding: 0; 
+            background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
+            color: #333;
             display: flex; justify-content: center; align-items: center; min-height: 100vh;
         }
         .container {
-            background: #ffffff; padding: 45px 35px; border-radius: 16px;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.08); text-align: center;
-            max-width: 550px; width: 90%; border-top: 6px solid #0056b3;
+            background: #ffffff; 
+            padding: 50px 40px; 
+            border-radius: 24px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3); 
+            text-align: center;
+            max-width: 600px; width: 92%; 
+            border-top: 8px solid #c9a0dc; /* لمسة ذهبية ملائمة للمكاتب الفاخرة */
             margin: 20px auto;
         }
-        h1 { color: #0056b3; font-size: 28px; margin-bottom: 15px; font-weight: 700; }
-        .subtitle { font-size: 16px; color: #666; line-height: 1.6; margin-bottom: 30px; }
+        h1 { 
+            color: #0f2027; 
+            font-size: 28px; 
+            margin-bottom: 12px; 
+            font-weight: 700; 
+        }
+        .subtitle { 
+            font-size: 15px; 
+            color: #555; 
+            line-height: 1.7; 
+            margin-bottom: 35px; 
+        }
         
         /* قسم القضايا المنظم */
-        .services-title { font-size: 18px; color: #0056b3; font-weight: 600; margin-bottom: 15px; text-align: right; border-bottom: 2px solid #f0f0f0; padding-bottom: 5px; }
-        .services-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; text-align: right; margin-bottom: 35px; }
-        .service-item { background: #f8f9fa; padding: 10px 15px; border-radius: 8px; font-size: 15px; color: #495057; border-right: 3px solid #0056b3; }
-        
-        /* قسم الاتصال المباشر */
-        .phone-display { font-size: 22px; color: #28a745; font-weight: bold; margin-bottom: 15px; direction: ltr; }
-        .btn-call {
-            display: inline-block; background-color: #28a745; color: white;
-            padding: 15px 40px; font-size: 18px; text-decoration: none;
-            border-radius: 30px; font-weight: bold; box-shadow: 0 4px 15px rgba(40, 167, 69, 0.3);
-            transition: all 0.2s ease;
+        .services-title { 
+            font-size: 18px; 
+            color: #0f2027; 
+            font-weight: 700; 
+            margin-bottom: 20px; 
+            text-align: right; 
+            border-bottom: 2px solid #eaeaea; 
+            padding-bottom: 8px; 
         }
-        .btn-call:hover { background-color: #218838; transform: translateY(-2px); }
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: 1fr 1fr; 
+            gap: 15px; 
+            text-align: right; 
+            margin-bottom: 40px; 
+        }
+        .service-item { 
+            background: #f8fafc; 
+            padding: 14px 18px; 
+            border-radius: 12px; 
+            font-size: 15px; 
+            color: #334e68; 
+            font-weight: 600;
+            border-right: 4px solid #2c5364; 
+            box-shadow: 0 2px 5px rgba(0,0,0,0.02);
+            transition: all 0.3s ease;
+        }
+        .service-item:hover {
+            transform: scale(1.03);
+            background: #f0f4f8;
+        }
+        
+        /* قسم الاتصال المباشر الرقمي */
+        .phone-wrapper {
+            background: #e6f4ea;
+            padding: 12px 20px;
+            border-radius: 12px;
+            display: inline-block;
+            margin-bottom: 20px;
+        }
+        .phone-display { 
+            font-size: 24px; 
+            color: #1e7e34; 
+            font-weight: 700; 
+            direction: ltr; 
+            letter-spacing: 1px;
+        }
+        .btn-call {
+            display: block; 
+            background: linear-gradient(135deg, #28a745, #1e7e34); 
+            color: white;
+            padding: 16px 40px; 
+            font-size: 19px; 
+            text-decoration: none;
+            border-radius: 50px; 
+            font-weight: 700; 
+            box-shadow: 0 6px 20px rgba(40, 167, 69, 0.4);
+            transition: all 0.3s ease;
+        }
+        .btn-call:hover { 
+            background: linear-gradient(135deg, #218838, #19692c); 
+            transform: translateY(-3px); 
+            box-shadow: 0 8px 25px rgba(40, 167, 69, 0.5);
+        }
     </style>
 
     <!-- كود فحص ذكي متقدم لتحويل الجوال والتابلت فوراً إلى لوحة الاتصال المباشر -->
     <script type="text/javascript">
     (function() {
-        // فحص إذا كان الجهاز جوال أو تابلت بناءً على الواجهة ونظام التشغيل وخصائص اللمس
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        var isSmallScreen = window.innerWidth <= 1024; // يشمل الجوالات والتابلت
+        var isSmallScreen = window.innerWidth <= 1024; 
         var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
 
         if (isMobile || (isSmallScreen && isTouch)) {
-            // تحويل تلقائي فوري ومباشر للوحة أرقام الجوال
             window.location.href = "tel:+966556799995";
         }
     })();
@@ -55,7 +128,7 @@
 
     <div class="container">
         <h1>منصة الاستشارات القانونية والمحاماة</h1>
-        <p class="subtitle">نخبة من المستشارين القانونيين لتقديم الدعم والحلول الشرعية والقانونية بكفاءة واحترافية متناهية.</p>
+        <p class="subtitle">نخبة من المستشارين القانونيين لتقديم الدعم والحلول الشرعية والقانونية بكفاءة وااحترافية متناهية.</p>
         
         <div class="services-title">مختصون في كافة القضايا:</div>
         <div class="services-grid">
@@ -67,8 +140,11 @@
             <div class="service-item">🤝 الاستشارات القانونية العامة</div>
         </div>
 
-        <div class="phone-display">055 679 9995</div>
-        <a href="tel:+966556799995" class="btn-call">اتصل بنا الآن للاستشارة</a>
+        <div class="phone-wrapper">
+            <div class="phone-display">055 679 9995</div>
+        </div>
+        
+        <a href="tel:+966556799995" class="btn-call">اتصل بنا الآن للاستشارة الفورية</a>
     </div>
 
 </body>
