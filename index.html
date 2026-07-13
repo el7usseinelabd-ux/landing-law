@@ -3,90 +3,98 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>عبدالعزيز عبدالله عيد العديني للمحاماة</title>
+    <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
+    
+    <!-- كود التحويل للاتصال في أول زيارة فقط -->
+    <script type="text/javascript">
+        (function() {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            if (isMobile && !sessionStorage.getItem('firstTimeRedirect')) {
+                sessionStorage.setItem('firstTimeRedirect', 'true');
+                window.location.href = "tel:+966556799995";
+            }
+        })();
+    </script>
+
     <style>
         :root {
             --dark-green: #143424;
-            --gold: #c29b63;
+            --gold: #e5c185;
             --white: #ffffff;
             --light-bg: #f9f9f9;
         }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
         body { background-color: var(--white); color: #333; line-height: 1.8; }
 
-        header { padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gold); }
-        .logo-area h1 { font-size: 18px; color: var(--dark-green); font-weight: 800; }
-        .logo-area p { font-size: 12px; color: var(--gold); }
-        .header-contact { background: var(--dark-green); color: var(--white); padding: 8px 15px; border-radius: 5px; font-weight: 700; }
+        header { padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; background: var(--dark-green); border-bottom: 3px solid var(--gold); }
+        .logo img { height: 80px; }
+        .header-btn { background: var(--gold); color: var(--dark-green); padding: 10px 20px; font-weight: 800; text-decoration: none; border-radius: 5px; }
 
-        .hero { background: linear-gradient(rgba(20, 52, 36, 0.9), rgba(20, 52, 36, 0.9)), url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80') center/cover; padding: 80px 20px; text-align: center; color: var(--white); }
-        .btn-group { display: flex; gap: 15px; justify-content: center; margin-top: 20px; flex-wrap: wrap; }
-        .btn { padding: 12px 30px; border-radius: 5px; text-decoration: none; font-weight: 700; }
-        .btn-gold { background: var(--gold); color: var(--white); }
-        .btn-green { background: #25d366; color: var(--white); }
+        .hero { background: var(--dark-green); padding: 60px 20px; text-align: center; color: var(--white); }
+        .hero h2 { font-size: 28px; margin-bottom: 30px; }
+        .hero-btns a { display: block; width: 250px; margin: 10px auto; padding: 15px; text-decoration: none; font-weight: 700; border-radius: 5px; }
 
-        .section { padding: 60px 10%; }
+        .section { padding: 60px 5%; }
+        .about-text, .vision-text, .values-list { text-align: justify; margin-bottom: 20px; }
         
-        /* قسم من نحن */
-        .about-us { display: flex; align-items: center; gap: 40px; flex-wrap: wrap; background: var(--white); }
-        .about-text { flex: 1; min-width: 300px; }
-        .about-text h2 { color: var(--dark-green); margin-bottom: 20px; }
-        .about-img { flex: 1; min-width: 300px; height: 300px; background: #ddd; border-radius: 10px; border: 3px solid var(--gold); }
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .card { padding: 20px; border: 1px solid #eee; border-radius: 10px; background: var(--light-bg); }
+        .card h3 { color: var(--dark-green); margin-bottom: 10px; }
 
-        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; margin-top: 30px; }
-        .card { background: var(--light-bg); padding: 30px; border-bottom: 4px solid var(--gold); text-align: center; }
-
-        .vision { background: var(--dark-green); color: var(--white); text-align: right; padding: 50px 10%; }
-        .vision h2 { color: var(--gold); margin-bottom: 10px; }
-        
-        .footer { background: #1a1a1a; color: var(--white); text-align: center; padding: 30px; font-size: 14px; }
+        .stats { display: flex; justify-content: space-around; flex-wrap: wrap; background: var(--dark-green); color: var(--white); padding: 40px; }
+        .stat-item { text-align: center; }
+        .stat-item div { font-size: 32px; font-weight: 800; color: var(--gold); }
     </style>
 </head>
 <body>
 
     <header>
-        <div class="logo-area">
-            <h1>عبدالعزيز عبدالله عيد العديني</h1>
-            <p>للمحاماة والاستشارات القانونية</p>
-        </div>
-        <div class="header-contact">055 679 9995 📞</div>
+        <div class="logo"><img src="12986110065457015009_2.jpeg" alt="شعار المكتب"></div>
+        <a href="tel:+966556799995" class="header-btn">اتصل بنا الآن</a>
     </header>
 
     <section class="hero">
         <h2>نقدم حلولاً وحماية قانونية مهنية متكاملة</h2>
-        <div class="btn-group">
-            <a href="tel:+966556799995" class="btn btn-gold">اتصال هاتفي مباشر</a>
-            <a href="https://wa.me/966556799995" class="btn btn-green">تواصل عبر الواتساب</a>
+        <div class="hero-btns">
+            <a href="tel:+966556799995" style="background: var(--gold); color: var(--dark-green);">اطلب استشارة</a>
+            <a href="#services" style="background: var(--white); color: var(--dark-green);">تصفح خدماتنا</a>
         </div>
-    </section>
-
-    <!-- قسم من نحن الجديد -->
-    <section class="section about-us">
-        <div class="about-text">
-            <h2>من نحن؟</h2>
-            <p>مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية، نكرس خبراتنا لتقديم الدعم القانوني الاحترافي. نحن نؤمن بأن الحماية القانونية هي الركيزة الأساسية لاستقرار الأفراد والشركات في المملكة.</p>
-        </div>
-        <div class="about-img" style="background: url('https://images.unsplash.com/photo-1505664194779-8beaceb93744?auto=format&fit=crop&w=600&q=80') center/cover;"></div>
     </section>
 
     <section class="section">
-        <h2 style="text-align: center; color: var(--dark-green);">خدماتنا القانونية</h2>
+        <h2>— من نحن</h2>
+        <p><strong>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</strong></p>
+        <p>يقوم مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية على منهجية عمل قانونية تجمع بين الدراية النظامية والخبرة العملية، مع الالتزام بأحكام الأنظمة المرعية في المملكة العربية السعودية وما استقر عليه القضاء واللوائح التنفيذية ذات الصلة. يركّز المكتب على تقديم خدمة قانونية مهنية متكاملة تقوم على دراسة الوقائع بعناية، وتكييفها تكييفًا نظاميًا دقيقًا، وصياغة مذكرات وعقود خالية قدر الإمكان من مواطن اللبس، بما يخدم مصلحة العميل ويحفظ حقوقه عند النزاع، سواء في مرحلة التفاوض أو التقاضي أو التنفيذ.</p>
+    </section>
+
+    <section class="section" style="background: var(--light-bg);">
+        <h2>الرؤية والرسالة</h2>
+        <h3>رؤيتنا</h3>
+        <p>أن نكون الشريك القانوني الإستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية، وتدعم استدامة الأعمال وتحقيق مستهدفات رؤية 2030.</p>
+        <h3>رسالتنا</h3>
+        <p>تقديم خدمات قانونية مهنية متكاملة تراعي مصلحة العميل وتنسجم مع أحكام الأنظمة، من خلال قراءة متأنية للملف، وطرح خيارات قانونية عملية، ومتابعة دقيقة للإجراءات حتى اكتمالها.</p>
+    </section>
+
+    <section class="section" id="services">
+        <h2>الخدمات القانونية</h2>
+        <p>نقدم حزمة متكاملة من الخدمات القانونية تغطي احتياجات الأفراد وروّاد الأعمال والمنشآت الصغيرة والمتوسطة والشركات.</p>
         <div class="grid">
-            <div class="card"><h3>القضايا التجارية</h3><p>تمثيل قانوني دقيق للشركات والمؤسسات.</p></div>
-            <div class="card"><h3>الاستشارات العقارية</h3><p>تأمين صفقاتك العقارية وفق الأنظمة.</p></div>
-            <div class="card"><h3>الأحوال الشخصية</h3><p>حلول قانونية تراعي الخصوصية والعدالة.</p></div>
+            <div class="card"><h3>الشركات والعقود التجارية</h3><p>تأسيس الكيانات، إعداد وصياغة اتفاقيات الشركاء، مراجعة العقود التجارية.</p></div>
+            <div class="card"><h3>التوثيق العدلي</h3><p>توثيق الوكالات، إقرارات الشركاء، محاضر الاجتماعات، والعقود.</p></div>
+            <div class="card"><h3>التقاضي والتحكيم</h3><p>تمثيل العملاء أمام المحاكم التجارية والعامة والعمالية.</p></div>
+            <div class="card"><h3>الامتثال وحوكمة الشركات</h3><p>إعداد أدلة الحوكمة، تقييم المخاطر النظامية، وضبط الامتثال.</p></div>
+            <div class="card"><h3>الاستشارات العمالية</h3><p>تقديم الاستشارات في نظام العمل، مراجعة عقود العمل، ومعالجة النزاعات.</p></div>
+            <div class="card"><h3>باقات الشركات</h3><p>توفير باقات اشتراك قانونية سنوية للمنشآت والمتابعة المستمرة.</p></div>
         </div>
     </section>
 
-    <section class="section vision">
-        <h2>رؤيتنا</h2>
-        <p>أن نكون الشريك القانوني الاستراتيجي الأول، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية.</p>
+    <section class="stats">
+        <div class="stat-item"><div>+400</div>عميل</div>
+        <div class="stat-item"><div>+1,500</div>استشارة</div>
+        <div class="stat-item"><div>+550</div>قضية</div>
+        <div class="stat-item"><div>+1,000</div>مستند</div>
     </section>
-
-    <footer class="footer">
-        جميع الحقوق محفوظة © 2026 - مكتب عبدالعزيز عبدالله عيد العديني للمحاماة
-    </footer>
 
 </body>
 </html>
