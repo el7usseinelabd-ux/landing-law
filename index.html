@@ -45,6 +45,7 @@
             background-color: #ffffff;
             color: var(--text-dark);
             line-height: 1.8;
+            overflow-x: hidden; /* لمنع أي تمدد أفقي في الجوال */
         }
 
         /* شريط التنقل العلوي (الهيدر) */
@@ -56,6 +57,7 @@
             justify-content: space-between;
             align-items: center;
             box-shadow: 0 2px 10px rgba(0,0,0,0.03);
+            gap: 15px;
         }
         .header-brand {
             display: flex;
@@ -63,7 +65,7 @@
             gap: 15px;
         }
         
-        /* تنسيق احترافي ومناسب جداً لأبعاد الشعار المرفق */
+        /* حاوية الشعار للكمبيوتر والتابلت */
         .logo-container {
             width: 55px;
             height: 55px;
@@ -71,6 +73,7 @@
             overflow: hidden;
             border: 2px solid var(--gold-color);
             box-shadow: 0 2px 8px rgba(20, 52, 36, 0.15);
+            flex-shrink: 0;
         }
         .logo-container img {
             width: 100%;
@@ -91,7 +94,7 @@
             margin-top: -2px;
         }
         
-        /* زر الاتصال العلوي داخل مربع احترافي وفخم */
+        /* زر الاتصال العلوي */
         .header-phone-box {
             font-size: 14px;
             color: #ffffff;
@@ -104,6 +107,7 @@
             border-radius: 6px;
             box-shadow: 0 4px 10px rgba(20, 52, 36, 0.15);
             transition: all 0.2s ease;
+            white-space: nowrap;
         }
         .header-phone-box:active {
             transform: scale(0.95);
@@ -126,7 +130,7 @@
             margin: 0 auto 35px auto;
         }
         
-        /* أزرار التحويل المباشر مع زيادة قوة تأثير الإضاءة والنبض */
+        /* أزرار التحويل المباشر */
         .hero-actions {
             display: flex;
             justify-content: center;
@@ -149,14 +153,11 @@
             position: relative;
         }
         
-        /* زيادة إضاءة ونبض زر الاتصال الذهبي */
         .btn-call-glow {
             background-color: var(--gold-color);
             color: #ffffff;
             animation: goldPulseStrong 1.5s infinite ease-in-out;
         }
-        
-        /* زيادة إضاءة ونبض زر الواتساب الأخضر */
         .btn-wh-glow {
             background-color: #25d366;
             color: #ffffff;
@@ -167,37 +168,18 @@
             transform: scale(0.96);
         }
 
-        /* أنيميشن نبضات قوية وواضحة للأزرار الرئيسية */
         @keyframes goldPulseStrong {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.8), 0 5px 15px rgba(0,0,0,0.2);
-            }
-            50% {
-                transform: scale(1.03);
-                box-shadow: 0 0 20px 8px rgba(194, 155, 99, 0.4), 0 5px 15px rgba(0,0,0,0.2);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(194, 155, 99, 0), 0 5px 15px rgba(0,0,0,0.2);
-            }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.8), 0 5px 15px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(194, 155, 99, 0.4), 0 5px 15px rgba(0,0,0,0.2); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0), 0 5px 15px rgba(0,0,0,0.2); }
         }
         @keyframes whatsPulseStrong {
-            0% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8), 0 5px 15px rgba(0,0,0,0.2);
-            }
-            50% {
-                transform: scale(1.03);
-                box-shadow: 0 0 20px 8px rgba(37, 211, 102, 0.4), 0 5px 15px rgba(0,0,0,0.2);
-            }
-            100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 5px 15px rgba(0,0,0,0.2);
-            }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8), 0 5px 15px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(37, 211, 102, 0.4), 0 5px 15px rgba(0,0,0,0.2); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 5px 15px rgba(0,0,0,0.2); }
         }
 
-        /* زر الاتصال الجانبي العائم المطور */
+        /* زر الاتصال الجانبي العائم */
         .floating-call-btn {
             position: fixed;
             bottom: 30px;
@@ -221,8 +203,6 @@
             transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             animation: floatingPulse 2s infinite;
         }
-
-        /* يظهر الزر بشكل أنيق عند إضافة كلاس النشاط بالـ JavaScript */
         .floating-call-btn.visible {
             opacity: 1;
             visibility: visible;
@@ -262,7 +242,7 @@
             text-align-last: center;
         }
 
-        /* قسم الرؤية والرسالة (الخلفية الزيتية الداكنة) */
+        /* قسم الرؤية والرسالة */
         .section-vision-mission {
             background-color: var(--primary-green);
             color: #ffffff;
@@ -379,7 +359,7 @@
             text-align-last: center;
         }
 
-        /* الفوتر والعلامة المائية */
+        /* الفوتر */
         footer {
             background-color: #ffffff;
             border-top: 1px solid #eef2f0;
@@ -389,6 +369,79 @@
             color: #888;
             font-weight: 600;
         }
+
+        /* ======================================================= */
+        /*  أكواد التجاوب الذكية الخاصة بالجوالات والتابلت (مهمة جداً)   */
+        /* ======================================================= */
+        @media (max-width: 600px) {
+            header {
+                padding: 10px 4%;
+                gap: 8px;
+            }
+            .header-brand {
+                gap: 8px;
+            }
+            /* تصغير ذكي لحاوية الشعار في الجوال ليناسب السطر */
+            .logo-container {
+                width: 44px;
+                height: 44px;
+            }
+            /* تصغير وحماية نصوص الاسم من الالتواء الصعب */
+            .brand-text h2 {
+                font-size: 13px;
+                line-height: 1.3;
+            }
+            .brand-text p {
+                font-size: 9.5px;
+            }
+            /* ضبط حجم زر الاتصال العلوي ليناسب العرض */
+            .header-phone-box {
+                padding: 6px 10px;
+                font-size: 11px;
+                border-radius: 4px;
+            }
+            /* تكييف البانر الرئيسي وأزراره */
+            .hero-banner {
+                padding: 70px 15px;
+            }
+            .hero-banner h1 {
+                font-size: 23px;
+                margin-bottom: 25px;
+            }
+            .hero-actions {
+                gap: 12px;
+            }
+            /* الأزرار تأخذ العرض الكامل بالجوال لتسهيل النقرات الإعلانية */
+            .action-btn {
+                min-width: 100%;
+                font-size: 15px;
+                padding: 12px 20px;
+            }
+            /* تقليص الحواشي لتبدو المساحات متناسقة بالجوال */
+            .section-about, .section-vision-mission, .section-services {
+                padding: 40px 6%;
+            }
+            .section-values {
+                padding: 0 6% 40px 6%;
+            }
+            .section-title, .vm-title {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            /* تعديلات شاشات التابلت والأيباد */
+            header {
+                padding: 12px 4%;
+            }
+            .hero-banner h1 {
+                font-size: 28px;
+            }
+            .action-btn {
+                min-width: 200px;
+                font-size: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -396,7 +449,6 @@
     <!-- الهيدر الرسمي للموقع -->
     <header>
         <div class="header-brand">
-            <!-- الشعار الرسمي الجديد مضبوط على اسم الملف logo-main.png المرفوع في جيت هاب -->
             <div class="logo-container">
                 <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
             </div>
@@ -486,7 +538,7 @@
             <div class="service-card">
                 <div class="service-icon-container">✍️</div>
                 <h3>التوثيق العدلي</h3>
-                <p>القيام بأعمال التوثيق العدلي وفق الصلاحيات النظامية، توثيق الوكالات, إقرارات الشركاء، محاضر الاجتماعات، العقود، والاتفاقيات لضمان حجية المستند وسلامة الصياغة.</p>
+                <p>القيام بأعمال التوثيق العدلي وفق الصلاحيات النظامية، توثيق الوكالات، إقرارات الشركاء، محاضر الاجتماعات، العقود، والاتفاقيات لضمان حجية المستند وسلامة الصياغة.</p>
             </div>
 
             <div class="service-card">
