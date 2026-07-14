@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
-    
-    <!-- استدعاء خط Cairo -->
+
+    <!-- استدعاء خط Cairo المعتمد في الهوية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
 
     <style>
         :root {
-            --primary-green: #143424; 
-            --gold-color: #c29b63;    
+            --primary-green: #143424;
+            --gold-color: #c29b63;
             --bg-light: #fcfcfc;
             --text-dark: #2b2b2b;
             --text-muted: #5a5a5a;
         }
 
-        * { 
-            box-sizing: border-box; 
+        * {
+            box-sizing: border-box;
             font-family: 'Cairo', sans-serif;
             margin: 0; padding: 0;
         }
@@ -29,129 +29,8 @@
             color: var(--text-dark);
             line-height: 1.8;
             overflow-x: hidden;
-            padding-bottom: 80px; /* مساحة بالأسفل لعدم تغطية المحتوى بشريط الجوال */
         }
 
-        /* 1. النافذة التفاعلية الذكية (Smart Welcome Modal) */
-        .welcome-modal-overlay {
-            position: fixed;
-            top: 0; left: 0;
-            width: 100%; height: 100%;
-            background: rgba(20, 52, 36, 0.4);
-            backdrop-filter: blur(8px);
-            -webkit-backdrop-filter: blur(8px);
-            z-index: 100000;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: all 0.4s ease;
-        }
-        .welcome-modal-overlay.active {
-            opacity: 1;
-            visibility: visible;
-        }
-        .welcome-modal-card {
-            background: #ffffff;
-            padding: 30px 25px;
-            border-radius: 16px;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            border: 2px solid var(--gold-color);
-            text-align: center;
-            max-width: 90%;
-            width: 380px;
-            transform: scale(0.8);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-        }
-        .welcome-modal-overlay.active .welcome-modal-card {
-            transform: scale(1);
-        }
-        .modal-icon {
-            font-size: 40px;
-            margin-bottom: 15px;
-            animation: bounceIcon 2s infinite;
-        }
-        .welcome-modal-card h3 {
-            font-size: 18px;
-            font-weight: 800;
-            color: var(--primary-green);
-            margin-bottom: 10px;
-        }
-        .welcome-modal-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-            margin-bottom: 20px;
-        }
-        .modal-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            padding: 12px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 15px;
-            margin-bottom: 10px;
-            transition: all 0.2s;
-        }
-        .modal-btn-call {
-            background-color: var(--primary-green);
-            color: #ffffff;
-            border: 1px solid var(--gold-color);
-        }
-        .modal-btn-whatsapp {
-            background-color: #25d366;
-            color: #ffffff;
-        }
-        .modal-btn-close {
-            background: none;
-            border: none;
-            color: #999;
-            font-size: 13px;
-            font-weight: 600;
-            cursor: pointer;
-            margin-top: 5px;
-        }
-
-        /* 2. شريط الجوال السفلي الثابت (Sticky Mobile Bottom Bar) */
-        .mobile-bottom-bar {
-            display: none; /* مخفي في الشاشات الكبيرة */
-            position: fixed;
-            bottom: 0; left: 0;
-            width: 100%;
-            background: #ffffff;
-            box-shadow: 0 -4px 15px rgba(0,0,0,0.08);
-            border-top: 2px solid var(--gold-color);
-            padding: 10px 15px;
-            z-index: 9999;
-            grid-template-columns: 1fr 1fr;
-            gap: 10px;
-        }
-
-        .bar-btn {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            padding: 12px;
-            border-radius: 8px;
-            color: #ffffff;
-            text-decoration: none;
-            font-weight: 700;
-            font-size: 14px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-        }
-        .bar-btn-call {
-            background-color: var(--primary-green);
-            border: 1px solid var(--gold-color);
-        }
-        .bar-btn-whatsapp {
-            background-color: #25d366;
-        }
-
-        /* شريط الملاحة والهيدر */
         header {
             background: #ffffff;
             border-bottom: 3px solid var(--gold-color);
@@ -167,6 +46,7 @@
             align-items: center;
             gap: 15px;
         }
+
         .logo-container {
             width: 55px;
             height: 55px;
@@ -177,9 +57,12 @@
             flex-shrink: 0;
         }
         .logo-container img {
-            width: 100%; height: 100%;
-            object-fit: cover; display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
         }
+
         .brand-text h2 {
             font-size: 16px;
             color: var(--primary-green);
@@ -191,6 +74,7 @@
             font-weight: 600;
             margin-top: -2px;
         }
+
         .header-phone-box {
             font-size: 14px;
             color: #ffffff;
@@ -205,27 +89,30 @@
             transition: all 0.2s ease;
             white-space: nowrap;
         }
+        .header-phone-box:active {
+            transform: scale(0.95);
+        }
 
-        /* البانر الرئيسي (الهيرو) */
         .hero-banner {
             position: relative;
-            background: linear-gradient(rgba(20, 52, 36, 0.75), rgba(20, 52, 36, 0.55)), 
+            background: linear-gradient(rgba(20, 52, 36, 0.75), rgba(20, 52, 36, 0.55)),
                         url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1200&q=80') center/cover no-repeat;
-            padding: 130px 20px;
+            padding: 110px 20px;
             text-align: center;
             color: #ffffff;
         }
         .hero-banner h1 {
-            font-size: 36px;
+            font-size: 34px;
             font-weight: 800;
             text-shadow: 0 2px 12px rgba(0,0,0,0.5);
             max-width: 800px;
-            margin: 0 auto 40px auto;
+            margin: 0 auto 35px auto;
         }
+
         .hero-actions {
             display: flex;
             justify-content: center;
-            gap: 25px;
+            gap: 20px;
             flex-wrap: wrap;
             margin-top: 20px;
         }
@@ -233,159 +120,426 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 14px;
-            padding: 18px 45px;
-            font-size: 19px;
-            font-weight: 800;
+            gap: 12px;
+            padding: 14px 40px;
+            font-size: 16px;
+            font-weight: 700;
             text-decoration: none;
-            border-radius: 8px;
-            transition: transform 0.2s ease;
-            min-width: 280px;
+            border-radius: 6px;
+            transition: all 0.3s ease;
+            min-width: 230px;
+            position: relative;
         }
+
         .btn-call-glow {
             background-color: var(--gold-color);
             color: #ffffff;
-            animation: goldPulse 1.8s infinite ease-in-out;
+            animation: goldPulseStrong 1.5s infinite ease-in-out;
         }
         .btn-wh-glow {
             background-color: #25d366;
             color: #ffffff;
-            animation: whatsPulse 1.8s infinite ease-in-out;
+            animation: whatsPulseStrong 1.5s infinite ease-in-out;
         }
 
-        /* تنسيق الأقسام العام */
-        .section-about { padding: 60px 10%; text-align: center; }
-        .section-subtitle { font-size: 15px; color: var(--gold-color); font-weight: 700; margin-bottom: 5px; }
-        .section-title { font-size: 24px; color: var(--primary-green); font-weight: 800; margin-bottom: 25px; }
-        .about-text { font-size: 15.5px; color: var(--text-muted); max-width: 850px; margin: 0 auto 20px auto; text-align: justify; text-align-last: center; }
+        .action-btn:active {
+            transform: scale(0.96);
+        }
 
-        .section-vision-mission { background-color: var(--primary-green); color: #ffffff; padding: 60px 10%; text-align: center; }
-        .vm-title { font-size: 24px; font-weight: 800; color: #ffffff; margin-bottom: 35px; position: relative; display: inline-block; }
-        .vm-title::after { content: ''; display: block; width: 40px; height: 2px; background-color: var(--gold-color); margin: 8px auto 0 auto; }
-        .vm-box { max-width: 800px; margin: 0 auto 30px auto; text-align: right; border-right: 3px solid var(--gold-color); padding-right: 15px; }
-        .vm-box h3 { font-size: 18px; color: var(--gold-color); font-weight: 700; margin-bottom: 8px; }
-        .vm-box p { font-size: 14.5px; color: #bdc7c3; }
+        @keyframes goldPulseStrong {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.8), 0 5px 15px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(194, 155, 99, 0.4), 0 5px 15px rgba(0,0,0,0.2); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0), 0 5px 15px rgba(0,0,0,0.2); }
+        }
+        @keyframes whatsPulseStrong {
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8), 0 5px 15px rgba(0,0,0,0.2); }
+            50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(37, 211, 102, 0.4), 0 5px 15px rgba(0,0,0,0.2); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 5px 15px rgba(0,0,0,0.2); }
+        }
 
-        .section-values { background-color: var(--primary-green); padding: 0 10% 60px 10%; text-align: center; }
-        .values-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 15px; max-width: 1000px; margin: 0 auto; }
-        .value-card { background-color: rgba(255, 255, 255, 0.04); border: 1px solid rgba(194, 155, 99, 0.2); padding: 25px 15px; border-radius: 6px; color: #ffffff; }
-        .value-icon { font-size: 24px; color: var(--gold-color); margin-bottom: 12px; }
-        .value-card p { font-size: 14px; font-weight: 700; }
-
-        /* قسم التخصصات القضائية المضاف والمطور */
-        .section-cases {
-            padding: 60px 10%;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        .cases-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-            gap: 25px;
-            max-width: 1100px;
-            margin: 30px auto 0 auto;
-        }
-        .case-card {
-            background: #ffffff;
-            border-radius: 12px;
-            padding: 35px 25px;
-            box-shadow: 0 10px 30px rgba(20, 52, 36, 0.04);
-            border: 1px solid #eef2f0;
-            border-top: 4px solid var(--gold-color); /* شريط علوي ذهبي لتمييز البطاقات */
-            text-align: right;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        .case-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 35px rgba(20, 52, 36, 0.08);
-        }
-        .case-header {
+        .floating-call-btn {
+            position: fixed;
+            bottom: 30px;
+            left: 30px;
+            background-color: var(--primary-green);
+            color: #ffffff;
+            border: 2px solid var(--gold-color);
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
             display: flex;
             align-items: center;
-            gap: 15px;
-            margin-bottom: 15px;
+            justify-content: center;
+            font-size: 24px;
+            text-decoration: none;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 15px rgba(194, 155, 99, 0.5);
+            z-index: 9999;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            animation: floatingPulse 2s infinite;
         }
-        .case-icon {
-            font-size: 28px;
-            color: var(--primary-green);
+        .floating-call-btn.visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
         }
-        .case-card h3 {
-            font-size: 18px;
+
+        @keyframes floatingPulse {
+            0% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(194, 155, 99, 0.7); }
+            70% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 15px rgba(194, 155, 99, 0); }
+            100% { box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3), 0 0 0 0 rgba(194, 155, 99, 0); }
+        }
+
+        .section-about {
+            padding: 60px 10%;
+            text-align: center;
+            background-color: #ffffff;
+        }
+        .section-subtitle {
+            font-size: 15px;
+            color: var(--gold-color);
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        .section-title {
+            font-size: 24px;
             color: var(--primary-green);
             font-weight: 800;
+            margin-bottom: 25px;
         }
-        .case-card p {
+        .about-text {
+            font-size: 15.5px;
+            color: var(--text-muted);
+            max-width: 850px;
+            margin: 0 auto 20px auto;
+            text-align: justify;
+            text-align-last: center;
+        }
+
+        .section-vision-mission {
+            background-color: var(--primary-green);
+            color: #ffffff;
+            padding: 60px 10%;
+            text-align: center;
+        }
+        .vm-title {
+            font-size: 24px;
+            font-weight: 800;
+            color: #ffffff;
+            margin-bottom: 35px;
+            position: relative;
+            display: inline-block;
+        }
+        .vm-title::after {
+            content: '';
+            display: block;
+            width: 40px;
+            height: 2px;
+            background-color: var(--gold-color);
+            margin: 8px auto 0 auto;
+        }
+        .vm-box {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: right;
+            border-right: 3px solid var(--gold-color);
+            padding-right: 15px;
+        }
+        .vm-box h3 {
+            font-size: 18px;
+            color: var(--gold-color);
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .vm-box p {
+            font-size: 14.5px;
+            color: #bdc7c3;
+        }
+
+        .section-values {
+            background-color: var(--primary-green);
+            padding: 0 10% 60px 10%;
+            text-align: center;
+        }
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        .value-card {
+            background-color: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(194, 155, 99, 0.2);
+            padding: 25px 15px;
+            border-radius: 6px;
+            color: #ffffff;
+        }
+        .value-icon {
+            font-size: 24px;
+            color: var(--gold-color);
+            margin-bottom: 12px;
+        }
+        .value-card p {
+            font-size: 14px;
+            font-weight: 700;
+        }
+
+        .section-services {
+            padding: 60px 10%;
+            background-color: #f8faf9;
+            text-align: center;
+        }
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 30px auto 0 auto;
+        }
+        .service-card {
+            background: #ffffff;
+            border-radius: 8px;
+            padding: 30px 20px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.02);
+            border: 1px solid #eef2f0;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .service-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+        }
+        .service-icon-container {
+            width: 60px;
+            height: 60px;
+            background-color: var(--primary-green);
+            color: var(--gold-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 22px;
+            margin: 0 auto 15px auto;
+        }
+        .service-card h3 {
+            font-size: 17px;
+            color: var(--primary-green);
+            font-weight: 700;
+            margin-bottom: 12px;
+        }
+        .service-card p {
             font-size: 13.5px;
             color: var(--text-muted);
-            line-height: 1.7;
             text-align: justify;
+            text-align-last: center;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+        .service-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            background-color: #25d366;
+            color: #ffffff;
+            text-decoration: none;
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-size: 13.5px;
+            font-weight: 700;
+            transition: background-color 0.2s ease;
+        }
+        .service-link:hover {
+            background-color: #1ebe57;
         }
 
-        /* قسم الخدمات العامة للمكتب */
-        .section-services { padding: 60px 10%; background-color: #f8faf9; text-align: center; }
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 30px auto 0 auto; }
-        .service-card { background: #ffffff; border-radius: 8px; padding: 30px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid #eef2f0; text-align: center; }
-        .service-icon-container { width: 60px; height: 60px; background-color: var(--primary-green); color: var(--gold-color); border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 22px; margin: 0 auto 15px auto; }
-        .service-card h3 { font-size: 16.5px; color: var(--primary-green); font-weight: 700; margin-bottom: 12px; }
-        .service-card p { font-size: 13px; color: var(--text-muted); text-align: justify; text-align-last: center; }
-
-        footer { background-color: #ffffff; border-top: 1px solid #eef2f0; text-align: center; padding: 25px; font-size: 12px; color: #888; font-weight: 600; }
-
-        /* الأنيميشن */
-        @keyframes goldPulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.8); }
-            50% { transform: scale(1.04); box-shadow: 0 0 20px 8px rgba(194, 155, 99, 0.4); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); }
-        }
-        @keyframes whatsPulse {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8); }
-            50% { transform: scale(1.04); box-shadow: 0 0 20px 8px rgba(37, 211, 102, 0.4); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); }
-        }
-        @keyframes bounceIcon {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(-8px); }
+        footer {
+            background-color: #ffffff;
+            border-top: 1px solid #eef2f0;
+            text-align: center;
+            padding: 25px;
+            font-size: 12px;
+            color: #888;
+            font-weight: 600;
         }
 
-        /* تجاوب الجوالات والتابلت */
+        /* نافذة الاتصال الفورية المطورة (البطاقة المنبثقة الترحيبية الأنيقة) */
+        #instantCallOverlay {
+            position: fixed;
+            inset: 0;
+            z-index: 100000;
+            background: rgba(20, 52, 36, 0.85);
+            backdrop-filter: blur(4px);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.4s ease;
+        }
+        #instantCallOverlay.show {
+            opacity: 1;
+            visibility: visible;
+        }
+        .ico-box {
+            background: #ffffff;
+            color: var(--text-dark);
+            border-radius: 12px;
+            padding: 35px 20px;
+            width: 100%;
+            max-width: 400px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 2px solid var(--gold-color);
+            transform: scale(0.9);
+            transition: transform 0.4s ease;
+            position: relative;
+            text-align: center;
+        }
+        #instantCallOverlay.show .ico-box {
+            transform: scale(1);
+        }
+        .close-overlay-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: none;
+            border: none;
+            font-size: 20px;
+            color: var(--text-muted);
+            cursor: pointer;
+            line-height: 1;
+        }
+        .ico-logo {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 2px solid var(--gold-color);
+            margin: 0 auto 18px auto;
+        }
+        .ico-logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .ico-title {
+            color: var(--primary-green);
+            font-size: 18px;
+            font-weight: 800;
+            margin-bottom: 4px;
+        }
+        .ico-subtitle {
+            color: var(--gold-color);
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 20px;
+        }
+        .ico-btn {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            margin-bottom: 12px;
+            font-size: 15px;
+            font-weight: 700;
+            border-radius: 8px;
+            text-decoration: none;
+            color: #ffffff;
+            transition: transform 0.2s ease;
+        }
+        .ico-btn:active {
+            transform: scale(0.97);
+        }
+        .ico-call {
+            background-color: var(--gold-color);
+            animation: goldPulseStrong 1.5s infinite ease-in-out;
+        }
+        .ico-wh {
+            background-color: #25d366;
+            animation: whatsPulseStrong 1.5s infinite ease-in-out;
+        }
+        .ico-dismiss {
+            display: inline-block;
+            margin-top: 15px;
+            color: var(--text-muted);
+            font-size: 13px;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
         @media (max-width: 600px) {
-            header { padding: 10px 4%; gap: 8px; }
-            .logo-container { width: 44px; height: 44px; }
-            .brand-text h2 { font-size: 13px; }
-            .brand-text p { font-size: 9.5px; }
-            .header-phone-box { display: none; } 
-            .hero-banner { padding: 80px 15px; }
-            .hero-banner h1 { font-size: 24px; margin-bottom: 30px; }
-            .action-btn { min-width: 100%; font-size: 17px; padding: 15px 20px; }
-            .section-about, .section-vision-mission, .section-services, .section-cases { padding: 40px 6%; }
-            .section-values { padding: 0 6% 40px 6%; }
-            .section-title, .vm-title { font-size: 20px; }
-            
-            .mobile-bottom-bar { display: grid; }
+            header {
+                padding: 10px 4%;
+                gap: 8px;
+            }
+            .header-brand {
+                gap: 8px;
+            }
+            .logo-container {
+                width: 44px;
+                height: 44px;
+            }
+            .brand-text h2 {
+                font-size: 13px;
+                line-height: 1.3;
+            }
+            .brand-text p {
+                font-size: 9.5px;
+            }
+            .header-phone-box {
+                padding: 6px 10px;
+                font-size: 11px;
+                border-radius: 4px;
+            }
+            .hero-banner {
+                padding: 70px 15px;
+            }
+            .hero-banner h1 {
+                font-size: 23px;
+                margin-bottom: 25px;
+            }
+            .hero-actions {
+                gap: 12px;
+            }
+            .action-btn {
+                min-width: 100%;
+                font-size: 15px;
+                padding: 12px 20px;
+            }
+            .section-about, .section-vision-mission, .section-services {
+                padding: 40px 6%;
+            }
+            .section-values {
+                padding: 0 6% 40px 6%;
+            }
+            .section-title, .vm-title {
+                font-size: 20px;
+            }
+        }
+
+        @media (min-width: 601px) and (max-width: 1024px) {
+            header {
+                padding: 12px 4%;
+            }
+            .hero-banner h1 {
+                font-size: 28px;
+            }
+            .action-btn {
+                min-width: 200px;
+                font-size: 15px;
+            }
         }
     </style>
 </head>
 <body>
 
-    <!-- النافذة التفاعلية الذكية المخصصة للجوال بعد ثانيتين -->
-    <div class="welcome-modal-overlay" id="welcomeModal">
-        <div class="welcome-modal-card">
-            <div class="modal-icon">⚖️</div>
-            <h3>استشارة قانونية فورية عاجلة؟</h3>
-            <p>يسعدنا في مكتب المحامي عبدالعزيز العديني الرد على استفسارك مباشرة الآن.</p>
-            <a href="tel:+966556799995" class="modal-btn modal-btn-call">📞 اتصل هاتفياً الآن</a>
-            <a href="https://wa.me/966556799995" class="modal-btn modal-btn-whatsapp">💬 تواصل واتساب فوراً</a>
-            <button class="modal-btn-close" onclick="closeModal()">تصفح الموقع أولاً</button>
-        </div>
-    </div>
-
-    <!-- شريط الجوال السفلي الثابت (يظهر في الجوال فقط) -->
-    <div class="mobile-bottom-bar">
-        <a href="tel:+966556799995" class="bar-btn bar-btn-call">📞 إتصال مباشر</a>
-        <a href="https://wa.me/966556799995" class="bar-btn bar-btn-whatsapp">💬 واتساب سريع</a>
-    </div>
-
-    <!-- الهيدر الرسمي للموقع -->
     <header>
         <div class="header-brand">
             <div class="logo-container">
@@ -399,129 +553,232 @@
         <a href="tel:+966556799995" class="header-phone-box">📞 055 679 9995</a>
     </header>
 
-    <!-- البانر الرئيسي مع الأزرار الضخمة والنابضة بالحركة -->
     <section class="hero-banner" id="heroSection">
         <h1>نقدم حلولاً وحماية قانونية مهنية متكاملة</h1>
+
         <div class="hero-actions">
             <a href="tel:+966556799995" class="action-btn btn-call-glow">📞 اتصــال هاتفـي مباشر</a>
-            <a href="https://wa.me/966556799995" class="action-btn btn-wh-glow">💬 تواصل عبر الواتساب</a>
+            <a href="https://wa.me/966556799995?text=مرحباً، أود الحصول على استشارة قانونية سريعة" class="action-btn btn-wh-glow" target="_blank">💬 تواصل عبر الواتساب</a>
         </div>
     </section>
 
-    <!-- قسم من نحن -->
+    <!-- الزر العائم للاتصال -->
+    <a href="tel:+966556799995" class="floating-call-btn" id="floatingCallBtn" title="اتصل بنا الآن">📞</a>
+
     <section class="section-about">
         <div class="section-subtitle">— من نحن</div>
         <div class="section-title">مكتب عبدالعزيز عبدالله عيد العديني للمحاماة</div>
         <p class="about-text">
             يقوم مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية على منهجية عمل قانونية تجمع بين الدراية النظامية والخبرة العملية، مع الالتزام بأحكام الأنظمة المرعية في المملكة العربية السعودية وما استقر عليه القضاء واللوائح التنفيذية ذات الصلة.
         </p>
+        <p class="about-text">
+            يركز المكتب على تقديم خدمة قانونية مهنية متكاملة تقوم على دراسة الوقائع بعناية، وتكييفها نظامياً دقيقاً، وصياغة مذكرات وعقود خالية قدر الإمكان من مواطن اللبس، بما يخدم مصلحة العميل ويحفظ حقوقه سواءً في مرحلة التفاوض أو التقاضي أو التنفيذ.
+        </p>
     </section>
 
-    <!-- قسم القضايا والترافع (المطور والجديد بأسلوب قانوني رصين) -->
-    <section class="section-cases">
-        <div class="section-subtitle">— مجالات الترافع والقضايا</div>
-        <div class="section-title">تخصصاتنا القضائية والنظامية</div>
-        
-        <div class="cases-grid">
-            
-            <!-- 1. قضايا الأحوال الشخصية -->
-            <div class="case-card">
-                <div class="case-header">
-                    <div class="case-icon">🕌</div>
-                    <h3>قضايا الأحوال الشخصية</h3>
-                </div>
-                <p>
-                    نقدم التمثيل القضائي والشرعي المتميز في سائر دعاوى ومسائل الأحوال الشخصية وفق "نظام الأحوال الشخصية" ولائحته التنفيذية بالمملكة؛ بما يشمل دعاوى فسخ النكاح، والطلاق، والخلع، وإثبات الحضانة والزيارة، وتقدير النفقات، وقضايا العضل، بالإضافة إلى توثيق وحصر التركات، وتصفيتها، وقسمة المواريث بين الورثة رضاءً أو قضاءً.
-                </p>
-            </div>
-
-            <!-- 2. القضايا العمالية -->
-            <div class="case-card">
-                <div class="case-header">
-                    <div class="case-icon">👷‍♂️</div>
-                    <h3>القضايا والمنازعات العمالية</h3>
-                </div>
-                <p>
-                    نتولى الترافع والدفاع عن حقوق أطراف العمل (صاحب العمل أو العامل) أمام المحاكم العمالية والهيئات ذات العلاقة بموجب "نظام العمل السعودي"؛ ونمثل العملاء في دعاوى الفصل غير المشروع، ومطالبات الأجور المتأخرة، ومستحقات مكافأة نهاية الخدمة، ومنازعات عقود العمل والتعويضات، وتسوية الخلافات العمالية ودياً ونظامياً.
-                </p>
-            </div>
-
-            <!-- 3. القضايا المدنية والتجارية والعقارية -->
-            <div class="case-card">
-                <div class="case-header">
-                    <div class="case-icon">🏢</div>
-                    <h3>القضايا المدنية والعقارية</h3>
-                </div>
-                <p>
-                    متابعة وتمثيل العملاء في كافة المنازعات المدنية والعقارية ومنازعات الأراضي، وصياغة عقود الاستثمار والبيع والإيجار والامتياز، والمطالبة بالحقوق المالية والتعويض عن الأضرار الناشئة عن الإخلال بالالتزامات العقدية، والتمثيل أمام محاكم التنفيذ لتحصيل الأموال وتطبيق السندات التنفيذية.
-                </p>
-            </div>
-
-        </div>
-    </section>
-
-    <!-- قسم الرؤية والرسالة -->
     <section class="section-vision-mission">
         <div class="vm-title">الرؤية والرسالة</div>
+
         <div class="vm-box">
             <h3>رؤيتنا</h3>
-            <p>أن نكون الشريك القانوني الاستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية.</p>
+            <p>أن نكون الشريك القانوني الاستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية، وتدعم استدامة الأعمال وتحقيق مستهدفات رؤية 2030.</p>
+        </div>
+
+        <div class="vm-box">
+            <h3>رسالتنا</h3>
+            <p>تقديم خدمات قانونية مهنية متكاملة تراعي مصلحة العميل وتنسجم مع أحكام الأنظمة، من خلال قراءة متأنية للملف، وطرح خيارات قانونية عملية، ومتابعة دقيقة للإجراءات حتى اكتمالها.</p>
         </div>
     </section>
 
-    <!-- قسم خدماتنا العامة -->
+    <section class="section-values">
+        <div class="vm-title">قيمنا</div>
+        <div class="values-grid">
+            <div class="value-card">
+                <div class="value-icon">🤝</div>
+                <p>الثقة والموثوقية</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">👁️</div>
+                <p>الشفافية والوضوح</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">⚖️</div>
+                <p>الدقة في التكييف النظامي</p>
+            </div>
+            <div class="value-card">
+                <div class="value-icon">📋</div>
+                <p>الالتزام بأحكام الأنظمة واللوائح</p>
+            </div>
+        </div>
+    </section>
+
     <section class="section-services">
-        <div class="section-title">خدماتنا الإدارية والتوثيقية</div>
+        <div class="section-title">أبرز خدماتنا ومجالات قضايانا</div>
+
         <div class="services-grid">
+
+            <!-- الخدمة 1 -->
             <div class="service-card">
-                <div class="service-icon-container">💼</div>
-                <h3>حوكمة الشركات والعقود</h3>
-                <p>تأسيس الكيانات، إعداد اتفاقيات الشركاء، مراجعة الصفقات، وحوكمة المنشآت لضمان الامتثال التام للأنظمة.</p>
+                <div>
+                    <div class="service-icon-container">💼</div>
+                    <h3>الشركات والعقود التجارية</h3>
+                    <p>تأسيس الكيانات والشركات، إعداد وصياغة اتفاقيات الشركاء، مراجعة العقود التجارية، توثيق العلاقة التعاقدية بين الشركاء والمستثمرين، وحماية الأعمال من النزاعات التجارية.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (الشركات والعقود التجارية)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
+
+            <!-- الخدمة 2 -->
             <div class="service-card">
-                <div class="service-icon-container">✍️</div>
-                <h3>التوثيق العدلي المعتمد</h3>
-                <p>توثيق الوكالات، الإقرارات، مبايعات العقارات، ومحاضر الشركات لضمان حجيتها الرسمية التامة وسرعة إنجازها.</p>
+                <div>
+                    <div class="service-icon-container">✍️</div>
+                    <h3>التوثيق العدلي</h3>
+                    <p>القيام بأعمال التوثيق العدلي وفق الصلاحيات النظامية الممنوحة، توثيق وإصدار الوكالات، إقرارات الشركاء، محاضر الاجتماعات، وعقود البيع والإفراغ العقاري لضمان حجية المستندات.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (التوثيق العدلي)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
+
+            <!-- الخدمة 3 -->
             <div class="service-card">
-                <div class="service-icon-container">🛡️</div>
-                <h3>الامتثال والاستشارات السنوية</h3>
-                <p>نقدم باقات استشارية دورية للشركات والكيانات لحمايتها وتجنب نشوء النزاعات القضائية مستقبلاً.</p>
+                <div>
+                    <div class="service-icon-container">🏛️</div>
+                    <h3>التقاضي والتمثيل القضائي</h3>
+                    <p>تمثيل العملاء أمام المحاكم التجارية والعامة والعمالية والإدارية (ديوان المظالم)، صياغة وإعداد صحائف الدعاوى والمذكرات الجوابية والاعتراضية، وإدارة ملفات التحكيم والوساطة.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (التقاضي والتمثيل القضائي)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
+
+            <!-- الخدمة 4 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-container">❤️</div>
+                    <h3>قضايا الأحوال الشخصية والتركات</h3>
+                    <p>قضايا النكاح والفرقة والنفقة والحضانة، قسمة التركات وتصفيتها وتوزيعها بين الورثة رضائياً أو قضائياً، توثيق الوصايا والأوقاف وإدارتها وفق الضوابط الشرعية والنظامية.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (قضايا الأحوال الشخصية والتركات)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
+            </div>
+
+            <!-- الخدمة 5 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-container">👥</div>
+                    <h3>القضايا العمالية وعقود العمل</h3>
+                    <p>صياغة ومراجعة عقود العمل الفردية، إعداد اللوائح الداخلية للمنشآت والموارد البشرية، تسوية الخلافات العمالية ودياً وقضائياً، والمطالبة بالتعويضات ومستحقات نهاية الخدمة.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (القضايا العمالية وعقود العمل)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
+            </div>
+
+            <!-- الخدمة 6 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-container">🏢</div>
+                    <h3>القضايا العقارية والتمويل</h3>
+                    <p>إدارة النزاعات المتعلقة بالملكية العقارية، صياغة عقود التطوير العقاري والمقاولات، قضايا الاستثمار العقاري، وعقود الإيجار والتمويل والرهن مع البنوك والجهات التمويلية.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (القضايا العقارية والتمويل)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
+            </div>
+
+            <!-- الخدمة 7 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-container">⚖️</div>
+                    <h3>القضايا الإدارية وديوان المظالم</h3>
+                    <p>التظلم من القرارات الإدارية الصادرة عن الجهات الحكومية، إقامة دعاوى إلغاء القرارات ودعاوى التعويض ودعاوى العقود الإدارية والمنافسات والمشتريات الحكومية.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (القضايا الإدارية وديوان المظالم)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
+            </div>
+
+            <!-- الخدمة 8 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-container">💡</div>
+                    <h3>الملكية الفكرية وبراءات الاختراع</h3>
+                    <p>تسجيل العلامات التجارية وحمايتها من التقليد والتعدي، براءات الاختراع، حقوق المؤلف والمصنفات الأدبية والفنية، صياغة عقود الامتياز التجاري (الفرنشايز).</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (الملكية الفكرية)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
+            </div>
+
+            <!-- الخدمة 9 -->
+            <div class="service-card">
+                <div>
+                    <div class="service-icon-container">🛡️</div>
+                    <h3>الحوكمة والامتثال ومكافحة التستر</h3>
+                    <p>مراجعة أعمال المنشآت والشركات لضمان تطابقها التام مع القوانين الحديثة لتجنب العقوبات، تصحيح الأوضاع التجارية، ومكافحة جرائم التستر التجاري وغسيل الأموال.</p>
+                </div>
+                <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (الحوكمة والامتثال)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
+            </div>
+
         </div>
     </section>
 
-    <!-- الفوتر الرسمي -->
     <footer>
         جميع الحقوق محفوظة © مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية
     </footer>
 
-    <!-- سكربت جافا سكريبت للتحكم التفاعلي بالنافذة المنبثقة للعملاء من الجوال -->
+    <!-- نافذة الاتصال الترحيبية المدمجة (تظهر لمرة واحدة بذكاء) -->
+    <div id="instantCallOverlay">
+        <div class="ico-box">
+            <!-- زر إغلاق النافذة والعودة للتصفح -->
+            <button class="close-overlay-btn" id="icoCloseBtn" title="إغلاق">✕</button>
+            
+            <div class="ico-logo">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+            </div>
+            <div class="ico-title">عبدالعزيز عبدالله عيد العديني</div>
+            <div class="ico-subtitle">للمحاماة والاستشارات القانونية</div>
+            
+            <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6;">
+                أهلاً بك، نسعد بتقديم الدعم والحماية القانونية لقضاياك وأعمالك. هل تود الحصول على استشارة قانونية سريعة الآن؟
+            </p>
+
+            <a href="tel:+966556799995" class="ico-btn ico-call">📞 اتصال هاتفي مباشر</a>
+            <a href="https://wa.me/966556799995?text=مرحباً، أود الحصول على استشارة قانونية" class="ico-btn ico-wh" target="_blank">💬 تواصل سريع عبر الواتساب</a>
+
+            <span class="ico-dismiss" id="icoDismiss">متابعة تصفح الخدمات والحلول</span>
+        </div>
+    </div>
+
     <script type="text/javascript">
-        var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
-        var isSmallScreen = window.innerWidth <= 1024; 
-        var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+        // إدارة ظهور الزر العائم للاتصال عند سكرول الصفحة
+        window.addEventListener('scroll', function() {
+            var heroSection = document.getElementById('heroSection');
+            var floatingCallBtn = document.getElementById('floatingCallBtn');
 
-        // تشغيل النافذة التفاعلية الذكية للجوال فقط بعد ثانيتين من دخول الموقع لأول مرة في الجلسة
-        if (isMobile || (isSmallScreen && isTouch)) {
-            if (!sessionStorage.getItem('firstTimePopUp')) {
-                sessionStorage.setItem('firstTimePopUp', 'true');
-                
+            if (window.scrollY > heroSection.offsetHeight) {
+                floatingCallBtn.classList.add('visible');
+            } else {
+                floatingCallBtn.classList.remove('visible');
+            }
+        });
+
+        // إدارة النافذة الترحيبية الذكية (المحسّنة بدون الاتصال العشوائي بالتوافق مع الخصوصية)
+        (function() {
+            var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+            var isSmallScreen = window.innerWidth <= 1024;
+            var isTouch = ('ontouchstart' in window) || (navigator.maxTouchPoints > 0);
+            var overlay = document.getElementById('instantCallOverlay');
+            var dismissBtn = document.getElementById('icoDismiss');
+            var closeBtn = document.getElementById('icoCloseBtn');
+
+            // تظهر النافذة على الجوال فقط، ولأول مرة في الجلسة لعدم تكرار إزعاج الزائر
+            if ((isMobile || (isSmallScreen && isTouch)) && !sessionStorage.getItem('callOverlayShown')) {
                 setTimeout(function() {
-                    var modal = document.getElementById('welcomeModal');
-                    if (modal) {
-                        modal.classList.add('active');
-                    }
-                }, 2000); // إظهار النافذة بعد ثانيتين
+                    overlay.classList.add('show');
+                    sessionStorage.setItem('callOverlayShown', 'true');
+                }, 1200); // تظهر بسلاسة بعد ثانية وربع من دخول الموقع
+            } else {
+                overlay.remove();
+                return;
             }
-        }
 
-        function closeModal() {
-            var modal = document.getElementById('welcomeModal');
-            if (modal) {
-                modal.classList.remove('active');
+            function closeOverlay() {
+                overlay.classList.remove('show');
+                setTimeout(function() { overlay.remove(); }, 400);
             }
-        }
+
+            // تفعيل أزرار الإغلاق والتخطي
+            dismissBtn.addEventListener('click', closeOverlay);
+            closeBtn.addEventListener('click', closeOverlay);
+        })();
     </script>
 
 </body>
