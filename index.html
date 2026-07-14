@@ -151,7 +151,7 @@
             background-color: #25d366;
         }
 
-        /* باقي استايلات الموقع */
+        /* شريط الملاحة والهيدر */
         header {
             background: #ffffff;
             border-bottom: 3px solid var(--gold-color);
@@ -253,7 +253,7 @@
             animation: whatsPulse 1.8s infinite ease-in-out;
         }
 
-        /* التبسيط والجمالية للأقسام الأخرى */
+        /* تنسيق الأقسام العام */
         .section-about { padding: 60px 10%; text-align: center; }
         .section-subtitle { font-size: 15px; color: var(--gold-color); font-weight: 700; margin-bottom: 5px; }
         .section-title { font-size: 24px; color: var(--primary-green); font-weight: 800; margin-bottom: 25px; }
@@ -272,6 +272,56 @@
         .value-icon { font-size: 24px; color: var(--gold-color); margin-bottom: 12px; }
         .value-card p { font-size: 14px; font-weight: 700; }
 
+        /* قسم التخصصات القضائية المضاف والمطور */
+        .section-cases {
+            padding: 60px 10%;
+            background-color: #ffffff;
+            text-align: center;
+        }
+        .cases-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 25px;
+            max-width: 1100px;
+            margin: 30px auto 0 auto;
+        }
+        .case-card {
+            background: #ffffff;
+            border-radius: 12px;
+            padding: 35px 25px;
+            box-shadow: 0 10px 30px rgba(20, 52, 36, 0.04);
+            border: 1px solid #eef2f0;
+            border-top: 4px solid var(--gold-color); /* شريط علوي ذهبي لتمييز البطاقات */
+            text-align: right;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .case-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 35px rgba(20, 52, 36, 0.08);
+        }
+        .case-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+        .case-icon {
+            font-size: 28px;
+            color: var(--primary-green);
+        }
+        .case-card h3 {
+            font-size: 18px;
+            color: var(--primary-green);
+            font-weight: 800;
+        }
+        .case-card p {
+            font-size: 13.5px;
+            color: var(--text-muted);
+            line-height: 1.7;
+            text-align: justify;
+        }
+
+        /* قسم الخدمات العامة للمكتب */
         .section-services { padding: 60px 10%; background-color: #f8faf9; text-align: center; }
         .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; max-width: 1100px; margin: 30px auto 0 auto; }
         .service-card { background: #ffffff; border-radius: 8px; padding: 30px 20px; box-shadow: 0 4px 20px rgba(0,0,0,0.02); border: 1px solid #eef2f0; text-align: center; }
@@ -303,22 +353,21 @@
             .logo-container { width: 44px; height: 44px; }
             .brand-text h2 { font-size: 13px; }
             .brand-text p { font-size: 9.5px; }
-            .header-phone-box { display: none; } /* إخفاء زر الهاتف العلوي بالجوال لوجود الشريط السفلي */
+            .header-phone-box { display: none; } 
             .hero-banner { padding: 80px 15px; }
             .hero-banner h1 { font-size: 24px; margin-bottom: 30px; }
             .action-btn { min-width: 100%; font-size: 17px; padding: 15px 20px; }
-            .section-about, .section-vision-mission, .section-services { padding: 40px 6%; }
+            .section-about, .section-vision-mission, .section-services, .section-cases { padding: 40px 6%; }
             .section-values { padding: 0 6% 40px 6%; }
             .section-title, .vm-title { font-size: 20px; }
             
-            /* إظهار شريط الجوال السفلي فقط في الهواتف */
             .mobile-bottom-bar { display: grid; }
         }
     </style>
 </head>
 <body>
 
-    <!-- النافذة التفاعلية الذكية -->
+    <!-- النافذة التفاعلية الذكية المخصصة للجوال بعد ثانيتين -->
     <div class="welcome-modal-overlay" id="welcomeModal">
         <div class="welcome-modal-card">
             <div class="modal-icon">⚖️</div>
@@ -350,7 +399,7 @@
         <a href="tel:+966556799995" class="header-phone-box">📞 055 679 9995</a>
     </header>
 
-    <!-- البانر الرئيسي -->
+    <!-- البانر الرئيسي مع الأزرار الضخمة والنابضة بالحركة -->
     <section class="hero-banner" id="heroSection">
         <h1>نقدم حلولاً وحماية قانونية مهنية متكاملة</h1>
         <div class="hero-actions">
@@ -368,32 +417,86 @@
         </p>
     </section>
 
+    <!-- قسم القضايا والترافع (المطور والجديد بأسلوب قانوني رصين) -->
+    <section class="section-cases">
+        <div class="section-subtitle">— مجالات الترافع والقضايا</div>
+        <div class="section-title">تخصصاتنا القضائية والنظامية</div>
+        
+        <div class="cases-grid">
+            
+            <!-- 1. قضايا الأحوال الشخصية -->
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-icon">🕌</div>
+                    <h3>قضايا الأحوال الشخصية</h3>
+                </div>
+                <p>
+                    نقدم التمثيل القضائي والشرعي المتميز في سائر دعاوى ومسائل الأحوال الشخصية وفق "نظام الأحوال الشخصية" ولائحته التنفيذية بالمملكة؛ بما يشمل دعاوى فسخ النكاح، والطلاق، والخلع، وإثبات الحضانة والزيارة، وتقدير النفقات، وقضايا العضل، بالإضافة إلى توثيق وحصر التركات، وتصفيتها، وقسمة المواريث بين الورثة رضاءً أو قضاءً.
+                </p>
+            </div>
+
+            <!-- 2. القضايا العمالية -->
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-icon">👷‍♂️</div>
+                    <h3>القضايا والمنازعات العمالية</h3>
+                </div>
+                <p>
+                    نتولى الترافع والدفاع عن حقوق أطراف العمل (صاحب العمل أو العامل) أمام المحاكم العمالية والهيئات ذات العلاقة بموجب "نظام العمل السعودي"؛ ونمثل العملاء في دعاوى الفصل غير المشروع، ومطالبات الأجور المتأخرة، ومستحقات مكافأة نهاية الخدمة، ومنازعات عقود العمل والتعويضات، وتسوية الخلافات العمالية ودياً ونظامياً.
+                </p>
+            </div>
+
+            <!-- 3. القضايا المدنية والتجارية والعقارية -->
+            <div class="case-card">
+                <div class="case-header">
+                    <div class="case-icon">🏢</div>
+                    <h3>القضايا المدنية والعقارية</h3>
+                </div>
+                <p>
+                    متابعة وتمثيل العملاء في كافة المنازعات المدنية والعقارية ومنازعات الأراضي، وصياغة عقود الاستثمار والبيع والإيجار والامتياز، والمطالبة بالحقوق المالية والتعويض عن الأضرار الناشئة عن الإخلال بالالتزامات العقدية، والتمثيل أمام محاكم التنفيذ لتحصيل الأموال وتطبيق السندات التنفيذية.
+                </p>
+            </div>
+
+        </div>
+    </section>
+
     <!-- قسم الرؤية والرسالة -->
     <section class="section-vision-mission">
         <div class="vm-title">الرؤية والرسالة</div>
         <div class="vm-box">
             <h3>رؤيتنا</h3>
-            <p>أن نكون الشريك القانوني الاستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى.</p>
+            <p>أن نكون الشريك القانوني الاستراتيجي الأول، للأفراد والشركات الناشئة إلى الكيانات الكبرى، عبر تقديم خدمات قانونية متقدمة تُبنى على الامتثال والشفافية.</p>
         </div>
     </section>
 
-    <!-- قسم خدماتنا -->
+    <!-- قسم خدماتنا العامة -->
     <section class="section-services">
-        <div class="section-title">أبرز خدماتنا ومجالات قضايانا</div>
+        <div class="section-title">خدماتنا الإدارية والتوثيقية</div>
         <div class="services-grid">
             <div class="service-card">
                 <div class="service-icon-container">💼</div>
-                <h3>الشركات والعقود التجارية</h3>
-                <p>تأسيس الكيانات والشركات، إعداد وصياغة اتفاقيات الشركاء، ومراجعة العقود التجارية.</p>
+                <h3>حوكمة الشركات والعقود</h3>
+                <p>تأسيس الكيانات، إعداد اتفاقيات الشركاء، مراجعة الصفقات، وحوكمة المنشآت لضمان الامتثال التام للأنظمة.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon-container">✍️</div>
+                <h3>التوثيق العدلي المعتمد</h3>
+                <p>توثيق الوكالات، الإقرارات، مبايعات العقارات، ومحاضر الشركات لضمان حجيتها الرسمية التامة وسرعة إنجازها.</p>
+            </div>
+            <div class="service-card">
+                <div class="service-icon-container">🛡️</div>
+                <h3>الامتثال والاستشارات السنوية</h3>
+                <p>نقدم باقات استشارية دورية للشركات والكيانات لحمايتها وتجنب نشوء النزاعات القضائية مستقبلاً.</p>
             </div>
         </div>
     </section>
 
+    <!-- الفوتر الرسمي -->
     <footer>
         جميع الحقوق محفوظة © مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية
     </footer>
 
-    <!-- سكربت التحكم الذكي بالظهور -->
+    <!-- سكربت جافا سكريبت للتحكم التفاعلي بالنافذة المنبثقة للعملاء من الجوال -->
     <script type="text/javascript">
         var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
         var isSmallScreen = window.innerWidth <= 1024; 
@@ -409,7 +512,7 @@
                     if (modal) {
                         modal.classList.add('active');
                     }
-                }, 2000); // 2000 مللي ثانية = ثانيتين
+                }, 2000); // إظهار النافذة بعد ثانيتين
             }
         }
 
