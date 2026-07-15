@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
 
-    <!-- استدعاء خط Cairo المعتمد في الهوية -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700;800&display=swap" rel="stylesheet">
@@ -29,7 +28,7 @@
             color: var(--text-dark);
             line-height: 1.8;
             overflow-x: hidden;
-            padding-bottom: 80px; /* لضمان عدم حجب محتوى الصفحة بواسطة شريط الاتصال السفلي */
+            padding-bottom: 80px;
         }
 
         header {
@@ -115,50 +114,56 @@
             justify-content: center;
             gap: 20px;
             flex-wrap: wrap;
-            margin-top: 20px;
+            margin-top: 25px;
         }
         .action-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
             gap: 12px;
-            padding: 14px 40px;
-            font-size: 16px;
-            font-weight: 700;
+            padding: 18px 45px;
+            font-size: 17px;
+            font-weight: 800;
             text-decoration: none;
-            border-radius: 6px;
+            border-radius: 8px;
             transition: all 0.3s ease;
-            min-width: 230px;
+            min-width: 250px;
             position: relative;
+            letter-spacing: 0.3px;
         }
 
         .btn-call-glow {
-            background-color: var(--gold-color);
-            color: #ffffff;
-            animation: goldPulseStrong 1.5s infinite ease-in-out;
+            background: linear-gradient(135deg, var(--gold-color), #dab479);
+            color: #143424;
+            border: 2px solid #ffffff;
+            animation: goldPulseStrong 1.4s infinite ease-in-out;
         }
         .btn-wh-glow {
-            background-color: #25d366;
+            background: linear-gradient(135deg, #25d366, #1ebe57);
             color: #ffffff;
-            animation: whatsPulseStrong 1.5s infinite ease-in-out;
+            border: 2px solid #ffffff;
+            animation: whatsPulseStrong 1.4s infinite ease-in-out;
         }
 
         .action-btn:active {
-            transform: scale(0.96);
+            transform: scale(0.95);
+        }
+        .action-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 12px 25px rgba(0,0,0,0.25);
         }
 
         @keyframes goldPulseStrong {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.8), 0 5px 15px rgba(0,0,0,0.2); }
-            50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(194, 155, 99, 0.4), 0 5px 15px rgba(0,0,0,0.2); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0), 0 5px 15px rgba(0,0,0,0.2); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.9), 0 6px 18px rgba(0,0,0,0.25); }
+            50% { transform: scale(1.05); box-shadow: 0 0 25px 12px rgba(194, 155, 99, 0.5), 0 6px 18px rgba(0,0,0,0.25); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(194, 155, 99, 0), 0 6px 18px rgba(0,0,0,0.25); }
         }
         @keyframes whatsPulseStrong {
-            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.8), 0 5px 15px rgba(0,0,0,0.2); }
-            50% { transform: scale(1.03); box-shadow: 0 0 20px 8px rgba(37, 211, 102, 0.4), 0 5px 15px rgba(0,0,0,0.2); }
-            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 5px 15px rgba(0,0,0,0.2); }
+            0% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.9), 0 6px 18px rgba(0,0,0,0.25); }
+            50% { transform: scale(1.05); box-shadow: 0 0 25px 12px rgba(37, 211, 102, 0.5), 0 6px 18px rgba(0,0,0,0.25); }
+            100% { transform: scale(1); box-shadow: 0 0 0 0 rgba(37, 211, 102, 0), 0 6px 18px rgba(0,0,0,0.25); }
         }
 
-        /* شريط الاتصال الثابت المطور في منتصف أسفل الشاشة */
         .sticky-bottom-bar {
             position: fixed;
             bottom: 20px;
@@ -236,6 +241,38 @@
             text-align-last: center;
         }
 
+        .about-content {
+            display: flex;
+            align-items: center;
+            gap: 45px;
+            max-width: 1100px;
+            margin: 0 auto;
+            flex-wrap: wrap-reverse;
+            text-align: right;
+        }
+        .about-image-wrap {
+            flex: 1 1 320px;
+            min-width: 280px;
+        }
+        .about-image-wrap img {
+            width: 100%;
+            height: 340px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 3px solid var(--gold-color);
+            box-shadow: 0 10px 30px rgba(20, 52, 36, 0.15);
+            display: block;
+        }
+        .about-text-col {
+            flex: 1.4 1 380px;
+            min-width: 280px;
+        }
+        .about-text-col .about-text {
+            margin: 0 0 20px 0;
+            text-align: justify;
+            text-align-last: right;
+        }
+
         .section-vision-mission {
             background-color: var(--primary-green);
             color: #ffffff;
@@ -305,9 +342,50 @@
             font-weight: 700;
         }
 
+        .section-gallery {
+            padding: 60px 10% 70px 10%;
+            background-color: #f8faf9;
+            text-align: center;
+        }
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            max-width: 1000px;
+            margin: 30px auto 0 auto;
+        }
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+            border: 1px solid #eef2f0;
+        }
+        .gallery-item img {
+            width: 100%;
+            height: 300px;
+            object-fit: cover;
+            display: block;
+            transition: transform 0.4s ease;
+        }
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        .gallery-caption {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            background: linear-gradient(to top, rgba(20,52,36,0.9), rgba(20,52,36,0));
+            color: #ffffff;
+            padding: 35px 15px 12px 15px;
+            font-size: 14.5px;
+            font-weight: 700;
+        }
+
         .section-services {
             padding: 60px 10%;
-            background-color: #f8faf9;
+            background-color: #ffffff;
             text-align: center;
         }
         .services-grid {
@@ -387,7 +465,6 @@
             font-weight: 600;
         }
 
-        /* نافذة الاتصال الفورية المطورة (البطاقة المنبثقة الترحيبية الأنيقة) */
         #instantCallOverlay {
             position: fixed;
             inset: 0;
@@ -531,7 +608,7 @@
                 font-size: 15px;
                 padding: 12px 20px;
             }
-            .section-about, .section-vision-mission, .section-services {
+            .section-about, .section-vision-mission, .section-services, .section-gallery {
                 padding: 40px 6%;
             }
             .section-values {
@@ -539,6 +616,16 @@
             }
             .section-title, .vm-title {
                 font-size: 20px;
+            }
+            .about-content {
+                text-align: center;
+            }
+            .about-image-wrap img {
+                height: 240px;
+            }
+            .about-text-col .about-text {
+                text-align: justify;
+                text-align-last: center;
             }
             .sticky-bottom-bar {
                 bottom: 15px;
@@ -583,26 +670,33 @@
         <h1>نقدم حلولاً وحماية قانونية مهنية متكاملة</h1>
 
         <div class="hero-actions">
-            <a href="tel:+966556799995" class="action-btn btn-call-glow">📞 اتصــال هاتفـي مباشر</a>
-            <a href="https://wa.me/966556799995?text=مرحباً، أود الحصول على استشارة قانونية سريعة" class="action-btn btn-wh-glow" target="_blank">💬 تواصل عبر الواتساب</a>
+            <a href="tel:+966556799995" class="action-btn btn-call-glow">📞 اتصل الآن</a>
+            <a href="https://wa.me/966556799995?text=مرحباً، أود الحصول على استشارة قانونية سريعة" class="action-btn btn-wh-glow" target="_blank">💬 راسلنا واتساب الآن</a>
         </div>
     </section>
 
-    <!-- شريط الاتصال الذكي الثابت أسفل منتصف الشاشة (صعوداً ونزولاً) -->
     <div class="sticky-bottom-bar" id="stickyBottomBar">
-        <a href="tel:+966556799995" class="sticky-btn sticky-call">📞 اتصل بنا</a>
-        <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن الخدمات القانونية للمكتب" class="sticky-btn sticky-wh" target="_blank">💬 واتساب سريع</a>
+        <a href="tel:+966556799995" class="sticky-btn sticky-call">📞 اتصل الآن</a>
+        <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن الخدمات القانونية للمكتب" class="sticky-btn sticky-wh" target="_blank">💬 واتساب فوري</a>
     </div>
 
     <section class="section-about">
         <div class="section-subtitle">— من نحن</div>
         <div class="section-title">مكتب عبدالعزيز عبدالله عيد العديني للمحاماة</div>
-        <p class="about-text">
-            يقوم مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية على منهجية عمل قانونية تجمع بين الدراية النظامية والخبرة العملية، مع الالتزام بأحكام الأنظمة المرعية في المملكة العربية السعودية وما استقر عليه القضاء واللوائح التنفيذية ذات الصلة.
-        </p>
-        <p class="about-text">
-            يركز المكتب على تقديم خدمة قانونية مهنية متكاملة تقوم على دراسة الوقائع بعناية، وتكييفها نظامياً دقيقاً، وصياغة مذكرات وعقود خالية قدر الإمكان من مواطن اللبس، بما يخدم مصلحة العميل ويحفظ حقوقه سواءً في مرحلة التفاوض أو التقاضي أو التنفيذ.
-        </p>
+
+        <div class="about-content">
+            <div class="about-image-wrap">
+                <img src="about-img.jpg" alt="مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية">
+            </div>
+            <div class="about-text-col">
+                <p class="about-text">
+                    يقوم مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية على منهجية عمل قانونية تجمع بين الدراية النظامية والخبرة العملية، مع الالتزام بأحكام الأنظمة المرعية في المملكة العربية السعودية وما استقر عليه القضاء واللوائح التنفيذية ذات الصلة.
+                </p>
+                <p class="about-text">
+                    يركز المكتب على تقديم خدمة قانونية مهنية متكاملة تقوم على دراسة الوقائع بعناية، وتكييفها نظامياً دقيقاً، وصياغة مذكرات وعقود خالية قدر الإمكان من مواطن اللبس، بما يخدم مصلحة العميل ويحفظ حقوقه سواءً في مرحلة التفاوض أو التقاضي أو التنفيذ.
+                </p>
+            </div>
+        </div>
     </section>
 
     <section class="section-vision-mission">
@@ -641,12 +735,27 @@
         </div>
     </section>
 
+    <section class="section-gallery">
+        <div class="section-subtitle">— لمحة من المكتب</div>
+        <div class="section-title">صور من مكتب عبدالعزيز عبدالله عيد العديني للمحاماة</div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="2025-12-13.jpg" alt="مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية">
+                <div class="gallery-caption">بيئة عمل قانونية احترافية</div>
+            </div>
+            <div class="gallery-item">
+                <img src="020dd8a6-39c7-4e02-951e-4b6fe351d6c6.jpeg" alt="استشارات قانونية في مكتب عبدالعزيز العديني للمحاماة">
+                <div class="gallery-caption">استشارات ومتابعة قانونية دقيقة</div>
+            </div>
+        </div>
+    </section>
+
     <section class="section-services">
         <div class="section-title">أبرز خدماتنا ومجالات قضايانا</div>
 
         <div class="services-grid">
 
-            <!-- الخدمة 1 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">💼</div>
@@ -656,7 +765,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (الشركات والعقود التجارية)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 2 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">✍️</div>
@@ -666,7 +774,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (التوثيق العدلي)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 3 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">🏛️</div>
@@ -676,7 +783,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (التقاضي والتمثيل القضائي)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 4 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">❤️</div>
@@ -686,7 +792,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (قضايا الأحوال الشخصية والتركات)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 5 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">👥</div>
@@ -696,7 +801,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (القضايا العمالية وعقود العمل)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 6 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">🏢</div>
@@ -706,7 +810,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (القضايا العقارية والتمويل)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 7 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">⚖️</div>
@@ -716,7 +819,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن (القضايا الإدارية وديوان المظالم)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 8 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">💡</div>
@@ -726,7 +828,6 @@
                 <a href="https://wa.me/966556799995?text=مرحباً، أود الاستفسار عن خدمات (الملكية الفكرية)" class="service-link" target="_blank">💬 استفسر عن الخدمة</a>
             </div>
 
-            <!-- الخدمة 9 -->
             <div class="service-card">
                 <div>
                     <div class="service-icon-container">🛡️</div>
@@ -743,10 +844,8 @@
         جميع الحقوق محفوظة © مكتب عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية
     </footer>
 
-    <!-- نافذة الاتصال الترحيبية المدمجة والذكية -->
     <div id="instantCallOverlay">
         <div class="ico-box">
-            <!-- زر إغلاق النافذة والعودة للتصفح -->
             <button class="close-overlay-btn" id="icoCloseBtn" title="إغلاق">✕</button>
             
             <div class="ico-logo">
@@ -756,23 +855,21 @@
             <div class="ico-subtitle">للمحاماة والاستشارات القانونية</div>
             
             <p style="font-size: 14px; color: var(--text-muted); margin-bottom: 25px; line-height: 1.6;">
-                أهلاً بك، نسعد بتقديم الدعم والحماية القانونية لقضاياك وأعمالك. هل تود الحصول على استشارة قانونية سريعة الآن؟
+                حقك القانوني يستحق أفضل دفاع. فريقنا جاهز الآن للرد على استفسارك خلال دقائق — اختر طريقة التواصل الأنسب لك:
             </p>
 
-            <a href="tel:+966556799995" class="ico-btn ico-call">📞 اتصال هاتفي مباشر</a>
-            <a href="https://wa.me/966556799995?text=مرحباً، أود الحصول على استشارة قانونية" class="ico-btn ico-wh" target="_blank">💬 تواصل سريع عبر الواتساب</a>
+            <a href="tel:+966556799995" class="ico-btn ico-call">📞 اتصل الآن</a>
+            <a href="https://wa.me/966556799995?text=مرحباً، أود الحصول على استشارة قانونية" class="ico-btn ico-wh" target="_blank">💬 راسلنا الآن عبر واتساب</a>
 
-            <span class="ico-dismiss" id="icoDismiss">متابعة تصفح الخدمات والحلول</span>
+            <span class="ico-dismiss" id="icoDismiss">لا شكراً، أواصل تصفح الخدمات</span>
         </div>
     </div>
 
     <script type="text/javascript">
-        // إدارة ظهور واختفاء شريط الاتصال الثابت أسفل منتصف الشاشة عند التحرك لأسفل
         window.addEventListener('scroll', function() {
             var heroSection = document.getElementById('heroSection');
             var stickyBottomBar = document.getElementById('stickyBottomBar');
 
-            // يظهر الشريط فقط بعد تجاوز البانر الترحيبي الرئيسي
             if (window.scrollY > (heroSection.offsetHeight - 100)) {
                 stickyBottomBar.classList.add('visible');
             } else {
@@ -780,7 +877,6 @@
             }
         });
 
-        // إدارة النافذة الترحيبية المكررة ذكياً (بدون إزعاج)
         (function() {
             var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
             var isSmallScreen = window.innerWidth <= 1024;
@@ -797,28 +893,24 @@
             function closeOverlay() {
                 overlay.classList.remove('show');
                 
-                // التعديل الذكي: إعادة تشغيل النافذة مرة أخرى وبشكل هادئ بعد مرور 60 ثانية من إغلاقها
                 if (!sessionStorage.getItem('overlayReShown')) {
                     reShowTimeout = setTimeout(function() {
                         showOverlay();
-                        sessionStorage.setItem('overlayReShown', 'true'); // يضمن عدم تكرار الإظهار لأكثر من مرتين فقط منعاً للإزعاج التام
-                    }, 60000); // 60,000 مللي ثانية = 1 دقيقة بالتمام
+                        sessionStorage.setItem('overlayReShown', 'true');
+                    }, 60000);
                 }
             }
 
-            // تظهر النافذة على أجهزة الجوال واللمس فقط عند أول زيارة في الجلسة
             if ((isMobile || (isSmallScreen && isTouch)) && !sessionStorage.getItem('callOverlayShown')) {
                 setTimeout(function() {
                     showOverlay();
                     sessionStorage.setItem('callOverlayShown', 'true');
-                }, 1200); // تظهر للمرة الأولى بعد ثانية وربع من الدخول
+                }, 1200);
             } else {
-                // إذا لم يكن جوال، يتم إلغاء النافذة تماماً
                 overlay.remove();
                 return;
             }
 
-            // تفعيل أزرار الإغلاق والتخطي
             dismissBtn.addEventListener('click', closeOverlay);
             closeBtn.addEventListener('click', closeOverlay);
         })();
