@@ -5,11 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
 
+    <!-- الروابط الخارجية للخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
+        /* المتغيرات الأساسية للألوان والهوية البصرية */
         :root {
             --primary: #0d2c1d;
             --primary-light: #1a4d35;
@@ -27,15 +29,24 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* ===== GLOBAL ANIMATIONS ===== */
+        /* تأثيرات الحركة الاحترافية */
         @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
-        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.4); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
         .btn-shimmer { position: relative; overflow: hidden; }
-        .btn-shimmer::after { content: ""; position: absolute; top: 0; left: -100%; width: 50%; height: 100%; background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent); animation: shimmer 3s infinite; }
+        .btn-shimmer::after { 
+            content: ""; 
+            position: absolute; 
+            top: 0; 
+            left: -100%; 
+            width: 60%; 
+            height: 100%; 
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent); 
+            animation: shimmer 1.8s infinite; 
+        }
 
-        /* ===== HEADER ===== */
+        /* الهيدر (رأس الصفحة) */
         header {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -71,7 +82,7 @@
             white-space: nowrap;
         }
 
-        /* ===== HERO SECTION ===== */
+        /* واجهة الموقع (Hero Section) */
         .hero {
             padding: 100px 5% 80px;
             background: linear-gradient(rgba(13, 44, 29, 0.85), rgba(13, 44, 29, 0.7)), 
@@ -99,11 +110,7 @@
         .btn-hero-wh { background: var(--whatsapp); color: var(--white); animation: pulse-green 2s infinite; }
         .btn-main:hover { transform: translateY(-4px); filter: brightness(1.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-        /* ===== TRUST SECTION ===== */
-        .trust-section { background: var(--white); padding: 40px 5%; display: flex; justify-content: center; gap: 40px; flex-wrap: wrap; border-bottom: 1px solid #eee; }
-        .trust-item { display: flex; align-items: center; gap: 10px; color: var(--primary); font-weight: 800; font-size: 15px; }
-
-        /* ===== SERVICES GRID ===== */
+        /* قسم الخدمات */
         .services-section { padding: 80px 5%; background: var(--bg-soft); text-align: center; }
         .section-tag { color: var(--gold); font-weight: 800; font-size: 14px; margin-bottom: 10px; display: block; text-transform: uppercase; letter-spacing: 1px; }
         .section-h2 { font-size: 36px; color: var(--primary); font-weight: 900; margin-bottom: 60px; }
@@ -125,13 +132,7 @@
         .service-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
         .service-link { color: var(--gold); font-weight: 800; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 5px; }
 
-        /* ===== WHY US SECTION ===== */
-        .why-us { padding: 80px 5%; background: var(--primary); color: var(--white); text-align: center; }
-        .why-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 40px; margin-top: 50px; }
-        .why-item h4 { font-size: 22px; color: var(--gold-light); margin-bottom: 15px; font-weight: 900; }
-        .why-item p { font-size: 16px; opacity: 0.8; }
-
-        /* ===== CONVERSION POPUP ===== */
+        /* النافذة المنبثقة (Popup) */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -143,7 +144,7 @@
             justify-content: center;
             opacity: 0;
             visibility: hidden;
-            transition: opacity 0.3s ease, visibility 0.3s ease;
+            transition: opacity 0.25s ease, visibility 0.25s ease;
         }
         .modal-overlay.show { opacity: 1; visibility: visible; }
 
@@ -154,8 +155,8 @@
             padding: 50px 40px;
             border-radius: 30px;
             text-align: center;
-            transform: scale(0.85);
-            transition: transform 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            transform: scale(0.8);
+            transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 4px solid var(--gold);
             position: relative;
         }
@@ -171,7 +172,7 @@
         .modal-wh { background: var(--whatsapp); color: var(--white); }
         .modal-skip { margin-top: 15px; display: block; color: var(--gold); font-weight: 900; text-decoration: underline; cursor: pointer; font-size: 15px; }
 
-        /* ===== SMART FLOATING BAR ===== */
+        /* شريط التواصل العائم السفلي */
         .floating-bar {
             position: fixed;
             bottom: 25px;
@@ -192,8 +193,8 @@
         .floating-bar.visible { transform: translateY(0); }
         .float-link { text-decoration: none; color: var(--primary); font-weight: 900; font-size: 14px; display: flex; align-items: center; gap: 8px; }
 
-        /* ===== DETAIL PAGE ===== */
-        .page { display: none; animation: fadeIn 0.5s ease; }
+        /* صفحات التفاصيل */
+        .page { display: none; animation: fadeIn 0.4s ease; }
         .page.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
 
@@ -209,16 +210,14 @@
 
         .sidebar-card { background: var(--primary); color: var(--white); padding: 50px 40px; border-radius: 30px; text-align: center; position: sticky; top: 120px; }
         .sidebar-card h4 { font-size: 24px; color: var(--gold-light); margin-bottom: 20px; font-weight: 900; }
-        .sidebar-btn { display: block; width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: 900; margin-bottom: 15px; }
 
-        /* ===== FOOTER ===== */
+        /* الفوتر (تذييل الصفحة) */
         footer { background: var(--primary); padding: 50px 5%; text-align: center; color: rgba(255,255,255,0.7); border-top: 5px solid var(--gold); font-size: 14px; }
-
     </style>
 </head>
 <body>
 
-    <!-- HEADER -->
+    <!-- الهيدر -->
     <header id="mainHeader">
         <div class="header-brand" onclick="showPage('home')">
             <div class="logo-box">
@@ -232,14 +231,14 @@
         <a href="tel:+966556799995" class="header-call-btn btn-shimmer">☎️ اتصل بنا الآن</a>
     </header>
 
-    <!-- FLOATING BAR -->
+    <!-- شريط التواصل العائم -->
     <div class="floating-bar" id="floatingBar">
         <a href="tel:+966556799995" class="float-link">📞 اتصال فوري</a>
         <a id="floatWhLink" href="#" target="_blank" class="float-link">💬 واتساب</a>
         <a href="#" onclick="showPage('home')" class="float-link">🏠 الرئيسية</a>
     </div>
 
-    <!-- HOME PAGE -->
+    <!-- الصفحة الرئيسية -->
     <div id="home-page" class="page active">
         <section class="hero">
             <h1>نحمي حقوقكم بحلول قانونية مبتكرة</h1>
@@ -250,17 +249,11 @@
             </div>
         </section>
 
-        <section class="trust-section">
-            <div class="trust-item">✓ خبرة قانونية واسعة</div>
-            <div class="trust-item">✓ سرعة في الإجراءات</div>
-            <div class="trust-item">✓ سرية تامة للبيانات</div>
-            <div class="trust-item">✓ فريق عمل متخصص</div>
-        </section>
-
         <section class="services-section">
             <span class="section-tag">مجالات التميز</span>
             <h2 class="section-h2">نخبة الخدمات القانونية</h2>
             <div class="services-grid">
+                <!-- الخدمات التسع -->
                 <div class="service-card" onclick="handleServiceClick('commercial')">
                     <span class="service-icon">💼</span>
                     <h3>القانون التجاري والشركات</h3>
@@ -297,28 +290,24 @@
                     <p>حل نزاعات الملكية وتدقيق الصكوك وصياغة عقود التطوير.</p>
                     <span class="service-link">تصفح التفاصيل ←</span>
                 </div>
-            </div>
-        </section>
-
-        <section class="why-us">
-            <h2 class="section-h2" style="color: white; margin-bottom: 20px;">لماذا يختارنا العملاء؟</h2>
-            <p style="opacity: 0.8; max-width: 700px; margin: 0 auto 50px;">نحن نؤمن بأن كل قضية هي أمانة، ونسعى جاهدين لتحقيق أفضل النتائج القانونية لعملائنا.</p>
-            <div class="why-grid">
-                <div class="why-item">
-                    <h4>الاستجابة السريعة</h4>
-                    <p>نقدر وقتك، لذا نضمن الرد على استفساراتك في أسرع وقت ممكن.</p>
+                <div class="service-card" onclick="handleServiceClick('admin')">
+                    <span class="service-icon">📑</span>
+                    <h3>القضايا الإدارية</h3>
+                    <p>التظلم من القرارات الإدارية والتمثيل أمام ديوان المظالم.</p>
+                    <span class="service-link">تصفح التفاصيل ←</span>
                 </div>
-                <div class="why-item">
-                    <h4>الخبرة المتخصصة</h4>
-                    <p>فريقنا يضم نخبة من المحامين والمستشارين في كافة المجالات.</p>
+                <div class="service-card" onclick="handleServiceClick('ip')">
+                    <span class="service-icon">💡</span>
+                    <h3>الملكية الفكرية</h3>
+                    <p>تسجيل العلامات التجارية وحماية براءات الاختراع وحقوق المؤلف.</p>
+                    <span class="service-link">تصفح التفاصيل ←</span>
                 </div>
-                <div class="why-item">
-                    <h4>النتائج الملموسة</h4>
-                    <p>سجل حافل بالنجاحات في القضايا المعقدة والمطالبات الكبرى.</p>
+                <div class="service-card" onclick="handleServiceClick('compliance')">
+                    <span class="service-icon">🛡️</span>
+                    <h3>الامتثال والحوكمة</h3>
+                    <p>مراجعة سياسات المنشآت لضمان مطابقتها للأنظمة واللوائح المحلية.</p>
+                    <span class="service-link">تصفح التفاصيل ←</span>
                 </div>
-            </div>
-            <div style="margin-top: 60px;">
-                <a href="tel:+966556799995" class="btn-main btn-hero-call btn-shimmer">تواصل معنا للحصول على استشارة الآن</a>
             </div>
         </section>
 
@@ -327,9 +316,9 @@
         </footer>
     </div>
 
-    <!-- DETAIL PAGE -->
+    <!-- صفحة تفاصيل الخدمة -->
     <div id="detail-page" class="page detail-view">
-        <button class="btn-back" onclick="showPage('home')">← العودة للرئيسية</button>
+        <button class="btn-back btn-shimmer" onclick="showPage('home')">← العودة للرئيسية</button>
         <div class="detail-flex">
             <div class="detail-info">
                 <h1 id="detTitle">عنوان الخدمة</h1>
@@ -345,7 +334,7 @@
         </div>
     </div>
 
-    <!-- CONVERSION POPUP -->
+    <!-- النافذة المنبثقة للتحويل (Popup) -->
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal()">✕</span>
@@ -361,13 +350,17 @@
     </div>
 
     <script>
+        // بيانات الخدمات التسع
         const data = {
-            'commercial': { title: 'القانون التجاري والشركات', desc: 'نقدم حلولاً قانونية متكاملة للشركات، من التأسيس وحتى الحوكمة الشاملة، مع التركيز على حماية المصالح التجارية.', features: ['تأسيس وتحويل كافة أنواع الشركات', 'صياغة ومراجعة العقود التجارية', 'حوكمة الشركات والامتثال الأنظمي', 'الاستشارات الضريبية والزكوية'], msg: 'استفسار عن القانون التجاري' },
-            'notary': { title: 'التوثيق العدلي المعتمد', desc: 'نوفر كافة خدمات التوثيق المعتمدة من وزارة العدل التي تمنح مستنداتكم الحجية الرسمية والقوة التنفيذية.', features: ['إصدار وفسخ الوكالات الشرعية', 'توثيق عقود تأسيس الشركات', 'إفراغ العقارات ونقل الملكية', 'توثيق الإقرارات المالية والمبايعات'], msg: 'استفسار عن خدمات التوثيق' },
-            'litigation': { title: 'التمثيل والتقاضي', desc: 'نمتلك نخبة من المحامين المتخصصين في الترافع أمام كافة الدوائر القضائية السعودية لتحقيق أفضل النتائج.', features: ['التمثيل أمام المحاكم التجارية والعامة', 'قضايا التنفيذ والمطالبات المالية', 'الاستئناف والتمثيل أمام المحكمة العليا', 'التحكيم والوساطة في النزاعات'], msg: 'استفسار عن تمثيل قضائي' },
-            'family': { title: 'الأحوال الشخصية والتركات', desc: 'نتعامل مع قضايا الأسرة والتركات بأقصى درجات الخصوصية والاحترافية والحفظ الكامل للحقوق الشرعية.', features: ['قسمة التركات وتصفيتها وتوزيعها', 'قضايا النفقة والحضانة والزيارة', 'توثيق الوصايا والأوقاف العائلية', 'إجراءات الطلاق والخلع والفسخ'], msg: 'استفسار عن قضايا الأسرة' },
-            'labor': { title: 'القضايا العمالية', desc: 'نضمن حقوق أطراف العلاقة التعاقدية وفق نظام العمل السعودي، مع صياغة لوائح تمنع حدوث النزاعات.', features: ['تمثيل المنشآت في التسوية الودية', 'قضايا الفصل التعسفي والمستحقات', 'صياغة عقود العمل ولوائح المنشأة', 'استشارات نظام التأمينات الاجتماعية'], msg: 'استفسار عن قضايا عمالية' },
-            'realestate': { title: 'القضايا العقارية', desc: 'دعم قانوني شامل في القطاع العقاري، من تدقيق الملكيات وحتى حل النزاعات المعقدة في الاستثمار العقاري.', features: ['نزاعات الملكية وتداخل الصكوك', 'صياغة عقود التطوير والمقاولات', 'عقود الإيجار والتمويل والرهن', 'تمثيل الملاك أمام لجان المنازعات'], msg: 'استفسار عن قضايا عقارية' }
+            'commercial': { title: 'القانون التجاري والشركات', desc: 'نقدم حلولاً قانونية متكاملة للشركات، من التأسيس وحتى الحوكمة الشاملة.', features: ['تأسيس وتحويل كافة أنواع الشركات', 'صياغة ومراجعة العقود التجارية', 'حوكمة الشركات والامتثال الأنظمي'], msg: 'استفسار عن القانون التجاري' },
+            'notary': { title: 'التوثيق العدلي المعتمد', desc: 'نوفر كافة خدمات التوثيق المعتمدة التي تمنح مستنداتكم الحجية الرسمية.', features: ['إصدار وفسخ الوكالات الشرعية', 'توثيق عقود تأسيس الشركات', 'إفراغ العقارات ونقل الملكية'], msg: 'استفسار عن خدمات التوثيق' },
+            'litigation': { title: 'التمثيل والتقاضي', desc: 'نمتلك نخبة من المحامين المتخصصين في الترافع أمام كافة الدوائر القضائية.', features: ['التمثيل أمام المحاكم التجارية والعامة', 'قضايا التنفيذ والمطالبات المالية', 'التحكيم والوساطة في النزاعات'], msg: 'استفسار عن تمثيل قضائي' },
+            'family': { title: 'الأحوال الشخصية والتركات', desc: 'نتعامل مع قضايا الأسرة والتركات بأقصى درجات الخصوصية والاحترافية.', features: ['قسمة التركات وتصفيتها', 'قضايا النفقة والحضانة والزيارة', 'توثيق الوصايا والأوقاف العائلية'], msg: 'استفسار عن قضايا الأسرة' },
+            'labor': { title: 'القضايا العمالية', desc: 'نضمن حقوق أطراف العلاقة التعاقدية وفق نظام العمل السعودي.', features: ['تمثيل المنشآت في التسوية الودية', 'قضايا الفصل التعسفي والمستحقات', 'صياغة عقود العمل ولوائح المنشأة'], msg: 'استفسار عن قضايا عمالية' },
+            'realestate': { title: 'القضايا العقارية', desc: 'دعم قانوني شامل في القطاع العقاري، من تدقيق الملكيات وحتى حل النزاعات.', features: ['نزاعات الملكية وتداخل الصكوك', 'صياغة عقود التطوير والمقاولات', 'عقود الإيجار والتمويل والرهن'], msg: 'استفسار عن قضايا عقارية' },
+            'admin': { title: 'القضايا الإدارية', desc: 'التظلم من القرارات الإدارية والتمثيل أمام ديوان المظالم لحماية حقوقكم.', features: ['دعاوى إلغاء القرارات الإدارية', 'دعاوى التعويض ضد الجهات الحكومية', 'تمثيل الموظفين في النزاعات الوظيفية'], msg: 'استفسار عن قضايا إدارية' },
+            'ip': { title: 'الملكية الفكرية', desc: 'حماية إبداعاتكم وابتكاراتكم من خلال تسجيل العلامات التجارية وبراءات الاختراع.', features: ['تسجيل العلامات التجارية محلياً ودولياً', 'حماية حقوق المؤلف والحقوق المجاورة', 'ملاحقة حالات التعدي والتقليد'], msg: 'استفسار عن الملكية الفكرية' },
+            'compliance': { title: 'الامتثال والحوكمة', desc: 'ضمان سير عمل المنشأة وفق أعلى معايير النزاهة والأنظمة المحلية.', features: ['إعداد لوائح الحوكمة الداخلية', 'مراجعة الامتثال لأنظمة مكافحة التستر', 'تقييم المخاطر القانونية الدورية'], msg: 'استفسار عن الامتثال والحوكمة' }
         };
 
         let currentKey = '';
@@ -411,12 +404,12 @@
         document.getElementById('floatWhLink' ).href = "https://wa.me/966556799995?text=" + defaultMsg;
 
         window.onload = ( ) => {
-            if(!sessionStorage.getItem('lp_visited')) {
+            if(!sessionStorage.getItem('final_visited')) {
                 setTimeout(() => {
                     document.getElementById('modalWhLink').href = "https://wa.me/966556799995?text=" + defaultMsg;
                     document.getElementById('contactModal' ).classList.add('show');
-                    sessionStorage.setItem('lp_visited', 'true');
-                }, 1500);
+                    sessionStorage.setItem('final_visited', 'true');
+                }, 800); // سرعة فائقة للتحويل (0.8 ثانية)
             }
         };
     </script>
