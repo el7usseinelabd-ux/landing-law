@@ -29,7 +29,7 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* تأثيرات الحركة الاحترافية */
+        /* تأثيرات الحركة الاحترافية للأزرار */
         @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
@@ -132,7 +132,7 @@
         .service-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
         .service-link { color: var(--gold); font-weight: 800; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 5px; }
 
-        /* النافذة المنبثقة (Popup) */
+        /* النافذة المنبثقة للتحويل (Popup) */
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -228,13 +228,13 @@
                 <p>للمحاماة والاستشارات القانونية</p>
             </div>
         </div>
-        <a href="tel:+966556799995" class="header-call-btn btn-shimmer">☎️ اتصل بنا الآن</a>
+        <a href="tel:+966556799995" id="btn-call-header" class="header-call-btn btn-shimmer">☎️ اتصل بنا الآن</a>
     </header>
 
     <!-- شريط التواصل العائم -->
     <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966556799995" class="float-link">📞 اتصال فوري</a>
-        <a id="floatWhLink" href="#" target="_blank" class="float-link">💬 واتساب</a>
+        <a href="tel:+966556799995" id="btn-call-float" class="float-link">📞 اتصال فوري</a>
+        <a id="btn-wh-float" href="#" target="_blank" class="float-link">💬 واتساب</a>
         <a href="#" onclick="showPage('home')" class="float-link">🏠 الرئيسية</a>
     </div>
 
@@ -244,16 +244,15 @@
             <h1>نحمي حقوقكم بحلول قانونية مبتكرة</h1>
             <p>مكتب متخصص يقدم استشارات قانونية رصينة تتماشى مع رؤية المملكة 2030. تواصل معنا الآن لضمان حماية مصالحك القانونية.</p>
             <div class="hero-btns">
-                <a href="tel:+966556799995" class="btn-main btn-hero-call btn-shimmer">☎️ استشارة هاتفية فورية</a>
-                <a id="heroWhLink" href="#" target="_blank" class="btn-main btn-hero-wh btn-shimmer">💬 مراسلة عبر واتساب</a>
+                <a href="tel:+966556799995" id="btn-call-hero" class="btn-main btn-hero-call btn-shimmer">☎️ استشارة هاتفية فورية</a>
+                <a id="btn-wh-hero" href="#" target="_blank" class="btn-main btn-hero-wh btn-shimmer">💬 مراسلة عبر واتساب</a>
             </div>
         </section>
 
         <section class="services-section">
-            <span class="section-tag">مجالات التميز</span>
-            <h2 class="section-h2">حلول قانونية متكاملة وشاملة</h2>
+            <span class="section-tag">أرقى الخدمات والاستشارات القانونية</span>
+            <h2 class="section-h2">مجالات التميز القانوني</h2>
             <div class="services-grid">
-                <!-- الخدمات التسع -->
                 <div class="service-card" onclick="handleServiceClick('commercial')">
                     <span class="service-icon">💼</span>
                     <h3>القانون التجاري والشركات</h3>
@@ -290,24 +289,6 @@
                     <p>حل نزاعات الملكية وتدقيق الصكوك وصياغة عقود التطوير.</p>
                     <span class="service-link">تصفح التفاصيل ←</span>
                 </div>
-                <div class="service-card" onclick="handleServiceClick('admin')">
-                    <span class="service-icon">📑</span>
-                    <h3>القضايا الإدارية</h3>
-                    <p>التظلم من القرارات الإدارية والتمثيل أمام ديوان المظالم.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <div class="service-card" onclick="handleServiceClick('ip')">
-                    <span class="service-icon">💡</span>
-                    <h3>الملكية الفكرية</h3>
-                    <p>تسجيل العلامات التجارية وحماية براءات الاختراع وحقوق المؤلف.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <div class="service-card" onclick="handleServiceClick('compliance')">
-                    <span class="service-icon">🛡️</span>
-                    <h3>الامتثال والحوكمة</h3>
-                    <p>مراجعة سياسات المنشآت لضمان مطابقتها للأنظمة واللوائح المحلية.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
             </div>
         </section>
 
@@ -328,8 +309,8 @@
             <div class="sidebar-card">
                 <h4>تواصل معنا الآن</h4>
                 <p style="margin-bottom: 30px; opacity: 0.9; font-weight: 600;">نحن هنا لتقديم الدعم القانوني الفوري لك.</p>
-                <a href="tel:+966556799995" class="modal-btn modal-call btn-shimmer">☎️ اتصل بنا الآن</a>
-                <a id="detWhLink" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer">💬 مراسلة واتساب</a>
+                <a href="tel:+966556799995" id="btn-call-sidebar" class="modal-btn modal-call btn-shimmer">☎️ اتصل بنا الآن</a>
+                <a id="btn-wh-sidebar" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer">💬 مراسلة واتساب</a>
             </div>
         </div>
     </div>
@@ -342,25 +323,21 @@
             <h2 class="modal-h2">احصل على استشارة قانونية</h2>
             <p class="modal-p">فريقنا المتخصص جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
             
-            <a href="tel:+966556799995" class="modal-btn modal-call btn-shimmer">📞 اتصل بنا للحصول على رد فوري</a>
-            <a id="modalWhLink" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer">💬 تواصل عبر واتساب الآن</a>
+            <a href="tel:+966556799995" id="btn-call-modal" class="modal-btn modal-call btn-shimmer">📞 اتصل بنا للحصول على رد فوري</a>
+            <a id="btn-wh-modal" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer">💬 تواصل عبر واتساب الآن</a>
             
             <span class="modal-skip" onclick="proceedToDetail()">أو تصفح تفاصيل الخدمة أولاً</span>
         </div>
     </div>
 
     <script>
-        // بيانات الخدمات التسع
         const data = {
             'commercial': { title: 'القانون التجاري والشركات', desc: 'نقدم حلولاً قانونية متكاملة للشركات، من التأسيس وحتى الحوكمة الشاملة.', features: ['تأسيس وتحويل كافة أنواع الشركات', 'صياغة ومراجعة العقود التجارية', 'حوكمة الشركات والامتثال الأنظمي'], msg: 'استفسار عن القانون التجاري' },
             'notary': { title: 'التوثيق العدلي المعتمد', desc: 'نوفر كافة خدمات التوثيق المعتمدة التي تمنح مستنداتكم الحجية الرسمية.', features: ['إصدار وفسخ الوكالات الشرعية', 'توثيق عقود تأسيس الشركات', 'إفراغ العقارات ونقل الملكية'], msg: 'استفسار عن خدمات التوثيق' },
             'litigation': { title: 'التمثيل والتقاضي', desc: 'نمتلك نخبة من المحامين المتخصصين في الترافع أمام كافة الدوائر القضائية.', features: ['التمثيل أمام المحاكم التجارية والعامة', 'قضايا التنفيذ والمطالبات المالية', 'التحكيم والوساطة في النزاعات'], msg: 'استفسار عن تمثيل قضائي' },
             'family': { title: 'الأحوال الشخصية والتركات', desc: 'نتعامل مع قضايا الأسرة والتركات بأقصى درجات الخصوصية والاحترافية.', features: ['قسمة التركات وتصفيتها', 'قضايا النفقة والحضانة والزيارة', 'توثيق الوصايا والأوقاف العائلية'], msg: 'استفسار عن قضايا الأسرة' },
             'labor': { title: 'القضايا العمالية', desc: 'نضمن حقوق أطراف العلاقة التعاقدية وفق نظام العمل السعودي.', features: ['تمثيل المنشآت في التسوية الودية', 'قضايا الفصل التعسفي والمستحقات', 'صياغة عقود العمل ولوائح المنشأة'], msg: 'استفسار عن قضايا عمالية' },
-            'realestate': { title: 'القضايا العقارية', desc: 'دعم قانوني شامل في القطاع العقاري، من تدقيق الملكيات وحتى حل النزاعات.', features: ['نزاعات الملكية وتداخل الصكوك', 'صياغة عقود التطوير والمقاولات', 'عقود الإيجار والتمويل والرهن'], msg: 'استفسار عن قضايا عقارية' },
-            'admin': { title: 'القضايا الإدارية', desc: 'التظلم من القرارات الإدارية والتمثيل أمام ديوان المظالم لحماية حقوقكم.', features: ['دعاوى إلغاء القرارات الإدارية', 'دعاوى التعويض ضد الجهات الحكومية', 'تمثيل الموظفين في النزاعات الوظيفية'], msg: 'استفسار عن قضايا إدارية' },
-            'ip': { title: 'الملكية الفكرية', desc: 'حماية إبداعاتكم وابتكاراتكم من خلال تسجيل العلامات التجارية وبراءات الاختراع.', features: ['تسجيل العلامات التجارية محلياً ودولياً', 'حماية حقوق المؤلف والحقوق المجاورة', 'ملاحقة حالات التعدي والتقليد'], msg: 'استفسار عن الملكية الفكرية' },
-            'compliance': { title: 'الامتثال والحوكمة', desc: 'ضمان سير عمل المنشأة وفق أعلى معايير النزاهة والأنظمة المحلية.', features: ['إعداد لوائح الحوكمة الداخلية', 'مراجعة الامتثال لأنظمة مكافحة التستر', 'تقييم المخاطر القانونية الدورية'], msg: 'استفسار عن الامتثال والحوكمة' }
+            'realestate': { title: 'القضايا العقارية', desc: 'دعم قانوني شامل في القطاع العقاري، من تدقيق الملكيات وحتى حل النزاعات.', features: ['نزاعات الملكية وتداخل الصكوك', 'صياغة عقود التطوير والمقاولات', 'عقود الإيجار والتمويل والرهن'], msg: 'استفسار عن قضايا عقارية' }
         };
 
         let currentKey = '';
@@ -374,7 +351,8 @@
         function handleServiceClick(key) {
             currentKey = key;
             const item = data[key];
-            document.getElementById('modalWhLink').href = `https://wa.me/966556799995?text=${encodeURIComponent(item.msg )}`;
+            const whLink = `https://wa.me/966556799995?text=${encodeURIComponent(item.msg )}`;
+            document.getElementById('btn-wh-modal').href = whLink;
             document.getElementById('contactModal').classList.add('show');
         }
 
@@ -386,7 +364,7 @@
             if(!item) return showPage('home');
             document.getElementById('detTitle').innerText = item.title;
             document.getElementById('detDesc').innerText = item.desc;
-            document.getElementById('detWhLink').href = `https://wa.me/966556799995?text=${encodeURIComponent(item.msg )}`;
+            document.getElementById('btn-wh-sidebar').href = `https://wa.me/966556799995?text=${encodeURIComponent(item.msg )}`;
             const list = document.getElementById('detFeatures');
             list.innerHTML = '';
             item.features.forEach(f => { const li = document.createElement('li'); li.innerText = f; list.appendChild(li); });
@@ -400,16 +378,16 @@
         });
 
         const defaultMsg = encodeURIComponent("مرحباً، أود الحصول على استشارة قانونية.");
-        document.getElementById('heroWhLink').href = "https://wa.me/966556799995?text=" + defaultMsg;
-        document.getElementById('floatWhLink' ).href = "https://wa.me/966556799995?text=" + defaultMsg;
+        document.getElementById('btn-wh-hero').href = "https://wa.me/966556799995?text=" + defaultMsg;
+        document.getElementById('btn-wh-float' ).href = "https://wa.me/966556799995?text=" + defaultMsg;
 
         window.onload = ( ) => {
-            if(!sessionStorage.getItem('final_visited')) {
+            if(!sessionStorage.getItem('final_track_visited')) {
                 setTimeout(() => {
-                    document.getElementById('modalWhLink').href = "https://wa.me/966556799995?text=" + defaultMsg;
+                    document.getElementById('btn-wh-modal').href = "https://wa.me/966556799995?text=" + defaultMsg;
                     document.getElementById('contactModal' ).classList.add('show');
-                    sessionStorage.setItem('final_visited', 'true');
-                }, 800); // سرعة فائقة للتحويل (0.8 ثانية)
+                    sessionStorage.setItem('final_track_visited', 'true');
+                }, 800); // سرعة فائقة للنافذة (0.8 ثانية)
             }
         };
     </script>
