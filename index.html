@@ -196,12 +196,16 @@
         .modal-overlay.show { opacity: 1; visibility: visible; }
         .modal-content {
             background: var(--white); width: 90%; max-width: 420px;
-            padding: 40px 30px; border-radius: 25px; text-align: center;
+            padding: 30px 25px; border-radius: 25px; text-align: center;
             transform: translateY(20px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
             border: 3px solid var(--gold); position: relative;
         }
         .modal-overlay.show .modal-content { transform: translateY(0); }
         .modal-close { position: absolute; top: 15px; right: 15px; font-size: 24px; cursor: pointer; color: #ccc; }
+        
+        .modal-logo { width: 70px; height: 70px; border-radius: 50%; border: 2px solid var(--gold); padding: 3px; margin: 0 auto 15px auto; display: block; }
+        .modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
         .modal-h2 { font-size: 22px; color: var(--primary); font-weight: 900; margin-bottom: 10px; }
         .modal-p { font-size: 15px; color: var(--text-muted); margin-bottom: 25px; font-weight: 700; }
         .modal-btn { display: block; width: 100%; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 900; margin-bottom: 12px; font-size: 16px; }
@@ -347,6 +351,9 @@
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
             <span class="modal-close" onclick="closeModal( )">✕</span>
+            <div class="modal-logo">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+            </div>
             <h2 class="modal-h2">استشارة قانونية فورية</h2>
             <p class="modal-p">فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
             <a href="tel:+966556799995" class="modal-btn modal-call btn-shimmer" onclick="trackConversion('call', 'modal')">📞 اتصل الآن</a>
@@ -393,7 +400,7 @@
                     document.getElementById('btn-wh-modal').href = "https://wa.me/966556799995?text=" + defaultMsg;
                     document.getElementById('contactModal' ).classList.add('show');
                     sessionStorage.setItem('final_track_visited', 'true');
-                }, 800);
+                }, 100);
             }
         };
     </script>
