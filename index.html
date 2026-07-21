@@ -5,13 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>عبدالعزيز عبدالله عيد العديني للمحاماة والاستشارات القانونية</title>
 
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-KKHH6SBP');
+    </script>
+    <!-- End Google Tag Manager -->
+
     <!-- الروابط الخارجية للخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
 
     <style>
-        /* المتغيرات الأساسية للألوان والهوية البصرية */
         :root {
             --primary: #0d2c1d;
             --primary-light: #1a4d35;
@@ -29,7 +38,6 @@
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
         body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
-        /* تأثيرات الحركة الاحترافية للأزرار */
         @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
@@ -46,7 +54,6 @@
             animation: shimmer 1.8s infinite; 
         }
 
-        /* الهيدر (رأس الصفحة) */
         header {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -82,7 +89,6 @@
             white-space: nowrap;
         }
 
-        /* واجهة الموقع (Hero Section) */
         .hero {
             padding: 100px 5% 80px;
             background: linear-gradient(rgba(13, 44, 29, 0.85), rgba(13, 44, 29, 0.7)), 
@@ -110,7 +116,6 @@
         .btn-hero-wh { background: var(--whatsapp); color: var(--white); animation: pulse-green 2s infinite; }
         .btn-main:hover { transform: translateY(-4px); filter: brightness(1.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-        /* قسم الخدمات */
         .services-section { padding: 80px 5%; background: var(--bg-soft); text-align: center; }
         .section-tag { color: var(--gold); font-weight: 800; font-size: 14px; margin-bottom: 10px; display: block; text-transform: uppercase; letter-spacing: 1px; }
         .section-h2 { font-size: 36px; color: var(--primary); font-weight: 900; margin-bottom: 60px; }
@@ -132,7 +137,19 @@
         .service-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
         .service-link { color: var(--gold); font-weight: 800; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 5px; }
 
-        /* النافذة المنبثقة للتحويل (Popup) */
+        /* قسم التقييمات الجديد */
+        .testimonials-section { padding: 80px 5%; background: var(--white); text-align: center; }
+        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
+        .testimonial-card { background: var(--bg-soft); padding: 30px 25px; border-radius: 20px; text-align: right; border: 1px solid rgba(194,155,99,0.15); }
+        .testimonial-stars { color: var(--gold); font-size: 18px; margin-bottom: 12px; }
+        .testimonial-text { color: var(--text-main); font-size: 15px; line-height: 1.8; margin-bottom: 15px; font-weight: 600; }
+        .testimonial-name { color: var(--text-muted); font-size: 13px; font-weight: 800; }
+
+        /* شريط الثقة والتراخيص */
+        .trust-bar { padding: 40px 5%; background: var(--primary); text-align: center; }
+        .trust-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; }
+        .trust-item { color: var(--gold-light); font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+
         .modal-overlay {
             position: fixed;
             inset: 0;
@@ -172,7 +189,6 @@
         .modal-wh { background: var(--whatsapp); color: var(--white); }
         .modal-skip { margin-top: 15px; display: block; color: var(--gold); font-weight: 900; text-decoration: underline; cursor: pointer; font-size: 15px; }
 
-        /* شريط التواصل العائم السفلي */
         .floating-bar {
             position: fixed;
             bottom: 25px;
@@ -193,7 +209,6 @@
         .floating-bar.visible { transform: translateY(0); }
         .float-link { text-decoration: none; color: var(--primary); font-weight: 900; font-size: 14px; display: flex; align-items: center; gap: 8px; }
 
-        /* صفحات التفاصيل */
         .page { display: none; animation: fadeIn 0.4s ease; }
         .page.active { display: block; }
         @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
@@ -211,11 +226,14 @@
         .sidebar-card { background: var(--primary); color: var(--white); padding: 50px 40px; border-radius: 30px; text-align: center; position: sticky; top: 120px; }
         .sidebar-card h4 { font-size: 24px; color: var(--gold-light); margin-bottom: 20px; font-weight: 900; }
 
-        /* الفوتر (تذييل الصفحة) */
         footer { background: var(--primary); padding: 50px 5%; text-align: center; color: rgba(255,255,255,0.7); border-top: 5px solid var(--gold); font-size: 14px; }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
 
     <!-- الهيدر -->
     <header id="mainHeader">
@@ -291,6 +309,43 @@
                 </div>
             </div>
         </section>
+
+        <!-- قسم تقييمات العملاء الجديد -->
+        <section class="testimonials-section">
+            <span class="section-tag">ثقة عملائنا</span>
+            <h2 class="section-h2">آراء عملائنا</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"تعاون وسرعة وإنجاز، وحصلنا على البراءة بفضل جهوده وسعة صدره."</p>
+                    <p class="testimonial-name">Hessen H. — تقييم Google</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"مثال للمحامي المتمكن والمتعاون، وسريع في إنجاز الإجراءات."</p>
+                    <p class="testimonial-name">Helal H. — تقييم Google</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"متابعته ما عليها كلام، شخص صادق وراقٍ في التعامل."</p>
+                    <p class="testimonial-name">Ahmed S. — تقييم Google</p>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-stars">★★★★★</div>
+                    <p class="testimonial-text">"معاملة راقية ولم يستغرق وقتاً طويلاً لإنجاز المطلوب."</p>
+                    <p class="testimonial-name">Talal Z. — تقييم Google</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- شريط الثقة -->
+        <div class="trust-bar">
+            <div class="trust-items">
+                <span class="trust-item">✓ مرخص من وزارة العدل</span>
+                <span class="trust-item">✓ عضو الهيئة السعودية للمحامين</span>
+                <span class="trust-item">✓ سرية تامة وخصوصية العميل</span>
+            </div>
+        </div>
 
         <footer>
             <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، المملكة العربية السعودية</p>
@@ -387,7 +442,7 @@
                     document.getElementById('btn-wh-modal').href = "https://wa.me/966556799995?text=" + defaultMsg;
                     document.getElementById('contactModal' ).classList.add('show');
                     sessionStorage.setItem('final_track_visited', 'true');
-                }, 800); // سرعة فائقة للنافذة (0.8 ثانية)
+                }, 800);
             }
         };
     </script>
