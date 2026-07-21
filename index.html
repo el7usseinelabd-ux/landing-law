@@ -395,15 +395,16 @@
 
     <script>
         // ========== دالة تتبع التحويلات الموحّدة ==========
+        // ملاحظة: تم حذف حدث "conversion" المباشر (send_to: AW-...) لأنه كان بدون
+        // Conversion Label، فما كان يُسجَّل فعلياً في Google Ads. التحويل الحقيقي
+        // "عبدالعزيز العديني للمحاماه (web) click" مستورد أصلاً من GA4 (نوعه
+        // GOOGLE_ANALYTICS_4_CUSTOM) اعتماداً على حدث GA4 باسم "click" — فيكفي
+        // إرسال هذا الحدث فقط لـ GA4 وترك الاستيراد يتكفل بالباقي.
         function trackConversion(type, location) {
             if (typeof gtag === 'function') {
                 gtag('event', 'click', {
                     'event_category': 'engagement',
                     'event_label': type + '_' + location  // مثال: whatsapp_hero, call_float
-                });
-                // إرسال تحويل مباشر لـ Google Ads أيضاً كطبقة إضافية
-                gtag('event', 'conversion', {
-                    'send_to': 'AW-18309469015'
                 });
             }
         }
