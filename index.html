@@ -15,6 +15,16 @@
     </script>
     <!-- End Google Tag Manager -->
 
+    <!-- Google tag (gtag.js) - مباشر لضمان وصول الأحداث حتى بدون إعداد يدوي في GTM -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-24TNQ21B48"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'AW-18309469015');
+        gtag('config', 'G-24TNQ21B48');
+    </script>
+
     <!-- الروابط الخارجية للخطوط -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -39,7 +49,7 @@
         body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
 
         @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
-        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow:  0 0 0 0 rgba(194, 155, 99, 0); } }
         @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
 
         .btn-shimmer { position: relative; overflow: hidden; }
@@ -137,7 +147,6 @@
         .service-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
         .service-link { color: var(--gold); font-weight: 800; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 5px; }
 
-        /* قسم التقييمات الجديد */
         .testimonials-section { padding: 80px 5%; background: var(--white); text-align: center; }
         .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
         .testimonial-card { background: var(--bg-soft); padding: 30px 25px; border-radius: 20px; text-align: right; border: 1px solid rgba(194,155,99,0.15); }
@@ -145,7 +154,6 @@
         .testimonial-text { color: var(--text-main); font-size: 15px; line-height: 1.8; margin-bottom: 15px; font-weight: 600; }
         .testimonial-name { color: var(--text-muted); font-size: 13px; font-weight: 800; }
 
-        /* شريط الثقة والتراخيص */
         .trust-bar { padding: 40px 5%; background: var(--primary); text-align: center; }
         .trust-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; }
         .trust-item { color: var(--gold-light); font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px; }
@@ -246,13 +254,13 @@
                 <p>للمحاماة والاستشارات القانونية</p>
             </div>
         </div>
-        <a href="tel:+966556799995" id="btn-call-header" class="header-call-btn btn-shimmer">☎️ اتصل بنا الآن</a>
+        <a href="tel:+966556799995" id="btn-call-header" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل بنا الآن</a>
     </header>
 
     <!-- شريط التواصل العائم -->
     <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966556799995" id="btn-call-float" class="float-link">📞 اتصال فوري</a>
-        <a id="btn-wh-float" href="#" target="_blank" class="float-link">💬 واتساب</a>
+        <a href="tel:+966556799995" id="btn-call-float" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصال فوري</a>
+        <a id="btn-wh-float" href="#" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
         <a href="#" onclick="showPage('home')" class="float-link">🏠 الرئيسية</a>
     </div>
 
@@ -262,8 +270,8 @@
             <h1>نحمي حقوقكم بحلول قانونية مبتكرة</h1>
             <p>مكتب متخصص يقدم استشارات قانونية رصينة تتماشى مع رؤية المملكة 2030. تواصل معنا الآن لضمان حماية مصالحك القانونية.</p>
             <div class="hero-btns">
-                <a href="tel:+966556799995" id="btn-call-hero" class="btn-main btn-hero-call btn-shimmer">☎️ استشارة هاتفية فورية</a>
-                <a id="btn-wh-hero" href="#" target="_blank" class="btn-main btn-hero-wh btn-shimmer">💬 مراسلة عبر واتساب</a>
+                <a href="tel:+966556799995" id="btn-call-hero" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ استشارة هاتفية فورية</a>
+                <a id="btn-wh-hero" href="#" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب</a>
             </div>
         </section>
 
@@ -364,8 +372,8 @@
             <div class="sidebar-card">
                 <h4>تواصل معنا الآن</h4>
                 <p style="margin-bottom: 30px; opacity: 0.9; font-weight: 600;">نحن هنا لتقديم الدعم القانوني الفوري لك.</p>
-                <a href="tel:+966556799995" id="btn-call-sidebar" class="modal-btn modal-call btn-shimmer">☎️ اتصل بنا الآن</a>
-                <a id="btn-wh-sidebar" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer">💬 مراسلة واتساب</a>
+                <a href="tel:+966556799995" id="btn-call-sidebar" class="modal-btn modal-call btn-shimmer" onclick="trackConversion('call', 'sidebar')">☎️ اتصل بنا الآن</a>
+                <a id="btn-wh-sidebar" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer" onclick="trackConversion('whatsapp', 'sidebar')">💬 مراسلة واتساب</a>
             </div>
         </div>
     </div>
@@ -378,14 +386,28 @@
             <h2 class="modal-h2">احصل على استشارة قانونية</h2>
             <p class="modal-p">فريقنا المتخصص جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
             
-            <a href="tel:+966556799995" id="btn-call-modal" class="modal-btn modal-call btn-shimmer">📞 اتصل بنا للحصول على رد فوري</a>
-            <a id="btn-wh-modal" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer">💬 تواصل عبر واتساب الآن</a>
+            <a href="tel:+966556799995" id="btn-call-modal" class="modal-btn modal-call btn-shimmer" onclick="trackConversion('call', 'modal')">📞 اتصل بنا للحصول على رد فوري</a>
+            <a id="btn-wh-modal" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer" onclick="trackConversion('whatsapp', 'modal')">💬 تواصل عبر واتساب الآن</a>
             
             <span class="modal-skip" onclick="proceedToDetail()">أو تصفح تفاصيل الخدمة أولاً</span>
         </div>
     </div>
 
     <script>
+        // ========== دالة تتبع التحويلات الموحّدة ==========
+        function trackConversion(type, location) {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click', {
+                    'event_category': 'engagement',
+                    'event_label': type + '_' + location  // مثال: whatsapp_hero, call_float
+                });
+                // إرسال تحويل مباشر لـ Google Ads أيضاً كطبقة إضافية
+                gtag('event', 'conversion', {
+                    'send_to': 'AW-18309469015'
+                });
+            }
+        }
+
         const data = {
             'commercial': { title: 'القانون التجاري والشركات', desc: 'نقدم حلولاً قانونية متكاملة للشركات، من التأسيس وحتى الحوكمة الشاملة.', features: ['تأسيس وتحويل كافة أنواع الشركات', 'صياغة ومراجعة العقود التجارية', 'حوكمة الشركات والامتثال الأنظمي'], msg: 'استفسار عن القانون التجاري' },
             'notary': { title: 'التوثيق العدلي المعتمد', desc: 'نوفر كافة خدمات التوثيق المعتمدة التي تمنح مستنداتكم الحجية الرسمية.', features: ['إصدار وفسخ الوكالات الشرعية', 'توثيق عقود تأسيس الشركات', 'إفراغ العقارات ونقل الملكية'], msg: 'استفسار عن خدمات التوثيق' },
