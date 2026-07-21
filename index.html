@@ -45,7 +45,7 @@
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; }
+        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; font-size: 16px; }
 
         @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow:  0 0 0 0 rgba(194, 155, 99, 0); } }
@@ -67,7 +67,7 @@
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
             border-bottom: 2px solid var(--gold);
-            padding: 10px 5%;
+            padding: 8px 4%;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -77,163 +77,149 @@
             box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
 
-        .header-brand { display: flex; align-items: center; gap: 10px; cursor: pointer; flex: 1; }
-        .logo-box { width: 45px; height: 45px; border-radius: 50%; border: 1.5px solid var(--gold); padding: 2px; flex-shrink: 0; }
+        .header-brand { display: flex; align-items: center; gap: 8px; cursor: pointer; flex: 1; }
+        .logo-box { width: 40px; height: 40px; border-radius: 50%; border: 1.5px solid var(--gold); padding: 2px; flex-shrink: 0; }
         .logo-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-        .brand-info h2 { font-size: 14px; color: var(--primary); font-weight: 900; line-height: 1.2; }
-        .brand-info p { font-size: 10px; color: var(--gold); font-weight: 700; }
+        .brand-info h2 { font-size: 13px; color: var(--primary); font-weight: 900; line-height: 1.2; }
+        .brand-info p { font-size: 9px; color: var(--gold); font-weight: 700; }
 
         .header-call-btn {
             background: var(--primary);
             color: var(--white);
-            padding: 8px 15px;
+            padding: 6px 12px;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 800;
-            font-size: 12px;
+            font-size: 11px;
             display: flex;
             align-items: center;
-            gap: 5px;
+            gap: 4px;
             transition: var(--transition);
             white-space: nowrap;
         }
 
         .hero {
-            padding: 100px 5% 80px;
+            padding: 60px 5% 50px;
             background: linear-gradient(rgba(13, 44, 29, 0.85), rgba(13, 44, 29, 0.7)), 
                         url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1920&q=80' ) center/cover no-repeat;
             text-align: center;
             color: var(--white);
         }
 
-        .hero h1 { font-size: clamp(30px, 7vw, 52px); font-weight: 900; line-height: 1.2; margin-bottom: 20px; }
-        .hero p { font-size: clamp(18px, 2.5vw, 22px); color: var(--gold-light); margin-bottom: 40px; font-weight: 600; max-width: 850px; margin-left: auto; margin-right: auto; }
+        .hero h1 { font-size: clamp(26px, 8vw, 48px); font-weight: 900; line-height: 1.3; margin-bottom: 15px; }
+        .hero p { font-size: clamp(15px, 4vw, 20px); color: var(--gold-light); margin-bottom: 30px; font-weight: 600; max-width: 850px; margin-left: auto; margin-right: auto; }
 
-        .hero-btns { display: flex; gap: 15px; flex-wrap: wrap; justify-content: center; }
+        .hero-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+        @media (min-width: 600px) { .hero-btns { flex-direction: row; justify-content: center; } }
+        
         .btn-main {
-            padding: 18px 40px;
-            font-size: 18px;
+            width: 100%;
+            max-width: 320px;
+            padding: 15px 25px;
+            font-size: 16px;
             font-weight: 900;
             border-radius: 50px;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
-            gap: 12px;
+            justify-content: center;
+            gap: 10px;
             transition: var(--transition);
         }
         .btn-hero-call { background: var(--gold); color: var(--primary); animation: pulse-gold 2s infinite; }
         .btn-hero-wh { background: var(--whatsapp); color: var(--white); animation: pulse-green 2s infinite; }
-        .btn-main:hover { transform: translateY(-4px); filter: brightness(1.1); box-shadow: 0 10px 30px rgba(0,0,0,0.2); }
 
-        .services-section { padding: 80px 5%; background: var(--bg-soft); text-align: center; }
-        .section-tag { color: var(--gold); font-weight: 800; font-size: 14px; margin-bottom: 10px; display: block; text-transform: uppercase; letter-spacing: 1px; }
-        .section-h2 { font-size: 36px; color: var(--primary); font-weight: 900; margin-bottom: 60px; }
+        .services-section { padding: 60px 5%; background: var(--bg-soft); text-align: center; }
+        .section-tag { color: var(--gold); font-weight: 800; font-size: 13px; margin-bottom: 8px; display: block; text-transform: uppercase; letter-spacing: 1px; }
+        .section-h2 { font-size: 28px; color: var(--primary); font-weight: 900; margin-bottom: 40px; }
 
-        .services-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 30px; }
+        .services-grid { display: grid; grid-template-columns: 1fr; gap: 20px; }
+        @media (min-width: 768px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .services-grid { grid-template-columns: repeat(3, 1fr); } }
+
         .service-card {
             background: var(--white);
-            padding: 50px 35px;
-            border-radius: 25px;
+            padding: 35px 25px;
+            border-radius: 20px;
             text-align: right;
             transition: var(--transition);
             cursor: pointer;
-            border: 1px solid rgba(0,0,0,0.02);
-            position: relative;
+            border: 1px solid rgba(0,0,0,0.05);
         }
-        .service-card:hover { transform: translateY(-10px); box-shadow: var(--shadow-premium); border-color: var(--gold); }
-        .service-icon { font-size: 45px; margin-bottom: 25px; display: block; }
-        .service-card h3 { font-size: 22px; color: var(--primary); font-weight: 900; margin-bottom: 15px; }
-        .service-card p { font-size: 16px; color: var(--text-muted); line-height: 1.8; margin-bottom: 20px; }
-        .service-link { color: var(--gold); font-weight: 800; font-size: 14px; text-decoration: none; display: flex; align-items: center; gap: 5px; }
+        .service-icon { font-size: 35px; margin-bottom: 20px; display: block; }
+        .service-card h3 { font-size: 20px; color: var(--primary); font-weight: 900; margin-bottom: 12px; }
+        .service-card p { font-size: 15px; color: var(--text-muted); line-height: 1.7; margin-bottom: 18px; }
 
-        .testimonials-section { padding: 80px 5%; background: var(--white); text-align: center; }
-        .testimonials-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 25px; max-width: 1100px; margin: 0 auto; }
-        .testimonial-card { background: var(--bg-soft); padding: 30px 25px; border-radius: 20px; text-align: right; border: 1px solid rgba(194,155,99,0.15); }
-        .testimonial-stars { color: var(--gold); font-size: 18px; margin-bottom: 12px; }
-        .testimonial-text { color: var(--text-main); font-size: 15px; line-height: 1.8; margin-bottom: 15px; font-weight: 600; }
-        .testimonial-name { color: var(--text-muted); font-size: 13px; font-weight: 800; }
+        .testimonials-section { padding: 60px 5%; background: var(--white); text-align: center; }
+        .testimonials-grid { display: grid; grid-template-columns: 1fr; gap: 20px; max-width: 1200px; margin: 0 auto; }
+        @media (min-width: 768px) { .testimonials-grid { grid-template-columns: repeat(2, 1fr); } }
+        @media (min-width: 1024px) { .testimonials-grid { grid-template-columns: repeat(3, 1fr); } }
 
-        .trust-bar { padding: 40px 5%; background: var(--primary); text-align: center; }
-        .trust-items { display: flex; flex-wrap: wrap; justify-content: center; gap: 35px; }
-        .trust-item { color: var(--gold-light); font-weight: 800; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+        .testimonial-card { 
+            background: var(--white); 
+            padding: 25px; 
+            border-radius: 15px; 
+            text-align: right; 
+            box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+            border: 1px solid #f0f0f0;
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+        .testimonial-header { display: flex; align-items: center; gap: 12px; }
+        .testimonial-avatar { 
+            width: 45px; height: 45px; 
+            background: var(--gold); color: var(--white); 
+            border-radius: 50%; display: flex; align-items: center; justify-content: center; 
+            font-size: 18px; font-weight: 900; 
+        }
+        .testimonial-meta { flex: 1; }
+        .testimonial-name { font-weight: 800; font-size: 15px; color: var(--primary); }
+        .testimonial-google { width: 16px; height: 16px; }
+        .testimonial-text { 
+            color: var(--text-main); font-size: 14px; line-height: 1.6; font-weight: 600; 
+            display: -webkit-box; -webkit-line-clamp: 5; -webkit-box-orient: vertical; overflow: hidden;
+        }
+        .testimonial-more { color: var(--gold); font-weight: 800; font-size: 12px; text-decoration: none; align-self: flex-start; }
+
+        .trust-bar { padding: 30px 5%; background: var(--primary); text-align: center; }
+        .trust-items { display: flex; flex-direction: column; align-items: center; gap: 15px; }
+        @media (min-width: 600px) { .trust-items { flex-direction: row; justify-content: center; gap: 25px; } }
+        .trust-item { color: var(--gold-light); font-weight: 800; font-size: 13px; display: flex; align-items: center; gap: 6px; }
 
         .modal-overlay {
-            position: fixed;
-            inset: 0;
-            background: rgba(13, 44, 29, 0.96);
-            backdrop-filter: blur(12px);
-            z-index: 5000;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            opacity: 0;
-            visibility: hidden;
-            transition: opacity 0.25s ease, visibility 0.25s ease;
+            position: fixed; inset: 0;
+            background: rgba(13, 44, 29, 0.96); backdrop-filter: blur(10px);
+            z-index: 5000; display: flex; align-items: center; justify-content: center;
+            opacity: 0; visibility: hidden; transition: all 0.3s ease;
         }
         .modal-overlay.show { opacity: 1; visibility: visible; }
-
         .modal-content {
-            background: var(--white);
-            width: 92%;
-            max-width: 480px;
-            padding: 50px 40px;
-            border-radius: 30px;
-            text-align: center;
-            transform: scale(0.8);
-            transition: transform 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            border: 4px solid var(--gold);
-            position: relative;
+            background: var(--white); width: 90%; max-width: 420px;
+            padding: 40px 30px; border-radius: 25px; text-align: center;
+            transform: translateY(20px); transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 3px solid var(--gold); position: relative;
         }
-        .modal-overlay.show .modal-content { transform: scale(1); }
-
-        .modal-close { position: absolute; top: 20px; right: 20px; font-size: 28px; cursor: pointer; color: #bbb; padding: 5px; }
-        .modal-badge { background: var(--gold); color: var(--primary); padding: 6px 18px; border-radius: 50px; font-size: 13px; font-weight: 900; margin-bottom: 25px; display: inline-block; }
-        .modal-h2 { font-size: 26px; color: var(--primary); font-weight: 900; margin-bottom: 12px; }
-        .modal-p { font-size: 16px; color: var(--text-muted); margin-bottom: 35px; font-weight: 700; }
-
-        .modal-btn { display: block; width: 100%; padding: 18px; border-radius: 15px; text-decoration: none; font-weight: 900; margin-bottom: 15px; text-align: center; font-size: 17px; }
+        .modal-overlay.show .modal-content { transform: translateY(0); }
+        .modal-close { position: absolute; top: 15px; right: 15px; font-size: 24px; cursor: pointer; color: #ccc; }
+        .modal-h2 { font-size: 22px; color: var(--primary); font-weight: 900; margin-bottom: 10px; }
+        .modal-p { font-size: 15px; color: var(--text-muted); margin-bottom: 25px; font-weight: 700; }
+        .modal-btn { display: block; width: 100%; padding: 15px; border-radius: 12px; text-decoration: none; font-weight: 900; margin-bottom: 12px; font-size: 16px; }
         .modal-call { background: var(--primary); color: var(--white); }
         .modal-wh { background: var(--whatsapp); color: var(--white); }
-        .modal-skip { margin-top: 15px; display: block; color: var(--gold); font-weight: 900; text-decoration: underline; cursor: pointer; font-size: 15px; }
 
         .floating-bar {
-            position: fixed;
-            bottom: 25px;
-            left: 5%;
-            right: 5%;
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(15px);
-            padding: 14px 25px;
-            border-radius: 100px;
-            display: flex;
-            justify-content: space-around;
-            z-index: 2000;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            border: 2px solid var(--gold);
-            transform: translateY(150px);
-            transition: transform 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            position: fixed; bottom: 20px; left: 4%; right: 4%;
+            background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
+            padding: 12px 20px; border-radius: 100px;
+            display: flex; justify-content: space-around; z-index: 2000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1.5px solid var(--gold);
+            transform: translateY(120px); transition: transform 0.4s ease;
         }
         .floating-bar.visible { transform: translateY(0); }
-        .float-link { text-decoration: none; color: var(--primary); font-weight: 900; font-size: 14px; display: flex; align-items: center; gap: 8px; }
+        .float-link { text-decoration: none; color: var(--primary); font-weight: 900; font-size: 13px; display: flex; align-items: center; gap: 6px; }
 
-        .page { display: none; animation: fadeIn 0.4s ease; }
-        .page.active { display: block; }
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .detail-view { padding: 60px 5%; min-height: 100vh; }
-        .btn-back { background: var(--bg-soft); border: 2px solid var(--gold); color: var(--primary); padding: 10px 25px; border-radius: 50px; font-weight: 900; cursor: pointer; margin-bottom: 40px; }
-        .detail-flex { display: grid; grid-template-columns: 1fr; gap: 50px; }
-        @media (min-width: 992px) { .detail-flex { grid-template-columns: 1.6fr 1fr; } }
-
-        .detail-info h1 { font-size: 40px; color: var(--primary); font-weight: 900; margin-bottom: 25px; }
-        .feature-list { list-style: none; margin-top: 30px; }
-        .feature-list li { padding: 15px 45px 15px 0; position: relative; border-bottom: 1px solid #eee; font-weight: 800; font-size: 17px; }
-        .feature-list li::before { content: "✓"; position: absolute; right: 0; color: var(--gold); font-weight: 900; font-size: 22px; }
-
-        .sidebar-card { background: var(--primary); color: var(--white); padding: 50px 40px; border-radius: 30px; text-align: center; position: sticky; top: 120px; }
-        .sidebar-card h4 { font-size: 24px; color: var(--gold-light); margin-bottom: 20px; font-weight: 900; }
-
-        footer { background: var(--primary); padding: 50px 5%; text-align: center; color: rgba(255,255,255,0.7); border-top: 5px solid var(--gold); font-size: 14px; }
+        footer { background: var(--primary); padding: 40px 5%; text-align: center; color: rgba(255,255,255,0.6); border-top: 4px solid var(--gold); font-size: 12px; }
     </style>
 </head>
 <body>
@@ -242,7 +228,7 @@
     height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     <header id="mainHeader">
-        <div class="header-brand" onclick="showPage('home' )">
+        <div class="header-brand" onclick="window.scrollTo(0,0 )">
             <div class="logo-box">
                 <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
             </div>
@@ -251,183 +237,147 @@
                 <p>للمحاماة والاستشارات القانونية بجدة</p>
             </div>
         </div>
-        <a href="tel:+966556799995" id="btn-call-header" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل بالمحامي الآن</a>
+        <a href="tel:+966556799995" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل الآن</a>
     </header>
 
     <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966556799995" id="btn-call-float" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصال فوري</a>
+        <a href="tel:+966556799995" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصال</a>
         <a id="btn-wh-float" href="#" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
-        <a href="#" onclick="showPage('home')" class="float-link">🏠 الرئيسية</a>
+        <a href="#" onclick="window.scrollTo(0,0)" class="float-link">🏠 الرئيسية</a>
     </div>
 
-    <div id="home-page" class="page active">
-        <section class="hero">
-            <h1>أفضل مكتب محاماة في جدة | حلول قانونية مبتكرة</h1>
-            <p>مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القانون الجنائي، الأحوال الشخصية، والقضايا التجارية. تواصل مع نخبة من المحامين في جدة الآن.</p>
-            <div class="hero-btns">
-                <a href="tel:+966556799995" id="btn-call-hero" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ استشارة هاتفية فورية</a>
-                <a id="btn-wh-hero" href="#" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب</a>
-            </div>
-        </section>
+    <section class="hero">
+        <h1>أفضل مكتب محاماة في جدة | حلول قانونية مبتكرة</h1>
+        <p>مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القانون الجنائي، الأحوال الشخصية، والقضايا التجارية.</p>
+        <div class="hero-btns">
+            <a href="tel:+966556799995" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ استشارة هاتفية فورية</a>
+            <a id="btn-wh-hero" href="#" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب</a>
+        </div>
+    </section>
 
-        <section class="services-section">
-            <span class="section-tag">تخصصاتنا القانونية الشاملة</span>
-            <h2 class="section-h2">مجالات التميز والخبرة</h2>
-            <div class="services-grid">
-                <!-- القانون الجنائي -->
-                <div class="service-card" onclick="handleServiceClick('criminal')">
-                    <span class="service-icon">⚖️</span>
-                    <h3>القانون الجنائي</h3>
-                    <p>دفاع جنائي صلب، تمثيل أمام المحاكم الجزائية، وقضايا الحق العام والخاص والجرائم المعلوماتية.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <!-- الأحوال الشخصية -->
-                <div class="service-card" onclick="handleServiceClick('family')">
-                    <span class="service-icon">🏠</span>
-                    <h3>الأحوال الشخصية والتركات</h3>
-                    <p>متخصصون في قضايا الطلاق، الخلع، الحضانة، النفقة، وقسمة التركات وتصفية الأوقاف بحكمة وسرية.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <!-- القانون التجاري -->
-                <div class="service-card" onclick="handleServiceClick('commercial')">
-                    <span class="service-icon">💼</span>
-                    <h3>القانون التجاري والشركات</h3>
-                    <p>تأسيس الشركات، صياغة العقود التجارية، حل النزاعات بين الشركاء والحوكمة والامتثال الأنظمي.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <!-- القضايا العمالية -->
-                <div class="service-card" onclick="handleServiceClick('labor')">
-                    <span class="service-icon">👥</span>
-                    <h3>القضايا العمالية</h3>
-                    <p>تمثيل في مكتب العمل، قضايا الفصل التعسفي، صياغة لوائح العمل وحفظ حقوق أطراف العلاقة.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <!-- التوثيق العدلي -->
-                <div class="service-card" onclick="handleServiceClick('notary')">
-                    <span class="service-icon">✍️</span>
-                    <h3>التوثيق العدلي المعتمد</h3>
-                    <p>موثق معتمد لإصدار الوكالات، توثيق عقود الشركات، وإفراغ العقارات ونقل الملكية بشكل فوري.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
-                <!-- القضايا العقارية -->
-                <div class="service-card" onclick="handleServiceClick('realestate')">
-                    <span class="service-icon">🏢</span>
-                    <h3>القضايا العقارية</h3>
-                    <p>حل نزاعات الملكية، تدقيق الصكوك، صياغة عقود التطوير العقاري والمقاولات والرهن العقاري.</p>
-                    <span class="service-link">تصفح التفاصيل ←</span>
-                </div>
+    <section class="services-section">
+        <span class="section-tag">تخصصاتنا القانونية</span>
+        <h2 class="section-h2">مجالات التميز والخبرة</h2>
+        <div class="services-grid">
+            <div class="service-card" onclick="handleServiceClick('criminal')">
+                <span class="service-icon">⚖️</span>
+                <h3>القانون الجنائي</h3>
+                <p>دفاع جنائي صلب، تمثيل أمام المحاكم الجزائية، وقضايا الحق العام والخاص والجرائم المعلوماتية.</p>
             </div>
-        </section>
-
-        <section class="testimonials-section">
-            <span class="section-tag">ثقة عملائنا</span>
-            <h2 class="section-h2">آراء عملائنا</h2>
-            <div class="testimonials-grid">
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"أفضل محامي في جدة، خبرة واسعة في القانون الجنائي وحرص شديد على مصلحة العميل."</p>
-                    <p class="testimonial-name">Hessen H. — تقييم Google</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"مكتب محاماة متمكن جداً في قضايا الأحوال الشخصية والطلاق، تعامل راقٍ وإنجاز سريع."</p>
-                    <p class="testimonial-name">Helal H. — تقييم Google</p>
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-stars">★★★★★</div>
-                    <p class="testimonial-text">"رقم محامي شاطر في جدة، سرعة في الإنجاز وصدق في التعامل ونتائج ممتازة."</p>
-                    <p class="testimonial-name">Ahmed S. — تقييم Google</p>
-                </div>
+            <div class="service-card" onclick="handleServiceClick('family')">
+                <span class="service-icon">🏠</span>
+                <h3>الأحوال الشخصية والتركات</h3>
+                <p>متخصصون في قضايا الطلاق، الخلع، الحضانة، النفقة، وقسمة التركات وتصفية الأوقاف بحكمة وسرية.</p>
             </div>
-        </section>
-
-        <div class="trust-bar">
-            <div class="trust-items">
-                <span class="trust-item">✓ محامي مرخص من وزارة العدل</span>
-                <span class="trust-item">✓ عضو الهيئة السعودية للمحامين</span>
-                <span class="trust-item">✓ استشارات قانونية فورية بجدة</span>
+            <div class="service-card" onclick="handleServiceClick('commercial')">
+                <span class="service-icon">💼</span>
+                <h3>القانون التجاري والشركات</h3>
+                <p>تأسيس الشركات، صياغة العقود التجارية، حل النزاعات بين الشركاء والحوكمة والامتثال الأنظمي.</p>
+            </div>
+            <div class="service-card" onclick="handleServiceClick('labor')">
+                <span class="service-icon">👥</span>
+                <h3>القضايا العمالية</h3>
+                <p>تمثيل في مكتب العمل، قضايا الفصل التعسفي، صياغة لوائح العمل وحفظ حقوق أطراف العلاقة.</p>
+            </div>
+            <div class="service-card" onclick="handleServiceClick('notary')">
+                <span class="service-icon">✍️</span>
+                <h3>التوثيق العدلي المعتمد</h3>
+                <p>موثق معتمد لإصدار الوكالات، توثيق عقود الشركات، وإفراغ العقارات ونقل الملكية بشكل فوري.</p>
+            </div>
+            <div class="service-card" onclick="handleServiceClick('realestate')">
+                <span class="service-icon">🏢</span>
+                <h3>القضايا العقارية</h3>
+                <p>حل نزاعات الملكية، تدقيق الصكوك، صياغة عقود التطوير العقاري والمقاولات والرهن العقاري.</p>
             </div>
         </div>
+    </section>
 
-        <footer>
-            <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، المملكة العربية السعودية</p>
-        </footer>
-    </div>
-
-    <div id="detail-page" class="page detail-view">
-        <button class="btn-back btn-shimmer" onclick="showPage('home')">← العودة للرئيسية</button>
-        <div class="detail-flex">
-            <div class="detail-info">
-                <h1 id="detTitle">عنوان الخدمة</h1>
-                <p id="detDesc" style="font-size: 19px; color: var(--text-muted); line-height: 2;"></p>
-                <ul class="feature-list" id="detFeatures"></ul>
+    <section class="testimonials-section">
+        <span class="section-tag">ثقة عملائنا</span>
+        <h2 class="section-h2">آراء عملائنا</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">H</div>
+                    <div class="testimonial-meta">
+                        <h4 class="testimonial-name">Hessen hassan</h4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="testimonial-google" alt="Google">
+                    </div>
+                </div>
+                <p class="testimonial-text">اشكر الاستاذ عبد العزيز العديني علي تعاونه و السرعه والإنجاز وحصولنا ولله الحمد علي البراءة وإقفال القضية وذلك بجهودة بعد الله عز وجل وتبسيطه للقوانين والشرح المفصل وسعة صدرة واهتمامه وحرصه علي مصلحة موكله.</p>
+                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...</a>
             </div>
-            <div class="sidebar-card">
-                <h4>تواصل مع مكتب المحامي</h4>
-                <p style="margin-bottom: 30px; opacity: 0.9; font-weight: 600;">نحن هنا لتقديم الدعم القانوني الفوري لك في كافة محاكم جدة.</p>
-                <a href="tel:+966556799995" id="btn-call-sidebar" class="modal-btn modal-call btn-shimmer" onclick="trackConversion('call', 'sidebar')">☎️ اتصل بنا الآن</a>
-                <a id="btn-wh-sidebar" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer" onclick="trackConversion('whatsapp', 'sidebar')">💬 مراسلة واتساب</a>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">H</div>
+                    <div class="testimonial-meta">
+                        <h4 class="testimonial-name">HELAL H</h4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="testimonial-google" alt="Google">
+                    </div>
+                </div>
+                <p class="testimonial-text">أشكر الأستاذ عبدالعزيز العديني على جهوده الكبيرة وتعاملِه الراقي. بصراحة، كان مثالًا للمحامي المتمكن، المتعاون، والسريع في إنجاز الإجراءات، إضافة إلى أسلوبه الأكثر من رائع في المتابعة.</p>
+                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...</a>
+            </div>
+            <div class="testimonial-card">
+                <div class="testimonial-header">
+                    <div class="testimonial-avatar">a</div>
+                    <div class="testimonial-meta">
+                        <h4 class="testimonial-name">ahmed “soultan”</h4>
+                        <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="testimonial-google" alt="Google">
+                    </div>
+                </div>
+                <p class="testimonial-text">أنصح فيه متمكن جدا المحامي عبد العزيز بيض الوجه ومتابعته ما عليها كلام. شخص صادق وراقي في التعامل. الله يعطيه العافية وما قصر أبد</p>
+                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...</a>
             </div>
         </div>
+    </section>
+
+    <div class="trust-bar">
+        <div class="trust-items">
+            <span class="trust-item">✓ محامي مرخص</span>
+            <span class="trust-item">✓ الهيئة السعودية للمحامين</span>
+            <span class="trust-item">✓ استشارات فورية بجدة</span>
+        </div>
     </div>
+
+    <footer>
+        <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، السعودية</p>
+    </footer>
 
     <div id="contactModal" class="modal-overlay">
         <div class="modal-content">
-            <span class="modal-close" onclick="closeModal()">✕</span>
-            <span class="modal-badge">مستشارنا متاح للرد الآن</span>
-            <h2 class="modal-h2">احصل على استشارة قانونية</h2>
+            <span class="modal-close" onclick="closeModal( )">✕</span>
+            <h2 class="modal-h2">استشارة قانونية فورية</h2>
             <p class="modal-p">فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
-            <a href="tel:+966556799995" id="btn-call-modal" class="modal-btn modal-call btn-shimmer" onclick="trackConversion('call', 'modal')">📞 اتصل للحصول على رد فوري</a>
-            <a id="btn-wh-modal" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer" onclick="trackConversion('whatsapp', 'modal')">💬 تواصل عبر واتساب الآن</a>
-            <span class="modal-skip" onclick="proceedToDetail()">أو تصفح تفاصيل الخدمة أولاً</span>
+            <a href="tel:+966556799995" class="modal-btn modal-call btn-shimmer" onclick="trackConversion('call', 'modal')">📞 اتصل الآن</a>
+            <a id="btn-wh-modal" href="#" target="_blank" class="modal-btn modal-wh btn-shimmer" onclick="trackConversion('whatsapp', 'modal')">💬 تواصل عبر واتساب</a>
         </div>
     </div>
 
     <script>
         function trackConversion(type, location) {
             if (typeof gtag === 'function') {
-                gtag('event', 'click', {
-                    'event_category': 'engagement',
-                    'event_label': type + '_' + location
-                });
+                gtag('event', 'click', { 'event_category': 'engagement', 'event_label': type + '_' + location });
             }
         }
 
         const data = {
-            'criminal': { title: 'القانون الجنائي', desc: 'نقدم دفاعاً قانونياً متخصصاً في كافة القضايا الجنائية أمام المحاكم الجزائية بمختلف درجاتها.', features: ['التمثيل في قضايا الحق العام والخاص', 'الجرائم المعلوماتية والاحتيال المالي', 'الترافع في القضايا الجنائية الكبرى'], msg: 'استفسار عن قضية جنائية' },
-            'family': { title: 'الأحوال الشخصية والتركات', desc: 'نتعامل مع قضايا الأسرة والتركات بأقصى درجات الخصوصية والاحترافية في جدة.', features: ['قضايا الطلاق والخلع والفسخ', 'الحضانة والنفقة والزيارة', 'قسمة التركات وتصفية الأوقاف'], msg: 'استفسار عن قضايا الأسرة' },
-            'commercial': { title: 'القانون التجاري والشركات', desc: 'نقدم حلولاً قانونية متكاملة للشركات، من التأسيس وحتى الحوكمة الشاملة.', features: ['تأسيس وتحويل كافة أنواع الشركات', 'صياغة ومراجعة العقود التجارية', 'حوكمة الشركات والامتثال الأنظمي'], msg: 'استفسار عن القانون التجاري' },
-            'labor': { title: 'القضايا العمالية', desc: 'نضمن حقوق أطراف العلاقة التعاقدية وفق نظام العمل السعودي الجديد.', features: ['تمثيل المنشآت في التسوية الودية', 'قضايا الفصل التعسفي والمستحقات', 'صياغة عقود العمل ولوائح المنشأة'], msg: 'استفسار عن قضايا عمالية' },
-            'notary': { title: 'التوثيق العدلي المعتمد', desc: 'نوفر كافة خدمات التوثيق المعتمدة التي تمنح مستنداتكم الحجية الرسمية فوراً.', features: ['إصدار وفسخ الوكالات الشرعية', 'توثيق عقود تأسيس الشركات', 'إفراغ العقارات ونقل الملكية'], msg: 'استفسار عن خدمات التوثيق' },
-            'realestate': { title: 'القضايا العقارية', desc: 'دعم قانوني شامل في القطاع العقاري، من تدقيق الملكيات وحتى حل النزاعات.', features: ['نزاعات الملكية وتداخل الصكوك', 'صياغة عقود التطوير والمقاولات', 'عقود الإيجار والتمويل والرهن'], msg: 'استفسار عن قضايا عقارية' }
+            'criminal': { msg: 'استفسار عن قضية جنائية' },
+            'family': { msg: 'استفسار عن قضايا الأسرة' },
+            'commercial': { msg: 'استفسار عن القانون التجاري' },
+            'labor': { msg: 'استفسار عن قضايا عمالية' },
+            'notary': { msg: 'استفسار عن خدمات التوثيق' },
+            'realestate': { msg: 'استفسار عن قضايا عقارية' }
         };
 
-        let currentKey = '';
-        function showPage(id) {
-            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
-            document.getElementById(id + '-page').classList.add('active');
-            window.scrollTo(0,0);
-        }
         function handleServiceClick(key) {
-            currentKey = key;
             const item = data[key];
             const whLink = `https://wa.me/966556799995?text=${encodeURIComponent(item.msg )}`;
             document.getElementById('btn-wh-modal').href = whLink;
             document.getElementById('contactModal').classList.add('show');
         }
         function closeModal() { document.getElementById('contactModal').classList.remove('show'); }
-        function proceedToDetail() {
-            closeModal();
-            const item = data[currentKey];
-            if(!item) return showPage('home');
-            document.getElementById('detTitle').innerText = item.title;
-            document.getElementById('detDesc').innerText = item.desc;
-            document.getElementById('btn-wh-sidebar').href = `https://wa.me/966556799995?text=${encodeURIComponent(item.msg )}`;
-            const list = document.getElementById('detFeatures');
-            list.innerHTML = '';
-            item.features.forEach(f => { const li = document.createElement('li'); li.innerText = f; list.appendChild(li); });
-            showPage('detail');
-        }
+        
         window.addEventListener('scroll', () => {
             const floatingBar = document.getElementById('floatingBar');
             if (window.scrollY > 400) floatingBar.classList.add('visible');
@@ -436,6 +386,7 @@
         const defaultMsg = encodeURIComponent("مرحباً، أود الحصول على استشارة قانونية من مكتب المحامي عبدالعزيز العديني.");
         document.getElementById('btn-wh-hero').href = "https://wa.me/966556799995?text=" + defaultMsg;
         document.getElementById('btn-wh-float' ).href = "https://wa.me/966556799995?text=" + defaultMsg;
+        
         window.onload = ( ) => {
             if(!sessionStorage.getItem('final_track_visited')) {
                 setTimeout(() => {
