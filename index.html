@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية | أفضل محامي في جدة[cite: 4]</title>
-    <meta name="description" content="مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية في جدة. متخصصون في القانون الجنائي، الأحوال الشخصية، التجاري، العمالي، التوثيق العقاري. استشارات قانونية فورية.[cite: 4]">
-    <meta name="keywords" content="محامي جدة، محاماة جدة، استشارات قانونية جدة، محامي جنائي جدة، محامي أحوال شخصية جدة، محامي تجاري جدة، توثيق عدلي جدة، قضايا عقارية جدة, مكتب محاماة في جدة[cite: 4]">
+    <title>عبدالعزيز عبدالله العديني للمحاماة والاستشارات القانونية | أفضل محامي في جدة</title>
+    <meta name="description" content="مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية في جدة. متخصصون في القانون الجنائي، الأحوال الشخصية، التجاري، العمالي، التوثيق العقاري. استشارات قانونية فورية.">
+    <meta name="keywords" content="محامي جدة، محاماة جدة، استشارات قانونية جدة، محامي جنائي جدة، محامي أحوال شخصية جدة، محامي تجاري جدة، توثيق عدلي جدة، قضايا عقارية جدة, مكتب محاماة في جدة">
 
     <!-- Google Tag Manager -->
     <script>
@@ -42,12 +42,11 @@
             --text-main: #1d1d1d;
             --text-muted: #666666;
             --whatsapp: #25d366;
-            --shadow-premium: 0 15px 40px rgba(0,0,0,0.08);
             --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; font-size: 16px; }
+        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; font-size: 16px; padding-bottom: 70px; }
 
         @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
         @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
@@ -147,7 +146,6 @@
             transition: var(--transition);
             cursor: pointer;
             border: 1px solid rgba(0,0,0,0.05);
-            scroll-margin-top: 100px;
             display: flex;
             flex-direction: column;
             gap: 15px;
@@ -212,40 +210,43 @@
         @media (min-width: 600px) { .trust-items { flex-direction: row; justify-content: center; gap: 25px; } }
         .trust-item { color: var(--gold-light); font-weight: 800; font-size: 13px; display: flex; align-items: center; gap: 6px; }
 
-        /* نافذة منبثقة */
+        /* النافذة المنبثقة */
         .modal {
             display: none;
             position: fixed;
-            z-index: 3000;
+            z-index: 9999;
             left: 0;
             top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            animation: fadeIn 0.3s ease;
+            background-color: rgba(0, 0, 0, 0.6);
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
         }
 
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        .modal.active {
+            display: flex;
+        }
 
         .modal-content {
             background-color: var(--white);
-            margin: 10% auto;
-            padding: 30px;
+            padding: 30px 20px;
             border-radius: 20px;
-            width: 90%;
-            max-width: 500px;
+            width: 100%;
+            max-width: 450px;
             text-align: center;
-            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            box-shadow: 0 15px 50px rgba(0,0,0,0.3);
             animation: slideUp 0.3s ease;
         }
 
-        @keyframes slideUp { from { transform: translateY(50px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+        @keyframes slideUp { from { transform: translateY(30px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
 
-        .modal-logo { width: 80px; height: 80px; margin: 0 auto 20px; border-radius: 50%; border: 3px solid var(--gold); padding: 5px; }
+        .modal-logo { width: 70px; height: 70px; margin: 0 auto 15px; border-radius: 50%; border: 2.5px solid var(--gold); padding: 3px; }
         .modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
-        .modal h2 { color: var(--primary); font-size: 24px; margin-bottom: 15px; font-weight: 900; }
-        .modal p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 25px; }
+        .modal h2 { color: var(--primary); font-size: 22px; margin-bottom: 10px; font-weight: 900; }
+        .modal p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
 
         .modal-btns { display: flex; flex-direction: column; gap: 10px; }
         .modal-btn {
@@ -267,17 +268,17 @@
         .modal-btn-close { background: #f0f0f0; color: var(--text-main); }
 
         .floating-bar {
-            position: fixed; bottom: 20px; left: 4%; right: 4%;
+            position: fixed; bottom: 0; left: 0; right: 0;
             background: rgba(255, 255, 255, 0.98); backdrop-filter: blur(10px);
-            padding: 12px 20px; border-radius: 100px;
-            display: flex; justify-content: space-around; z-index: 2000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.15); border: 1.5px solid var(--gold);
-            transform: translateY(120px); transition: transform 0.4s ease;
+            padding: 12px 5%;
+            display: flex; justify-content: space-around; align-items: center;
+            z-index: 2000;
+            box-shadow: 0 -5px 20px rgba(0,0,0,0.1);
+            border-top: 1.5px solid var(--gold);
         }
-        .floating-bar.visible { transform: translateY(0); }
         .float-link { text-decoration: none; color: var(--primary); font-weight: 900; font-size: 13px; display: flex; align-items: center; gap: 6px; }
 
-        footer { background: var(--primary); padding: 40px 5%; text-align: center; color: rgba(255,255,255,0.6); border-top: 4px solid var(--gold); font-size: 12px; }
+        footer { background: var(--primary); padding: 40px 5%; text-align: center; color: rgba(255,255,255,0.6); border-top: 4px solid var(--gold); font-size: 12px; margin-bottom: 50px; }
     </style>
 </head>
 <body>
@@ -288,30 +289,30 @@
     <header id="mainHeader">
         <div class="header-brand" onclick="window.location.href='index.html'">
             <div class="logo-box">
-                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني[cite: 1]">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
             </div>
             <div class="brand-info">
-                <h2>عبدالعزيز عبدالله العديني[cite: 4]</h2>
-                <p>للمحاماة والاستشارات القانونية بجدة[cite: 4]</p>
+                <h2>عبدالعزيز عبدالله العديني</h2>
+                <p>للمحاماة والاستشارات القانونية بجدة</p>
             </div>
         </div>
-        <a href="tel:+966556799995" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل الآن[cite: 1]</a>
+        <a href="tel:+966556799995" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل الآن</a>
     </header>
 
     <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966556799995" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصال[cite: 4]</a>
-        <a id="btn-wh-float" href="https://wa.me/966556799995?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب[cite: 4]</a>
-        <a href="index.html" class="float-link">🏠 الرئيسية[cite: 3]</a>
+        <a href="tel:+966556799995" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصال</a>
+        <a href="https://wa.me/966556799995?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
+        <a href="index.html" class="float-link">🏠 الرئيسية</a>
     </div>
 
     <!-- النافذة المنبثقة -->
     <div id="consultationModal" class="modal">
         <div class="modal-content">
             <div class="modal-logo">
-                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني[cite: 1]">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
             </div>
             <h2>استشارة قانونية فورية</h2>
-            <p>فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
+            <p>فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية والشرعية.</p>
             <div class="modal-btns">
                 <a href="tel:+966556799995" class="modal-btn modal-btn-call" onclick="trackConversion('modal_call', 'consultation')">☎️ اتصل الآن</a>
                 <a href="https://wa.me/966556799995?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="modal-btn modal-btn-wh" onclick="trackConversion('modal_whatsapp', 'consultation')">💬 واتساب</a>
@@ -321,137 +322,137 @@
     </div>
 
     <section class="hero">
-        <h1>أفضل مكتب محاماة في جدة | حلول قانونية مبتكرة[cite: 4]</h1>
-        <p>مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القانون الجنائي، الأحوال الشخصية، والقضايا التجارية.[cite: 4]</p>
+        <h1>أفضل مكتب محاماة في جدة | حلول قانونية مبتكرة</h1>
+        <p>مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القانون الجنائي، الأحوال الشخصية، والقضايا التجارية.</p>
         <div class="hero-btns">
-            <a href="tel:+966556799995" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ استشارة هاتفية فورية[cite: 4]</a>
-            <a href="https://wa.me/966556799995?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب[cite: 4]</a>
+            <a href="tel:+966556799995" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ استشارة هاتفية فورية</a>
+            <a href="https://wa.me/966556799995?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب</a>
         </div>
     </section>
 
     <section class="services-section">
-        <span class="section-tag">تخصصاتنا القانونية[cite: 4]</span>
-        <h2 class="section-h2">مجالات التميز والخبرة[cite: 4]</h2>
+        <span class="section-tag">تخصصاتنا القانونية</span>
+        <h2 class="section-h2">مجالات التميز والخبرة</h2>
         <div class="services-grid">
-            <a href="criminal.html" class="service-card" onclick="trackConversion('service_click', 'criminal')">
+            <div class="service-card" onclick="trackConversion('service_click', 'criminal')">
                 <span class="service-icon">⚖️</span>
-                <h3>القانون الجنائي[cite: 4]</h3>
-                <p>هل تواجه قضية جنائية معقدة؟ محامونا المتخصصون يقدمون دفاعاً قوياً وحلولاً قانونية مبتكرة.[cite: 4]</p>
+                <h3>القانون الجنائي</h3>
+                <p>هل تواجه قضية جنائية معقدة؟ محامونا المتخصصون يقدمون دفاعاً قوياً وحلولاً قانونية مبتكرة.</p>
                 <ul class="service-list">
-                    <li>دفاع جنائي صلب وفعال[cite: 4]</li>
-                    <li>تمثيل أمام المحاكم الجزائية[cite: 4]</li>
-                    <li>قضايا المخدرات والجرائم الإلكترونية[cite: 4]</li>
-                    <li>قضايا الحق العام والخاص[cite: 4]</li>
+                    <li>دفاع جنائي صلب وفعال</li>
+                    <li>تمثيل أمام المحاكم الجزائية</li>
+                    <li>قضايا المخدرات والجرائم الإلكترونية</li>
+                    <li>قضايا الحق العام والخاص</li>
                 </ul>
-            </a>
-            <a href="family.html" class="service-card" onclick="trackConversion('service_click', 'family')">
+            </div>
+            <div class="service-card" onclick="trackConversion('service_click', 'family')">
                 <span class="service-icon">🏠</span>
-                <h3>الأحوال الشخصية والتركات[cite: 4]</h3>
-                <p>تبحث عن محامي أحوال شخصية موثوق؟ نقدم استشارات وحلولاً سرية وحكيمة.[cite: 4]</p>
+                <h3>الأحوال الشخصية والتركات</h3>
+                <p>تبحث عن محامي أحوال شخصية موثوق؟ نقدم استشارات وحلولاً سرية وحكيمة.</p>
                 <ul class="service-list">
-                    <li>قضايا الطلاق والخلع[cite: 4]</li>
-                    <li>قضايا الحضانة والنفقة[cite: 4]</li>
-                    <li>قسمة التركات وتصفية الأوقاف[cite: 4]</li>
-                    <li>الاستشارات الأسرية السرية[cite: 4]</li>
+                    <li>قضايا الطلاق والخلع</li>
+                    <li>قضايا الحضانة والنفقة</li>
+                    <li>قسمة التركات وتصفية الأوقاف</li>
+                    <li>الاستشارات الأسرية السرية</li>
                 </ul>
-            </a>
-            <a href="commercial.html" class="service-card" onclick="trackConversion('service_click', 'commercial')">
+            </div>
+            <div class="service-card" onclick="trackConversion('service_click', 'commercial')">
                 <span class="service-icon">💼</span>
-                <h3>القانون التجاري والشركات[cite: 4]</h3>
-                <p>تحتاج لدعم قانوني لشركتك؟ خبراء القانون التجاري لدينا يقدمون حلولاً متخصصة.[cite: 1]</p>
+                <h3>القانون التجاري والشركات</h3>
+                <p>تحتاج لدعم قانوني لشركتك؟ خبراء القانون التجاري لدينا يقدمون حلولاً متخصصة.</p>
                 <ul class="service-list">
-                    <li>تأسيس الشركات والتسجيل[cite: 4]</li>
-                    <li>صياغة العقود التجارية[cite: 4]</li>
-                    <li>حل النزاعات التجارية[cite: 4]</li>
-                    <li>استشارات الشركات الناشئة والكبرى[cite: 4]</li>
+                    <li>تأسيس الشركات والتسجيل</li>
+                    <li>صياغة العقود التجارية</li>
+                    <li>حل النزاعات التجارية</li>
+                    <li>استشارات الشركات الناشئة والكبرى</li>
                 </ul>
-            </a>
-            <a href="labor.html" class="service-card" onclick="trackConversion('service_click', 'labor')">
+            </div>
+            <div class="service-card" onclick="trackConversion('service_click', 'labor')">
                 <span class="service-icon">👥</span>
-                <h3>القضايا العمالية[cite: 4]</h3>
-                <p>هل تواجه نزاعاً عمالياً؟ محامونا متخصصون في حماية حقوقك العمالية.[cite: 4]</p>
+                <h3>القضايا العمالية</h3>
+                <p>هل تواجه نزاعاً عمالياً؟ محامونا متخصصون في حماية حقوقك العمالية.</p>
                 <ul class="service-list">
-                    <li>تمثيل في مكتب العمل[cite: 4]</li>
-                    <li>قضايا الفصل التعسفي[cite: 4]</li>
-                    <li>صياغة لوائح العمل[cite: 4]</li>
-                    <li>حفظ حقوق أطراف العلاقة العمالية[cite: 4]</li>
+                    <li>تمثيل في مكتب العمل</li>
+                    <li>قضايا الفصل التعسفي</li>
+                    <li>صياغة لوائح العمل</li>
+                    <li>حفظ حقوق أطراف العلاقة العمالية</li>
                 </ul>
-            </a>
-            <a href="notary.html" class="service-card" onclick="trackConversion('service_click', 'notary')">
+            </div>
+            <div class="service-card" onclick="trackConversion('service_click', 'notary')">
                 <span class="service-icon">✍️</span>
-                <h3>التوثيق العدلي المعتمد[cite: 4]</h3>
-                <p>تحتاج لخدمات توثيق سريعة وموثوقة؟ موثقون معتمدون جاهزون لخدمتك.[cite: 4]</p>
+                <h3>التوثيق العدلي المعتمد</h3>
+                <p>تحتاج لخدمات توثيق سريعة وموثوقة؟ موثقون معتمدون جاهزون لخدمتك.</p>
                 <ul class="service-list">
-                    <li>إصدار الوكالات الشرعية[cite: 4]</li>
-                    <li>توثيق عقود الشركات[cite: 4]</li>
-                    <li>إفراغ العقارات ونقل الملكية[cite: 4]</li>
-                    <li>توثيق سريع وفوري[cite: 4]</li>
+                    <li>إصدار الوكالات الشرعية</li>
+                    <li>توثيق عقود الشركات</li>
+                    <li>إفراغ العقارات ونقل الملكية</li>
+                    <li>توثيق سريع وفوري</li>
                 </ul>
-            </a>
-            <a href="realestate.html" class="service-card" onclick="trackConversion('service_click', 'realestate')">
+            </div>
+            <div class="service-card" onclick="trackConversion('service_click', 'realestate')">
                 <span class="service-icon">🏢</span>
-                <h3>القضايا العقارية[cite: 4]</h3>
-                <p>هل لديك نزاع عقاري؟ محامونا متخصصون في حماية استثماراتك العقارية.[cite: 4]</p>
+                <h3>القضايا العقارية</h3>
+                <p>هل لديك نزاع عقاري؟ محامونا متخصصون في حماية استثماراتك العقارية.</p>
                 <ul class="service-list">
-                    <li>حل نزاعات الملكية والحدود[cite: 4]</li>
-                    <li>تدقيق الصكوك والوثائق[cite: 4]</li>
-                    <li>عقود التطوير العقاري[cite: 4]</li>
-                    <li>قضايا الرهن العقاري والمقاولات[cite: 4]</li>
+                    <li>حل نزاعات الملكية والحدود</li>
+                    <li>تدقيق الصكوك والوثائق</li>
+                    <li>عقود التطوير العقاري</li>
+                    <li>قضايا الرهن العقاري والمقاولات</li>
                 </ul>
-            </a>
+            </div>
         </div>
     </section>
 
     <section class="testimonials-section">
-        <span class="section-tag">ثقة عملائنا[cite: 4]</span>
-        <h2 class="section-h2">آراء عملائنا[cite: 4]</h2>
+        <span class="section-tag">ثقة عملائنا</span>
+        <h2 class="section-h2">آراء عملائنا</h2>
         <div class="testimonials-grid">
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">H</div>
                     <div class="testimonial-meta">
-                        <h4 class="testimonial-name">Hessen hassan[cite: 4]</h4>
+                        <h4 class="testimonial-name">Hessen hassan</h4>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="testimonial-google" alt="Google">
                     </div>
                 </div>
-                <p class="testimonial-text">اشكر الاستاذ عبد العزيز العديني علي تعاونه و السرعه والإنجاز وحصولنا ولله الحمد علي البراءة وإقفال القضية وذلك بجهودة بعد الله عز وجل وتبسيطه للقوانين والشرح المفصل وسعة صدرة واهتمامه وحرصه علي مصلحة موكله.[cite: 4]</p>
-                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...[cite: 4]</a>
+                <p class="testimonial-text">اشكر الاستاذ عبد العزيز العديني علي تعاونه و السرعه والإنجاز وحصولنا ولله الحمد علي البراءة وإقفال القضية وذلك بجهودة بعد الله عز وجل وتبسيطه للقوانين والشرح المفصل وسعة صدرة واهتمامه وحرصه علي مصلحة موكله.</p>
+                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...</a>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">H</div>
                     <div class="testimonial-meta">
-                        <h4 class="testimonial-name">HELAL H[cite: 4]</h4>
+                        <h4 class="testimonial-name">HELAL H</h4>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="testimonial-google" alt="Google">
                     </div>
                 </div>
-                <p class="testimonial-text">أشكر الأستاذ عبدالعزيز العديني على جهوده الكبيرة وتعاملِه الراقي. بصراحة، كان مثالًا للمحامي المتمكن، المتعاون، والسريع في إنجاز الإجراءات، إضافة إلى أسلوبه الأكثر من رائع في المتابعة.[cite: 4]</p>
-                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...[cite: 4]</a>
+                <p class="testimonial-text">أشكر الأستاذ عبدالعزيز العديني على جهوده الكبيرة وتعاملِه الراقي. بصراحة، كان مثالًا للمحامي المتمكن، المتعاون، والسريع في إنجاز الإجراءات، إضافة إلى أسلوبه الأكثر من رائع في المتابعة.</p>
+                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...</a>
             </div>
             <div class="testimonial-card">
                 <div class="testimonial-header">
                     <div class="testimonial-avatar">a</div>
                     <div class="testimonial-meta">
-                        <h4 class="testimonial-name">ahmed "soultan"[cite: 4]</h4>
+                        <h4 class="testimonial-name">ahmed "soultan"</h4>
                         <img src="https://upload.wikimedia.org/wikipedia/commons/c/c1/Google_%22G%22_logo.svg" class="testimonial-google" alt="Google">
                     </div>
                 </div>
-                <p class="testimonial-text">أنصح فيه متمكن جدا المحامي عبد العزيز بيض الوجه ومتابعته ما عليها كلام. شخص صادق وراقي في التعامل. الله يعطيه العافية وما قصر أبد[cite: 4]</p>
-                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...[cite: 4]</a>
+                <p class="testimonial-text">أنصح فيه متمكن جدا المحامي عبد العزيز بيض الوجه ومتابعته ما عليها كلام. شخص صادق وراقي في التعامل. الله يعطيه العافية وما قصر أبد</p>
+                <a href="https://share.google/67vxgyjkhERPL0jRF" target="_blank" class="testimonial-more">المزيد...</a>
             </div>
         </div>
     </section>
 
     <div class="trust-bar">
         <div class="trust-items">
-            <span class="trust-item">✓ محامي مرخص[cite: 4]</span>
-            <span class="trust-item">✓ الهيئة السعودية للمحامين[cite: 4]</span>
-            <span class="trust-item">✓ استشارات فورية بجدة[cite: 4]</span>
+            <span class="trust-item">✓ محامي مرخص</span>
+            <span class="trust-item">✓ الهيئة السعودية للمحامين</span>
+            <span class="trust-item">✓ استشارات فورية بجدة</span>
         </div>
     </div>
 
     <footer>
-        <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، السعودية[cite: 4]</p>
+        <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، السعودية</p>
     </footer>
 
     <script type="application/ld+json">
@@ -484,11 +485,7 @@
           "closes": "17:00"
         }
       ],
-      "hasMap": "https://www.google.com/maps/place/Abdulaziz+Al-Odayni+Law+Firm",
-      "sameAs": [
-        "https://www.linkedin.com/in/abdulaziz-alodayni",
-        "https://twitter.com/abdulaziz_law"
-      ]
+      "hasMap": "https://www.google.com/maps/place/Abdulaziz+Al-Odayni+Law+Firm"
     }
     </script>
 
@@ -500,11 +497,11 @@
         }
 
         function openModal() {
-            document.getElementById('consultationModal').style.display = 'block';
+            document.getElementById('consultationModal').classList.add('active');
         }
 
         function closeModal() {
-            document.getElementById('consultationModal').style.display = 'none';
+            document.getElementById('consultationModal').classList.remove('active');
         }
 
         window.addEventListener('click', (event) => {
@@ -514,18 +511,13 @@
             }
         });
 
-        window.addEventListener('scroll', () => {
-            const floatingBar = document.getElementById('floatingBar');
-            if (window.scrollY > 400) floatingBar.classList.add('visible');
-            else floatingBar.classList.remove('visible');
-        });
-
+        // ظهور النافذة المنبثقة فورياً عند التحميل لأول مرة
         setTimeout(() => {
             if (!sessionStorage.getItem('consultationShown')) {
                 openModal();
                 sessionStorage.setItem('consultationShown', 'true');
             }
-        }, 100);
+        }, 500);
     </script>
 </body>
 </html>
