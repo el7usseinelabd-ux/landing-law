@@ -2,118 +2,395 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>القضايا التجارية وتأسيس الشركات بجدة | مكتب عبدالعزيز العديني</title>
+    <meta name="description" content="مكتب المحامي عبدالعزيز العديني يقدم خدمات القضايا التجارية وتأسيس الشركات، صياغة العقود، وحل المنازعات التجاريّة بجدة.">
+    <meta name="keywords" content="القضايا التجارية، تأسيس شركات جدة، محامي تجاري، صياغة عقود تجارية">
+
+    <!-- Google Tag Manager -->
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
+        new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
+        "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,"script","dataLayer","GTM-KKHH6SBP");
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
     <style>
         :root {
-            --primary: #1a3a2a; /* أخضر غامق هادئ */
-            --gold: #b8860b;    /* ذهبي مطفي (Dark Goldenrod) */
+            --primary: #0d2c1d;
+            --primary-light: #1a4d35;
+            --gold: #c29b63;
+            --gold-light: #dab479;
             --white: #ffffff;
-            --bg-body: #f9f9f9;
-            --text-dark: #333333;
+            --bg-soft: #f4f7f6;
+            --text-main: #1d1d1d;
+            --text-muted: #666666;
             --whatsapp: #25d366;
-            --transition: all 0.3s ease;
+            --shadow-premium: 0 15px 40px rgba(0,0,0,0.08);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
-        body { font-family: 'Cairo', sans-serif; margin: 0; background-color: var(--bg-body); direction: rtl; text-align: right; }
-        
-        /* الهيدر المحدث */
+        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; direction: rtl; }
+        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; font-size: 16px; text-align: right; }
+
+        @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
+        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
+        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
+
+        .btn-shimmer { position: relative; overflow: hidden; }
+        .btn-shimmer::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 60%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
+            animation: shimmer 1.8s infinite;
+        }
+
         header {
-            background: var(--white);
-            padding: 15px 5%;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid var(--gold);
+            padding: 12px 5%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            border-bottom: 2px solid var(--gold);
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
         }
-        .logo-box { width: 50px; height: 50px; overflow: hidden; border-radius: 50%; border: 1px solid var(--gold); }
-        .logo-box img { width: 100%; height: 100%; object-fit: cover; }
-        
-        .call-btn {
+
+        .header-brand { display: flex; align-items: center; gap: 10px; cursor: pointer; }
+        .logo-box { width: 45px; height: 45px; border-radius: 50%; border: 1.5px solid var(--gold); padding: 2px; flex-shrink: 0; overflow: hidden; background: var(--white); }
+        .logo-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+        .brand-info h2 { font-size: 14px; color: var(--primary); font-weight: 900; line-height: 1.2; }
+        .brand-info p { font-size: 10px; color: var(--gold); font-weight: 700; }
+
+        .header-call-btn {
             background: var(--primary);
             color: var(--white);
-            padding: 10px 20px;
-            border-radius: 8px;
+            padding: 8px 16px;
+            border-radius: 50px;
             text-decoration: none;
-            font-weight: 700;
+            font-weight: 800;
+            font-size: 12px;
             display: flex;
             align-items: center;
-            gap: 8px;
+            gap: 6px;
+            transition: var(--transition);
+            white-space: nowrap;
         }
 
-        /* النافذة المنبثقة المحدثة */
-        .modal { display: none; position: fixed; z-index: 2000; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.5); }
-        .modal-content {
-            background: var(--white);
-            margin: 15% auto;
-            padding: 30px;
-            width: 90%;
-            max-width: 400px;
-            border-radius: 15px;
+        .hero {
+            padding: 70px 5% 60px;
+            background: linear-gradient(rgba(13, 44, 29, 0.88), rgba(13, 44, 29, 0.78)),
+                        url('https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
             text-align: center;
+            color: var(--white);
         }
-        .modal-btn {
-            display: flex;
+
+        .hero h1 { font-size: clamp(26px, 6vw, 44px); font-weight: 900; line-height: 1.3; margin-bottom: 15px; }
+        .hero p { font-size: clamp(15px, 3vw, 18px); color: var(--gold-light); margin-bottom: 30px; font-weight: 600; max-width: 800px; margin-left: auto; margin-right: auto; }
+
+        .hero-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
+        @media (min-width: 600px) { .hero-btns { flex-direction: row; } }
+
+        .btn-main {
+            width: 100%;
+            max-width: 280px;
+            padding: 14px 20px;
+            font-size: 15px;
+            font-weight: 900;
+            border-radius: 50px;
+            text-decoration: none;
+            display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 10px;
-            padding: 12px;
-            margin: 10px 0;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: 700;
+            gap: 8px;
+            transition: var(--transition);
         }
-        .modal-btn-call { background: var(--primary); color: var(--white); }
-        .modal-btn-wh { background: var(--whatsapp); color: var(--white); }
+        .btn-hero-call { background: var(--gold); color: var(--primary); animation: pulse-gold 2s infinite; }
+        .btn-hero-wh { background: var(--whatsapp); color: var(--white); animation: pulse-green 2s infinite; }
 
-        .hero { background: var(--primary); color: var(--white); padding: 60px 5%; text-align: center; }
-        .content { padding: 40px 5%; line-height: 1.8; }
-        
-        /* إصلاح اتجاه النصوص */
-        ul { list-style: none; padding-right: 0; }
-        ul li { margin-bottom: 10px; }
+        .trust-section { padding: 50px 5%; background: var(--bg-soft); }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
+        .trust-card {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 16px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
+            border: 1px solid #eaeaea;
+            text-align: center;
+            transition: var(--transition);
+        }
+        .trust-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: var(--shadow-premium); }
+        .trust-card h3 { font-size: 18px; color: var(--primary); margin-bottom: 10px; font-weight: 900; }
+        .trust-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
+
+        .content-section { padding: 60px 5%; background: var(--white); text-align: right; max-width: 1100px; margin: 0 auto; }
+        .content-section h2 { font-size: 26px; color: var(--primary); font-weight: 900; margin-bottom: 15px; }
+        .content-section p { font-size: 16px; color: var(--text-main); line-height: 1.8; margin-bottom: 20px; }
+        .content-section h3 { font-size: 20px; color: var(--gold); margin-top: 25px; margin-bottom: 15px; font-weight: 800; }
+        .content-section ul { list-style: none; padding: 0; }
+        .content-section ul li {
+            font-size: 15px;
+            color: var(--text-muted);
+            line-height: 2.2;
+            padding-right: 25px;
+            position: relative;
+        }
+        .content-section ul li:before {
+            content: "✓";
+            position: absolute;
+            right: 0;
+            color: var(--gold);
+            font-weight: 900;
+        }
+
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 3000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(5px);
+            animation: fadeIn 0.3s ease;
+        }
+
+        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+
+        .modal-content {
+            background-color: var(--white);
+            margin: 12% auto;
+            padding: 30px;
+            border-radius: 20px;
+            width: 90%;
+            max-width: 450px;
+            text-align: center;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            animation: slideUp 0.3s ease;
+        }
+
+        @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .modal-logo { width: 70px; height: 70px; margin: 0 auto 15px; border-radius: 50%; border: 2px solid var(--gold); padding: 2px; overflow: hidden; background: var(--white); }
+        .modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
+
+        .modal h3 { color: var(--primary); font-size: 22px; margin-bottom: 10px; font-weight: 900; }
+        .modal p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+
+        .modal-btns { display: flex; flex-direction: column; gap: 10px; }
+        .modal-btn {
+            padding: 12px 20px;
+            border: none;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 900;
+            cursor: pointer;
+            text-decoration: none;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+        .modal-btn-call { background: var(--gold); color: var(--primary); }
+        .modal-btn-wh { background: var(--whatsapp); color: var(--white); }
+        .modal-btn-close { background: #f0f0f0; color: var(--text-main); margin-top: 5px; }
+
+        .floating-bar {
+            position: fixed; bottom: 20px; left: 5%; right: 5%; max-width: 500px; margin: 0 auto;
+            background: rgba(13, 44, 29, 0.95); backdrop-filter: blur(10px);
+            padding: 12px 25px; border-radius: 100px;
+            display: flex; justify-content: space-around; z-index: 2000;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1.5px solid var(--gold);
+            transform: translateY(120px); transition: transform 0.4s ease;
+        }
+        .floating-bar.visible { transform: translateY(0); }
+        .float-link { text-decoration: none; color: var(--white); font-weight: 900; font-size: 14px; display: flex; align-items: center; gap: 6px; }
+
+        footer { background: var(--primary); padding: 30px 5%; text-align: center; color: rgba(255,255,255,0.7); border-top: 4px solid var(--gold); font-size: 13px; }
+
+        .related-section { padding: 50px 5%; background: var(--bg-soft); text-align: center; }
+        .related-title { font-size: 22px; color: var(--primary); font-weight: 900; margin-bottom: 20px; }
+        .related-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin: 0 auto; }
+        .related-link {
+            background: var(--white);
+            color: var(--primary);
+            padding: 10px 18px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 800;
+            font-size: 13px;
+            border: 1.5px solid var(--gold);
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            transition: var(--transition);
+        }
+        .related-link:hover { background: var(--gold); color: var(--white); }
     </style>
 </head>
 <body>
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <header>
-        <div class="logo-box">
-            <img src="logo-main.png" alt="شعار">
+    <header id="mainHeader">
+        <div class="header-brand" onclick="window.location.href='index.html'">
+            <div class="logo-box">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+            </div>
+            <div class="brand-info">
+                <h2>عبدالعزيز عبدالله العديني</h2>
+                <p>للمحاماة والاستشارات القانونية بجدة</p>
+            </div>
         </div>
-        <!-- تم تغيير الأيقونة لسماعة -->
-        <a href="tel:+966553878758" class="call-btn">☎️ اتصل الآن: 0553878758</a>
+        <!-- تم تغيير الأيقونة هنا إلى سماعة ☎️ -->
+        <a href="tel:+966553878758" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل الآن: 0553878758</a>
     </header>
 
-    <section class="hero">
-        <h1>القضايا التجارية وتأسيس الشركات بجدة</h1>
-        <p>حلول قانونية متكاملة لرجال الأعمال والشركات.</p>
-    </section>
+    <div class="floating-bar" id="floatingBar">
+        <a href="tel:+966553878758" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصل الآن</a>
+        <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
+    </div>
 
-    <section class="content">
-        <h2>خدمات القضايا التجارية وتأسيس الشركات</h2>
-        <p>ندعم مسيرة عملائنا عبر توفير حماية قانونية شاملة لأنشطتهم التجارية.</p>
-        <h3>أبرز خدماتنا التجارية:</h3>
-        <ul>
-            <li>✓ تأسيس الشركات بجميع أنواعها واستخراج التراخيص اللازمة</li>
-            <li>✓ صياغة ومراجعة العقود التجارية وعقود الشراكة</li>
-            <li>✓ تسوية المنازعات التجارية والتمثيل أمام المحاكم التجارية</li>
-            <li>✓ قضايا الإفلاس والتصفية وإعادة الهيكلة</li>
-        </ul>
-    </section>
-
-    <!-- النافذة المنبثقة -->
-    <div id="consultationModal" class="modal" style="display: block;">
+    <!-- النافذة المنبثقة للتحويلات -->
+    <div id="consultationModal" class="modal">
         <div class="modal-content">
+            <div class="modal-logo">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+            </div>
             <h3>استشارة قانونية فورية</h3>
-            <!-- تم تغيير الأيقونات لسماعة في النافذة -->
-            <a href="tel:+966553878758" class="modal-btn modal-btn-call">☎️ اتصال هاتفي</a>
-            <a href="https://wa.me/966553878758" class="modal-btn modal-btn-wh">💬 مراسلة واتساب</a>
-            <button onclick="document.getElementById('consultationModal').style.display='none'" style="border:none; background:none; cursor:pointer; margin-top:10px; color:#888;">إغلاق</button>
+            <p>فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
+            <div class="modal-btns">
+                <!-- تم تغيير الأيقونة هنا أيضاً إلى سماعة ☎️ -->
+                <a href="tel:+966553878758" class="modal-btn modal-btn-call btn-shimmer" onclick="trackConversion('modal_call', 'consultation')">☎️ اتصل الآن</a>
+                <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="modal-btn modal-btn-wh btn-shimmer" onclick="trackConversion('modal_whatsapp', 'consultation')">💬 واتساب</a>
+                <button class="modal-btn modal-btn-close" onclick="closeModal()">إغلاق</button>
+            </div>
         </div>
     </div>
 
+    <section class="hero">
+        <h1>القضايا التجارية وتأسيس الشركات بجدة</h1>
+        <p>نقدم خدمات متكاملة لرجال الأعمال والشركات تشمل تأسيس الشركات، صياغة العقود التجارية، وحل المنازعات التجارية بحرفية عالية.</p>
+        <div class="hero-btns">
+            <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب</a>
+            <a href="tel:+966553878758" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ اتصل الآن</a>
+        </div>
+    </section>
+
+    <section class="trust-section">
+        <div class="trust-grid">
+            <div class="trust-card">
+                <h3>✅ خبرة قانونية</h3>
+                <p>سنوات طويلة من التميز والنجاح في ساحات القضاء وتقديم الاستشارات.</p>
+            </div>
+            <div class="trust-card">
+                <h3>🔒 سرية تامة</h3>
+                <p>بياناتك وقضاياك تحظى بأعلى معايير الخصوصية والأمان المطلق معنا.</p>
+            </div>
+            <div class="trust-card">
+                <h3>💼 تمثيل احترافي</h3>
+                <p>نرافع عنك بكل قوة واحترافية لتحقيق أفضل النتائج وحماية حقوقك.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>خدمات القضايا التجارية وتأسيس الشركات</h2>
+        <p>ندعم مسيرة عملائنا عبر توفير حماية قانونية شاملة لأنشطتهم التجارية والاستثمارية. نعمل على صياغة العقود والاتفاقيات التجارية بدقة بالغة تضمن تفادي النزاعات وتحافظ على مصالح الشركات والأفراد.</p>
+        <h3>أبرز خدماتنا التجارية:</h3>
+        <ul>
+            <li>تأسيس الشركات بجميع أنواعها واستخراج التراخيص اللازمة</li>
+            <li>صياغة ومراجعة العقود التجارية وعقود الشراكة</li>
+            <li>تسوية المنازعات التجارية والتمثيل أمام المحاكم التجارية</li>
+            <li>قضايا الإفلاس والتصفية وإعادة الهيكلة</li>
+            <li>الاستشارات القانونية المستمرة للشركات والمؤسسات</li>
+        </ul>
+    </section>
+
+    <section class="related-section">
+        <h2 class="related-title">خدمات أخرى قد تهمك</h2>
+        <div class="related-links">
+            <a href="criminal.html" class="related-link btn-shimmer">⚖️ القضايا الجنائية</a>
+            <a href="family.html" class="related-link btn-shimmer">🏠 الأحوال الشخصية والتركات</a>
+            <a href="commercial.html" class="related-link btn-shimmer">💼 القضايا التجارية وتأسيس الشركات</a>
+            <a href="labor.html" class="related-link btn-shimmer">👥 القضايا العمالية</a>
+            <a href="realestate.html" class="related-link btn-shimmer">🏢 القضايا العقارية</a>
+            <a href="notary.html" class="related-link btn-shimmer">📜 التوثيق العدلي</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، السعودية</p>
+    </footer>
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Attorney",
+      "name": "مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية",
+      "image": "https://landing-law.vercel.app/logo-main.png",
+      "url": "https://landing-law.vercel.app/",
+      "telephone": "+966553878758",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "حي الروضة، شارع صاري",
+        "addressLocality": "جدة",
+        "addressRegion": "مكة المكرمة",
+        "postalCode": "23431",
+        "addressCountry": "SA"
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
+          "opens": "09:00",
+          "closes": "17:00"
+        }
+      ]
+    }
+    </script>
+
+    <script>
+        function trackConversion(type, location) {
+            if (typeof gtag === 'function') {
+                gtag('event', 'click', { 'event_category': 'engagement', 'event_label': type + '_' + location });
+            }
+        }
+
+        function openModal() {
+            var modal = document.getElementById('consultationModal');
+            if (modal) modal.style.display = 'block';
+        }
+
+        function closeModal() {
+            var modal = document.getElementById('consultationModal');
+            if (modal) modal.style.display = 'none';
+        }
+
+        window.addEventListener('scroll', () => {
+            const floatingBar = document.getElementById('floatingBar');
+            if (window.scrollY > 300) floatingBar.classList.add('visible');
+            else floatingBar.classList.remove('visible');
+        });
+
+        document.addEventListener('DOMContentLoaded', () => {
+            setTimeout(openModal, 1500);
+        });
+    </script>
 </body>
 </html>
