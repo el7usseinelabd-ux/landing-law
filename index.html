@@ -2,109 +2,62 @@
 <html lang="ar" dir="rtl">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>مكتب عبدالعزيز العديني | محاماة واستشارات قانونية بجدة</title>
-    <meta name="description" content="مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القانون الجنائي، الأحوال الشخصية، والقضايا التجارية بجدة. خبرة واحترافية في خدمة موكلينا.">
-
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
-        new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
-        "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,"script","dataLayer","GTM-KKHH6SBP");
-    </script>
-    <!-- End Google Tag Manager -->
-
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;700;800&display=swap" rel="stylesheet">
     <style>
-        :root {
-            --primary: #0d2c1d; --primary-light: #1a4d35; --gold: #c29b63;
-            --white: #ffffff; --bg-soft: #f9f9f9; --text-main: #1d1d1d;
-            --whatsapp: #25d366; --shadow: 0 10px 30px rgba(0,0,0,0.1);
-        }
+        :root { --primary: #0d2c1d; --gold: #c29b63; --white: #ffffff; }
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; }
-        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; }
+        body { background-color: #f4f4f4; color: #333; }
 
-        /* العناصر الأساسية */
-        .header { background: #fff; padding: 15px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid var(--gold); position: sticky; top: 0; z-index: 1000; }
-        .hero { padding: 80px 5%; background: linear-gradient(rgba(13, 44, 29, 0.9), rgba(13, 44, 29, 0.9)), url('https://images.unsplash.com/photo-1589829545856-d13d55e095b1?q=80&w=1920'); background-size: cover; text-align: center; color: #fff; }
-        .hero h1 { font-size: 32px; margin-bottom: 20px; }
-        
-        /* قسم الثقة الجديد */
-        .trust-section { padding: 50px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px; background: #fff; }
-        .trust-card { padding: 30px; border: 1px solid #eee; border-radius: 15px; text-align: center; transition: 0.3s; }
-        .trust-card:hover { border-color: var(--gold); box-shadow: var(--shadow); }
-        .trust-card h3 { color: var(--primary); margin-bottom: 10px; }
+        /* Header */
+        header { background: var(--white); padding: 20px 5%; display: flex; justify-content: space-between; align-items: center; border-bottom: 3px solid var(--gold); }
+        .logo { font-weight: 800; color: var(--primary); font-size: 1.2rem; }
 
-        /* التعديلات السابقة */
-        .btn-main { display: inline-block; padding: 15px 30px; border-radius: 50px; text-decoration: none; font-weight: 800; margin: 10px; transition: 0.3s; }
-        .btn-wh { background: var(--whatsapp); color: #fff; }
-        .btn-call { background: var(--gold); color: var(--primary); }
-        .floating-bar { position: fixed; bottom: 20px; left: 5%; right: 5%; background: var(--primary); color: #fff; padding: 15px; border-radius: 50px; display: flex; justify-content: space-around; z-index: 999; }
-        .floating-bar a { color: #fff; text-decoration: none; font-weight: 700; }
-        
-        /* مودال الاستشارة */
-        .modal { display: none; position: fixed; z-index: 2000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.6); }
-        .modal-content { background: #fff; margin: 20% auto; padding: 30px; width: 90%; max-width: 400px; border-radius: 20px; text-align: center; }
+        /* Hero */
+        .hero { background: var(--primary); color: white; padding: 60px 5%; text-align: center; }
+        .hero h1 { margin-bottom: 15px; font-size: 2rem; }
+        .hero p { margin-bottom: 30px; opacity: 0.9; }
+        .btn-group { display: flex; gap: 15px; justify-content: center; }
+        .btn { padding: 15px 30px; border-radius: 8px; text-decoration: none; font-weight: 700; transition: 0.3s; }
+        .btn-green { background: #25d366; color: white; }
+        .btn-gold { background: var(--gold); color: var(--primary); }
+
+        /* Trust Section */
+        .trust { padding: 50px 5%; display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+        .card { background: white; padding: 30px; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); text-align: center; }
+
+        /* Floating Bar Fix */
+        .floating-bar { position: fixed; bottom: 0; left: 0; right: 0; background: var(--primary); display: flex; padding: 15px; justify-content: space-around; }
+        .floating-bar a { color: white; text-decoration: none; font-weight: 700; }
     </style>
 </head>
 <body>
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
-    <header class="header">
-        <div class="logo"><strong>عبدالعزيز العديني</strong><br><small>للمحاماة والاستشارات</small></div>
-        <a href="tel:+966553878758" class="btn-call" style="padding: 8px 15px; font-size: 14px;" onclick="trackConversion('call', 'header')">اتصل بنا</a>
+    <header>
+        <div class="logo">مكتب عبدالعزيز العديني للمحاماة</div>
+        <a href="tel:+966553878758" class="btn btn-gold" style="padding: 10px 20px;">اتصل بنا</a>
     </header>
 
     <section class="hero">
         <h1>شريكك القانوني الموثوق في جدة</h1>
         <p>نحن نحمي حقوقك ونقدم لك استشارات قانونية دقيقة بخبرة واحترافية.</p>
-        <div class="hero-btns">
-            <a href="https://wa.me/966553878758" class="btn-main btn-wh" onclick="trackConversion('whatsapp', 'hero')">واتساب</a>
-            <a href="tel:+966553878758" class="btn-main btn-call" onclick="trackConversion('call', 'hero')">اتصل الآن</a>
+        <div class="btn-group">
+            <a href="https://wa.me/966553878758" class="btn btn-green">واتساب</a>
+            <a href="tel:+966553878758" class="btn btn-gold">اتصل الآن</a>
         </div>
     </section>
 
-    <!-- قسم الثقة الجديد -->
-    <section class="trust-section">
-        <div class="trust-card"><h3>✅ خبرة قانونية</h3><p>سنوات من التميز في ساحات القضاء.</p></div>
-        <div class="trust-card"><h3>🔒 سرية تامة</h3><p>بياناتك وقضاياك في أمان مطلق معنا.</p></div>
-        <div class="trust-card"><h3>💼 تمثيل احترافي</h3><p>نرافع عنك بكل قوة لتحقيق أفضل النتائج.</p></div>
+    <section class="trust">
+        <div class="card"><h3>✅ خبرة قانونية</h3><p>سنوات من التميز في ساحات القضاء.</p></div>
+        <div class="card"><h3>🔒 سرية تامة</h3><p>بياناتك وقضاياك في أمان مطلق معنا.</p></div>
+        <div class="card"><h3>💼 تمثيل احترافي</h3><p>نرافع عنك بكل قوة لتحقيق أفضل النتائج.</p></div>
     </section>
 
-    <section style="padding: 50px 5%;">
-        <h2>خدماتنا القانونية</h2>
-        <ul style="list-style: none; margin-top: 20px;">
-            <li>✓ القضايا الجنائية والتجارية</li>
-            <li>✓ الأحوال الشخصية والتركات</li>
-            <li>✓ صياغة العقود والاتفاقيات</li>
-        </ul>
-    </section>
-
-    <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966553878758" onclick="trackConversion('call', 'float')">📞 اتصال</a>
-        <a href="https://wa.me/966553878758" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
+    <div class="floating-bar">
+        <a href="tel:+966553878758">📞 اتصال</a>
+        <a href="https://wa.me/966553878758">💬 واتساب</a>
     </div>
 
-    <div id="consultationModal" class="modal">
-        <div class="modal-content">
-            <h3>هل تحتاج مساعدة؟</h3>
-            <p>تحدث مع المحامي الآن واحصل على استشارة قانونية فورية.</p>
-            <a href="https://wa.me/966553878758" class="btn-main btn-wh" onclick="trackConversion('modal_whatsapp', 'modal')">تواصل معنا</a>
-            <button onclick="closeModal()" style="display:block; width:100%; margin-top:10px; background:none; border:none; color:gray;">إغلاق</button>
-        </div>
-    </div>
-
-    <script>
-        function trackConversion(type, location) {
-            if (typeof gtag === 'function') {
-                gtag('event', 'click', { 'event_category': 'engagement', 'event_label': type + '_' + location });
-            }
-        }
-        function openModal() { document.getElementById('consultationModal').style.display = 'block'; }
-        function closeModal() { document.getElementById('consultationModal').style.display = 'none'; }
-        setTimeout(openModal, 5000); // تظهر بعد 5 ثواني لتعزيز التحويل
-    </script>
 </body>
 </html>
