@@ -54,6 +54,15 @@
             animation: shimmer 1.8s infinite;
         }
 
+        /* تنسيق أيقونة السماعة SVG لتكون نظيفة وثابتة */
+        .phone-icon {
+            width: 15px;
+            height: 15px;
+            fill: currentColor;
+            display: inline-block;
+            vertical-align: middle;
+        }
+
         header {
             background: rgba(255, 255, 255, 0.98);
             backdrop-filter: blur(10px);
@@ -257,12 +266,18 @@
                 <p>للمحاماة والاستشارات القانونية بجدة</p>
             </div>
         </div>
-        <!-- تم تغيير الأيقونة هنا إلى سماعة ☎️ -->
-        <a href="tel:+966553878758" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">☎️ اتصل الآن: 0553878758</a>
+        <!-- زر الهيدر مع أيقونة سماعة نظيفة -->
+        <a href="tel:+966553878758" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">
+            <svg class="phone-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            اتصل الآن: 0553878758
+        </a>
     </header>
 
     <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966553878758" class="float-link" onclick="trackConversion('call', 'float')">📞 اتصل الآن</a>
+        <a href="tel:+966553878758" class="float-link" onclick="trackConversion('call', 'float')">
+            <svg class="phone-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            اتصل الآن
+        </a>
         <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
     </div>
 
@@ -275,8 +290,11 @@
             <h3>استشارة قانونية فورية</h3>
             <p>فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
             <div class="modal-btns">
-                <!-- تم تغيير الأيقونة هنا أيضاً إلى سماعة ☎️ -->
-                <a href="tel:+966553878758" class="modal-btn modal-btn-call btn-shimmer" onclick="trackConversion('modal_call', 'consultation')">☎️ اتصل الآن</a>
+                <!-- زر النافذة المنبثقة مع أيقونة سماعة نظيفة -->
+                <a href="tel:+966553878758" class="modal-btn modal-btn-call btn-shimmer" onclick="trackConversion('modal_call', 'consultation')">
+                    <svg class="phone-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                    اتصل الآن
+                </a>
                 <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="modal-btn modal-btn-wh btn-shimmer" onclick="trackConversion('modal_whatsapp', 'consultation')">💬 واتساب</a>
                 <button class="modal-btn modal-btn-close" onclick="closeModal()">إغلاق</button>
             </div>
@@ -288,7 +306,11 @@
         <p>نقدم خدمات متكاملة لرجال الأعمال والشركات تشمل تأسيس الشركات، صياغة العقود التجارية، وحل المنازعات التجارية بحرفية عالية.</p>
         <div class="hero-btns">
             <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="btn-main btn-hero-wh btn-shimmer" onclick="trackConversion('whatsapp', 'hero')">💬 مراسلة عبر واتساب</a>
-            <a href="tel:+966553878758" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">☎️ اتصل الآن</a>
+            <!-- زر الهيرو مع أيقونة سماعة نظيفة -->
+            <a href="tel:+966553878758" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">
+                <svg class="phone-icon" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                اتصل الآن
+            </a>
         </div>
     </section>
 
