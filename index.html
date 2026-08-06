@@ -69,7 +69,8 @@
         }
 
         .header-brand { display: flex; align-items: center; gap: 10px; cursor: pointer; }
-        .logo-box { width: 45px; height: 45px; border-radius: 50%; border: 1.5px solid var(--gold); padding: 2px; flex-shrink: 0; display: flex; align-items: center; justify-content: center; background: var(--primary); color: var(--gold); font-weight: 900; }
+        .logo-box { width: 45px; height: 45px; border-radius: 50%; border: 1.5px solid var(--gold); padding: 2px; flex-shrink: 0; overflow: hidden; background: var(--white); }
+        .logo-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
         .brand-info h2 { font-size: 14px; color: var(--primary); font-weight: 900; line-height: 1.2; }
         .brand-info p { font-size: 10px; color: var(--gold); font-weight: 700; }
 
@@ -119,18 +120,8 @@
         .btn-hero-call { background: var(--gold); color: var(--primary); animation: pulse-gold 2s infinite; }
         .btn-hero-wh { background: var(--whatsapp); color: var(--white); animation: pulse-green 2s infinite; }
 
-        /* قسم الثقة المرتب والجديد */
-        .trust-section {
-            padding: 50px 5%;
-            background: var(--bg-soft);
-        }
-        .trust-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-            gap: 20px;
-            max-width: 1100px;
-            margin: 0 auto;
-        }
+        .trust-section { padding: 50px 5%; background: var(--bg-soft); }
+        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
         .trust-card {
             background: var(--white);
             padding: 25px;
@@ -140,11 +131,7 @@
             text-align: center;
             transition: var(--transition);
         }
-        .trust-card:hover {
-            transform: translateY(-5px);
-            border-color: var(--gold);
-            box-shadow: var(--shadow-premium);
-        }
+        .trust-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: var(--shadow-premium); }
         .trust-card h3 { font-size: 18px; color: var(--primary); margin-bottom: 10px; font-weight: 900; }
         .trust-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
 
@@ -196,6 +183,9 @@
         }
 
         @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
+
+        .modal-logo { width: 70px; height: 70px; margin: 0 auto 15px; border-radius: 50%; border: 2px solid var(--gold); padding: 2px; overflow: hidden; background: var(--white); }
+        .modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
         .modal h3 { color: var(--primary); font-size: 22px; margin-bottom: 10px; font-weight: 900; }
         .modal p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
@@ -259,7 +249,9 @@
 
     <header id="mainHeader">
         <div class="header-brand" onclick="window.location.href='index.html'">
-            <div class="logo-box">ع</div>
+            <div class="logo-box">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+            </div>
             <div class="brand-info">
                 <h2>عبدالعزيز عبدالله العديني</h2>
                 <p>للمحاماة والاستشارات القانونية بجدة</p>
@@ -273,9 +265,12 @@
         <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الحصول%20على%20استشارة%20قانونية" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
     </div>
 
-    <!-- النافذة المنبثقة للتحويلات -->
+    <!-- النافذة المنبثقة للتحويلات (تظهر أسرع الآن) -->
     <div id="consultationModal" class="modal">
         <div class="modal-content">
+            <div class="modal-logo">
+                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+            </div>
             <h3>استشارة قانونية فورية</h3>
             <p>فريقنا المتخصص في جدة جاهز لمساعدتك في حل قضيتك بأفضل الطرق القانونية.</p>
             <div class="modal-btns">
@@ -295,7 +290,6 @@
         </div>
     </section>
 
-    <!-- قسم الثقة المضاف بشكل مرتب واحترافي -->
     <section class="trust-section">
         <div class="trust-grid">
             <div class="trust-card">
@@ -393,7 +387,8 @@
         });
 
         document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(openModal, 4000);
+            // تم تقليل الوقت لتظهر النافذة المنبثقة أسرع (بعد ثانية ونصف تقريباً)
+            setTimeout(openModal, 1500);
         });
     </script>
 </body>
