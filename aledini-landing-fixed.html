@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#0b291b">
+  <meta name="description" content="مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية في جدة. خدمات قانونية متخصصة للأفراد والمنشآت.">
+  <title>مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية | جدة</title>
+
+  <!-- Google Tag Manager — لا تحذف -->
+  <script>
+    (function(w,d,s,l,i){
+      w[l]=w[l]||[];
+      w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});
+      var f=d.getElementsByTagName(s)[0],
+          j=d.createElement(s),
+          dl=l!='dataLayer'?'&l='+l:'';
+      j.async=true;
+      j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;
+      f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-KKHH6SBP');
+  </script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+  <style>
+    :root{
+      --green:#0b291b;
+      --green-2:#123b27;
+      --gold:#c8a365;
+      --gold-2:#e4c892;
+      --cream:#f8f6ef;
+      --soft:#f4f6f3;
+      --white:#fff;
+      --text:#17221b;
+      --muted:#6c756f;
+      --line:#e5e9e5;
+      --wa:#25d366;
+      --shadow:0 20px 55px rgba(11,41,27,.10);
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box;margin:0;padding:0}
+    html{scroll-behavior:smooth}
+    body{
+      font-family:'Cairo',Arial,sans-serif;
+      background:#fff;
+      color:var(--text);
+      line-height:1.7;
+      overflow-x:hidden;
+    }
+    img{display:block;max-width:100%}
+    a{text-decoration:none;color:inherit}
+    button{font:inherit}
+    .container{width:calc(100% - 32px);max-width:var(--max);margin-inline:auto}
+    .ltr{direction:ltr;unicode-bidi:isolate;display:inline-block;white-space:nowrap;font-variant-numeric:tabular-nums}
+
+    /* ===== Header ===== */
+    .topbar{background:var(--green);color:#eaf1ec;font-size:12px}
+    .topbar-inner{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:15px}
+    .topbar-left,.topbar-right{display:flex;gap:16px;align-items:center;flex-wrap:wrap}
+    .topbar a:hover{color:var(--gold-2)}
+
+    .navbar{
+      position:sticky;top:0;z-index:1000;
+      background:rgba(255,255,255,.94);
+      border-bottom:1px solid var(--line);
+      backdrop-filter:blur(14px);
+      -webkit-backdrop-filter:blur(14px)
+    }
+    .nav-inner{min-height:78px;display:flex;align-items:center;justify-content:space-between;gap:18px}
+    .brand{display:flex;align-items:center;gap:11px;min-width:0}
+    .brand-logo{width:52px;height:52px;padding:4px;background:#fff;border:1px solid rgba(200,163,101,.65);border-radius:15px;box-shadow:0 6px 18px rgba(0,0,0,.07);flex:0 0 auto}
+    .brand-logo img{width:100%;height:100%;object-fit:contain}
+    .brand-name{min-width:0}
+    .brand-name strong{display:block;color:var(--green);font-size:14px;font-weight:900;line-height:1.3}
+    .brand-name span{display:block;color:var(--gold);font-size:10px;font-weight:800;margin-top:2px;white-space:nowrap}
+    .nav-links{display:flex;align-items:center;gap:24px;color:#4a554f;font-size:13px;font-weight:800}
+    .nav-links a{transition:.2s}
+    .nav-links a:hover{color:var(--green)}
+    .nav-call{background:var(--green);color:#fff;padding:11px 16px;border-radius:13px;font-size:12px;font-weight:900;white-space:nowrap}
+
+    /* ===== Hero ===== */
+    .hero{
+      position:relative;
+      overflow:hidden;
+      background:
+        radial-gradient(circle at 80% 10%,rgba(200,163,101,.18),transparent 30%),
+        linear-gradient(135deg,#081c11,#0b291b 50%,#123b27);
+      color:#fff;
+    }
+    .hero:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(rgba(228,200,146,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(228,200,146,.035) 1px,transparent 1px);background-size:54px 54px}
+    .hero-inner{position:relative;z-index:1;padding:74px 0 82px;display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+    .eyebrow{display:inline-flex;align-items:center;gap:8px;padding:7px 12px;border:1px solid rgba(228,200,146,.34);background:rgba(228,200,146,.07);border-radius:999px;color:var(--gold-2);font-size:11px;font-weight:800}
+    .live-dot{width:7px;height:7px;border-radius:50%;background:#42cb7c;box-shadow:0 0 0 5px rgba(66,203,124,.11)}
+    .hero h1{font-size:clamp(34px,5vw,62px);line-height:1.16;font-weight:900;letter-spacing:-1px;margin-top:18px;max-width:760px}
+    .hero h1 span{color:var(--gold-2)}
+    .hero p{margin-top:19px;max-width:700px;color:rgba(255,255,255,.76);font-size:16px}
+    .hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+    .btn{min-height:52px;padding:0 21px;border-radius:14px;display:inline-flex;align-items:center;justify-content:center;font-size:14px;font-weight:900;transition:.25s;white-space:nowrap}
+    .btn:hover{transform:translateY(-2px)}
+    .btn-gold{background:var(--gold);color:var(--green);box-shadow:0 10px 25px rgba(200,163,101,.18)}
+    .btn-wa{background:var(--wa);color:#fff}
+    .hero-note{display:flex;gap:8px;align-items:center;margin-top:17px;color:rgba(255,255,255,.56);font-size:11px}
+    .hero-card{padding:10px;border:1px solid rgba(255,255,255,.14);border-radius:28px;background:rgba(255,255,255,.07);backdrop-filter:blur(12px);box-shadow:0 25px 70px rgba(0,0,0,.22)}
+    .hero-card-inner{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.09);border-radius:20px;padding:28px}
+    .hero-logo{width:94px;height:94px;background:#fff;border:1px solid rgba(228,200,146,.8);padding:6px;border-radius:22px;box-shadow:0 12px 30px rgba(0,0,0,.16)}
+    .hero-logo img{width:100%;height:100%;object-fit:contain}
+    .hero-card h2{font-size:23px;font-weight:900;line-height:1.35;margin-top:20px}
+    .hero-card p{font-size:13px;margin-top:8px;color:rgba(255,255,255,.65)}
+    .stats{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-top:22px}
+    .stat{padding:13px;border-radius:14px;background:rgba(0,0,0,.13);border:1px solid rgba(255,255,255,.07)}
+    .stat b{display:block;color:var(--gold-2);font-size:14px}.stat span{display:block;color:rgba(255,255,255,.57);font-size:10px;margin-top:2px}
+
+    /* ===== Trust ===== */
+    .trust{background:#fff;border-bottom:1px solid var(--line)}
+    .trust-grid{display:grid;grid-template-columns:repeat(4,1fr)}
+    .trust-item{padding:20px 16px;border-left:1px solid var(--line);display:flex;align-items:center;gap:11px}
+    .trust-item:last-child{border-left:0}
+    .trust-icon{width:38px;height:38px;border-radius:11px;display:grid;place-items:center;background:#f5f7f5;color:var(--gold);font-size:17px;flex:0 0 auto}
+    .trust-item strong{display:block;color:var(--green);font-size:11px}.trust-item span{display:block;color:var(--muted);font-size:9px;margin-top:2px}
+
+    /* ===== Sections ===== */
+    section{padding:82px 0}
+    .section-head{text-align:center;max-width:760px;margin:0 auto 40px}
+    .section-head .eyebrow{color:var(--green);background:#f2f5f2;border-color:#e1e7e1}
+    .section-head h2{font-size:clamp(27px,4vw,41px);line-height:1.25;font-weight:900;color:var(--green);margin-top:12px}
+    .section-head p{font-size:14px;color:var(--muted);margin-top:10px}
+
+    .about{background:var(--cream)}
+    .about-grid{display:grid;grid-template-columns:.9fr 1.1fr;gap:58px;align-items:center}
+    .about-card{background:linear-gradient(145deg,var(--green),var(--green-2));border-radius:30px;padding:32px;color:#fff;min-height:390px;position:relative;overflow:hidden;box-shadow:var(--shadow)}
+    .about-card:before{content:"";position:absolute;inset:18px;border:1px solid rgba(228,200,146,.22);border-radius:22px;pointer-events:none}
+    .about-logo{position:relative;width:82px;height:82px;background:#fff;padding:6px;border-radius:22px;border:1px solid rgba(228,200,146,.8);z-index:1}
+    .about-logo img{width:100%;height:100%;object-fit:contain}
+    .about-card h3{position:relative;z-index:1;margin-top:38px;font-size:25px;line-height:1.4;font-weight:900;max-width:420px}
+    .about-card p{position:relative;z-index:1;color:rgba(255,255,255,.66);font-size:13px;margin-top:10px;max-width:430px}
+    .about-tag{position:absolute;bottom:25px;left:27px;background:rgba(0,0,0,.14);border:1px solid rgba(255,255,255,.09);border-radius:13px;padding:9px 12px;color:var(--gold-2);font-size:11px;font-weight:900}
+    .points{display:grid;grid-template-columns:repeat(2,1fr);gap:18px;margin-top:22px}
+    .point{display:flex;gap:12px;align-items:flex-start}.point-no{width:36px;height:36px;border-radius:11px;background:var(--green);color:var(--gold-2);display:grid;place-items:center;font-size:10px;font-weight:900;flex:0 0 auto}.point strong{display:block;color:var(--green);font-size:13px}.point span{display:block;color:var(--muted);font-size:11px;margin-top:3px;line-height:1.7}
+
+    .services{background:#fff}
+    .services-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .service{background:#fff;border:1px solid var(--line);border-radius:21px;padding:25px;min-height:235px;display:flex;flex-direction:column;justify-content:space-between;transition:.25s;position:relative;overflow:hidden}
+    .service:after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:var(--gold);transform:scaleX(.25);transition:.25s}
+    .service:hover{transform:translateY(-6px);box-shadow:var(--shadow);border-color:#d9c49b}.service:hover:after{transform:scaleX(1)}
+    .service-top{display:flex;align-items:flex-start;justify-content:space-between;gap:12px}.service-icon{width:46px;height:46px;border-radius:14px;background:#f5f7f5;display:grid;place-items:center;font-size:19px;color:var(--green)}.service-number{font-size:10px;color:#9ba39e;font-weight:900}.service h3{margin-top:16px;color:var(--green);font-size:18px;font-weight:900}.service p{margin-top:7px;color:var(--muted);font-size:12px;line-height:1.85}.service-link{display:inline-flex;gap:6px;align-items:center;margin-top:18px;color:var(--green);font-size:12px;font-weight:900}
+
+    .process{background:var(--soft)}
+    .process-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+    .process-card{background:#fff;border:1px solid var(--line);border-radius:20px;padding:25px}.process-no{width:38px;height:38px;border-radius:12px;background:var(--green);color:var(--gold-2);display:grid;place-items:center;font-size:12px;font-weight:900}.process-card h3{margin-top:15px;color:var(--green);font-size:17px;font-weight:900}.process-card p{margin-top:7px;color:var(--muted);font-size:12px}
+
+    .cta{background:var(--soft);padding-top:15px}.cta-box{background:linear-gradient(135deg,var(--green),var(--green-2));border-radius:29px;padding:50px 55px;color:#fff;box-shadow:var(--shadow)}.cta-row{display:flex;align-items:center;justify-content:space-between;gap:30px}.cta h2{font-size:clamp(25px,4vw,37px);line-height:1.3;font-weight:900}.cta p{margin-top:8px;color:rgba(255,255,255,.65);font-size:13px}.cta-buttons{display:flex;gap:10px;flex-wrap:wrap;flex:0 0 auto}
+
+    footer{background:#071910;color:#fff;padding:62px 0 24px;border-top:1px solid rgba(228,200,146,.18)}
+    .footer-grid{display:grid;grid-template-columns:1.25fr .8fr .8fr;gap:42px}.footer-brand{display:flex;align-items:center;gap:11px}.footer-grid h3{font-size:13px;color:var(--gold-2);margin-bottom:13px}.footer-text{margin-top:13px;color:rgba(255,255,255,.58);font-size:12px;line-height:1.9;max-width:440px}.footer-list{display:flex;flex-direction:column;gap:8px}.footer-list a,.footer-list span{font-size:12px;color:rgba(255,255,255,.58)}.footer-list a:hover{color:#fff}.map-link{display:inline-flex;margin-top:15px;border:1px solid rgba(228,200,146,.3);border-radius:12px;padding:9px 12px;color:var(--gold-2)!important;background:rgba(228,200,146,.05)}.footer-bottom{margin-top:38px;padding-top:17px;border-top:1px solid rgba(255,255,255,.08);text-align:center;color:rgba(255,255,255,.4);font-size:10px}
+
+    /* ===== Floating CTA ===== */
+    .floating{position:fixed;z-index:1300;left:50%;bottom:13px;transform:translate(-50%,140%);opacity:0;display:flex;gap:8px;width:min(calc(100% - 26px),460px);padding:8px;border-radius:17px;background:rgba(8,29,19,.96);border:1px solid rgba(228,200,146,.3);box-shadow:0 18px 42px rgba(0,0,0,.22);transition:.35s}
+    .floating.show{transform:translate(-50%,0);opacity:1}.floating a{flex:1;min-height:44px;border-radius:12px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:900}.floating-call{background:var(--gold);color:var(--green)}.floating-wa{background:var(--wa);color:#fff}
+
+    /* ===== Entry popup ===== */
+    .popup{position:fixed;inset:0;z-index:3000;display:none;align-items:center;justify-content:center;padding:15px;background:rgba(2,12,8,.78);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+    .popup.show{display:flex;animation:fadeIn .2s ease}
+    .popup-card{width:min(100%,500px);border-radius:28px;padding:7px;background:linear-gradient(145deg,rgba(228,200,146,.65),rgba(255,255,255,.08));box-shadow:0 30px 80px rgba(0,0,0,.35)}
+    .popup-inner{background:#fff;border-radius:23px;padding:26px 22px 18px;text-align:center;position:relative;overflow:hidden}
+    .popup-inner:before{content:"";position:absolute;top:0;right:0;left:0;height:5px;background:linear-gradient(90deg,var(--gold),var(--gold-2),var(--gold))}
+    .popup-badge{display:inline-flex;align-items:center;gap:7px;margin-bottom:13px;padding:6px 11px;border-radius:999px;background:#f2f5f2;color:var(--green);font-size:10px;font-weight:900}.popup-badge i{width:7px;height:7px;border-radius:50%;background:#2fbe6e;box-shadow:0 0 0 5px rgba(47,190,110,.1)}
+    .popup-logo{width:82px;height:82px;margin:0 auto 13px;padding:5px;background:#fff;border:1px solid rgba(200,163,101,.7);border-radius:22px;box-shadow:0 10px 25px rgba(0,0,0,.08)}.popup-logo img{width:100%;height:100%;object-fit:contain}
+    .popup h2{color:var(--green);font-size:23px;line-height:1.4;font-weight:900}.popup-copy{max-width:390px;margin:7px auto 0;color:var(--muted);font-size:12px;line-height:1.9}
+    .popup-phone{display:flex;align-items:center;justify-content:center;gap:8px;width:max-content;max-width:100%;margin:12px auto 0;padding:8px 12px;border:1px solid #e4e8e4;background:#f7f8f6;border-radius:11px;color:var(--green);font-size:12px;font-weight:900}.popup-phone .ltr{font-size:15px}
+    .popup-actions{display:grid;gap:9px;margin-top:17px}.popup-action{width:100%;min-height:52px;border:0;border-radius:14px;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:13px;font-weight:900;transition:.2s}.popup-action:hover{transform:translateY(-1px)}.popup-call{background:var(--green);color:#fff;box-shadow:0 10px 22px rgba(11,41,27,.16)}.popup-wa{background:var(--wa);color:#fff}.popup-close{background:#f0f3f0;color:#57625b}.popup-note{margin-top:10px;color:#939a95;font-size:9px!important}
+
+    @keyframes fadeIn{from{opacity:0}to{opacity:1}}
+
+    /* ===== Responsive ===== */
+    @media(max-width:980px){
+      .nav-links{display:none}.hero-inner{grid-template-columns:1fr;gap:34px}.hero-copy{text-align:center}.hero .eyebrow{margin-inline:auto}.hero p{margin-inline:auto}.hero-actions,.hero-note{justify-content:center}.hero-card{max-width:560px;margin-inline:auto}.about-grid{grid-template-columns:1fr}.about-card{max-width:720px;margin-inline:auto}.services-grid{grid-template-columns:repeat(2,1fr)}.process-grid{grid-template-columns:1fr 1fr}.cta-row{flex-direction:column;align-items:flex-start}.footer-grid{grid-template-columns:1fr 1fr}
+    }
+    @media(max-width:640px){
+      .topbar{display:none}.container{width:calc(100% - 24px)}
+      .nav-inner{min-height:68px}.brand-logo{width:45px;height:45px;border-radius:13px}.brand-name strong{font-size:11px}.brand-name span{font-size:8px}.nav-call{padding:9px 11px;font-size:10px}
+      .hero-inner{padding:47px 0 58px}.hero h1{font-size:32px;letter-spacing:-.5px}.hero p{font-size:13px}.hero-actions{flex-direction:column}.hero-actions .btn{width:100%}.hero-card-inner{padding:22px}.hero-card h2{font-size:21px}
+      .trust-grid{grid-template-columns:1fr 1fr}.trust-item{padding:15px 10px}.trust-item strong{font-size:10px}.trust-item span{font-size:8px}.trust-icon{width:32px;height:32px;font-size:14px}
+      section{padding:62px 0}.section-head{margin-bottom:30px}.section-head h2{font-size:28px}.section-head p{font-size:12px}.points{grid-template-columns:1fr}.about-card{min-height:325px;padding:27px}.about-card h3{font-size:22px;margin-top:32px}
+      .services-grid,.process-grid{grid-template-columns:1fr}.service{min-height:215px}.cta{padding-top:0}.cta-box{padding:32px 23px;border-radius:23px}.cta-buttons{width:100%;flex-direction:column}.cta-buttons .btn{width:100%}.footer-grid{grid-template-columns:1fr;gap:28px}.footer-bottom{margin-top:28px}.popup-inner{padding:23px 16px 16px}.popup h2{font-size:21px}.popup-copy{font-size:11px}.popup-action{min-height:50px;font-size:12px}
+    }
+  </style>
+</head>
+<body>
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="topbar">
+    <div class="container topbar-inner">
+      <div class="topbar-right"><span>مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية</span></div>
+      <div class="topbar-left"><a href="tel:+966553878758"><span class="ltr">055 387 8758</span></a><span>جدة — المملكة العربية السعودية</span></div>
+    </div>
+  </div>
+
+  <header class="navbar">
+    <div class="container nav-inner">
+      <a class="brand" href="#top" aria-label="الرئيسية">
+        <span class="brand-logo"><img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني"></span>
+        <span class="brand-name"><strong>عبدالعزيز عبدالله العديني</strong><span>للمحاماة والاستشارات القانونية</span></span>
+      </a>
+      <nav class="nav-links" aria-label="التنقل الرئيسي">
+        <a href="#about">عن المكتب</a><a href="#services">الخدمات</a><a href="#process">آلية العمل</a><a href="#contact">تواصل معنا</a>
+      </nav>
+      <a class="nav-call" href="tel:+966553878758" onclick="trackConversion('call','header')">اتصال مباشر <span class="ltr">055 387 8758</span></a>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <div class="eyebrow"><i class="live-dot"></i> متاح للتواصل عبر الاتصال والواتساب</div>
+          <h1>تمثيل قانوني <span>باحترافية</span> تبدأ من فهم قضيتك.</h1>
+          <p>مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية في جدة، يقدم خدمات قانونية متخصصة للأفراد والمنشآت مع عناية بالوقائع والإجراءات والخصوصية.</p>
+          <div class="hero-actions">
+            <a class="btn btn-gold" href="tel:+966553878758" onclick="trackConversion('call','hero')">اتصل بالمكتب الآن</a>
+            <a class="btn btn-wa" href="https://wa.me/966553878758" target="_blank" rel="noopener" onclick="trackConversion('whatsapp','hero')">تواصل عبر واتساب</a>
+          </div>
+          <div class="hero-note"><span>✓</span> <strong>سرية تامة</strong><span>•</span><strong>توجيه واضح</strong><span>•</span><strong>متابعة مهنية</strong></div>
+        </div>
+
+        <div class="hero-card">
+          <div class="hero-card-inner">
+            <div class="hero-logo"><img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني"></div>
+            <h2>حلول قانونية عملية للأفراد والمنشآت</h2>
+            <p>تواصل مباشرة مع المكتب لمشاركة ملخص قضيتك وتحديد الخطوة القانونية المناسبة.</p>
+            <div class="stats">
+              <div class="stat"><b>خصوصية</b><span>تعامل مهني مع معلومات القضية</span></div>
+              <div class="stat"><b>وضوح</b><span>توجيه قانوني بصورة عملية</span></div>
+              <div class="stat"><b>متابعة</b><span>تنظيم للمستندات والإجراءات</span></div>
+              <div class="stat"><b>جدة</b><span>خدمة قانونية داخل المملكة</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="trust">
+      <div class="container trust-grid">
+        <div class="trust-item"><div class="trust-icon">⚖</div><div><strong>خبرة قانونية</strong><span>تعامل متخصص مع الملفات</span></div></div>
+        <div class="trust-item"><div class="trust-icon">◉</div><div><strong>سرية وخصوصية</strong><span>اهتمام بمعلومات العميل</span></div></div>
+        <div class="trust-item"><div class="trust-icon">▣</div><div><strong>تمثيل احترافي</strong><span>متابعة منظمة للإجراءات</span></div></div>
+        <div class="trust-item"><div class="trust-icon">⌂</div><div><strong>في جدة</strong><span>المملكة العربية السعودية</span></div></div>
+      </div>
+    </section>
+
+    <section class="about" id="about">
+      <div class="container about-grid">
+        <div class="about-card">
+          <div class="about-logo"><img src="logo-main.png" alt="شعار المكتب"></div>
+          <h3>نبدأ من فهم القضية، ثم نحدد المسار القانوني.</h3>
+          <p>نعمل على تقديم خدمة قانونية واضحة ومنظمة تراعي طبيعة كل ملف واحتياجات كل عميل.</p>
+          <div class="about-tag">عبدالعزيز العديني للمحاماة والاستشارات القانونية</div>
+        </div>
+        <div>
+          <div class="section-head" style="text-align:right;margin:0 0 25px;max-width:none">
+            <div class="eyebrow">عن المكتب</div>
+            <h2>خدمة قانونية تركز على الوضوح والاحتراف.</h2>
+            <p>نلبي الاحتياجات القانونية والقضائية للأفراد والمنشآت في جدة وخارجها ضمن إطار مهني يراعي خصوصية كل ملف.</p>
+          </div>
+          <div class="points">
+            <div class="point"><div class="point-no">01</div><div><strong>استيعاب دقيق للوقائع</strong><span>فهم تفاصيل الملف قبل اختيار الإجراء المناسب.</span></div></div>
+            <div class="point"><div class="point-no">02</div><div><strong>توجيه قانوني واضح</strong><span>عرض الخيارات القانونية بصورة عملية ومفهومة.</span></div></div>
+            <div class="point"><div class="point-no">03</div><div><strong>متابعة منظمة</strong><span>اهتمام بتسلسل الإجراءات والمستندات والمواعيد.</span></div></div>
+            <div class="point"><div class="point-no">04</div><div><strong>خصوصية عالية</strong><span>التعامل مع معلومات القضية بسرية واحترافية.</span></div></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="services" id="services">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">مجالات العمل</div><h2>خدمات قانونية متكاملة</h2><p>مجموعة من الخدمات المتخصصة لتغطية أبرز الاحتياجات القانونية للأفراد والمنشآت.</p></div>
+        <div class="services-grid">
+          <article class="service"><div><div class="service-top"><div class="service-icon">⚖</div><span class="service-number">01</span></div><h3>القضايا الجنائية</h3><p>دفاع قانوني وتمثيل احترافي في مختلف القضايا الجنائية أمام الجهات القضائية، مع عناية بحقوق العميل وإجراءات القضية.</p></div><a class="service-link" href="criminal.html">التعرف على الخدمة ←</a></article>
+          <article class="service"><div><div class="service-top"><div class="service-icon">⌂</div><span class="service-number">02</span></div><h3>الأحوال الشخصية والتركات</h3><p>معالجة قضايا الأسرة والطلاق والحضانة والتركات وقسمتها بحكمة وخصوصية.</p></div><a class="service-link" href="family.html">التعرف على الخدمة ←</a></article>
+          <article class="service"><div><div class="service-top"><div class="service-icon">▦</div><span class="service-number">03</span></div><h3>القضايا التجارية والشركات</h3><p>صياغة العقود، الاستشارات التجارية، وتسوية المنازعات وحماية المصالح الاستثمارية.</p></div><a class="service-link" href="commercial.html">التعرف على الخدمة ←</a></article>
+          <article class="service"><div><div class="service-top"><div class="service-icon">◎</div><span class="service-number">04</span></div><h3>القضايا العمالية</h3><p>تمثيل العمال وأصحاب العمل ومتابعة المنازعات العمالية والإجراءات ذات الصلة.</p></div><a class="service-link" href="labor.html">التعرف على الخدمة ←</a></article>
+          <article class="service"><div><div class="service-top"><div class="service-icon">▤</div><span class="service-number">05</span></div><h3>القضايا العقارية</h3><p>النزاعات العقارية، وصياغة عقود البيع والإيجار، والمعاملات القانونية المرتبطة بالعقار.</p></div><a class="service-link" href="realestate.html">التعرف على الخدمة ←</a></article>
+          <article class="service"><div><div class="service-top"><div class="service-icon">▥</div><span class="service-number">06</span></div><h3>التوثيق العدلي</h3><p>خدمات التوثيق والإفراغ وتوثيق العقود والوكالات وفق الإجراءات الرسمية المعتمدة.</p></div><a class="service-link" href="notary.html">التعرف على الخدمة ←</a></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="process">
+      <div class="container">
+        <div class="section-head"><div class="eyebrow">آلية العمل</div><h2>من أول تواصل إلى الخطوة القانونية المناسبة</h2><p>تجربة أكثر وضوحًا للعميل من خلال خطوات مرتبة ومباشرة.</p></div>
+        <div class="process-grid">
+          <div class="process-card"><div class="process-no">01</div><h3>تواصل أولي</h3><p>شاركنا ملخص القضية أو طلبك عبر الاتصال أو الواتساب.</p></div>
+          <div class="process-card"><div class="process-no">02</div><h3>دراسة وتوجيه</h3><p>فهم الوقائع والمستندات وتحديد المسار القانوني الأنسب.</p></div>
+          <div class="process-card"><div class="process-no">03</div><h3>متابعة وتمثيل</h3><p>مواصلة الإجراءات وفق طبيعة الملف وبما يحقق أفضل خدمة قانونية ممكنة.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" id="contact">
+      <div class="container"><div class="cta-box"><div class="cta-row"><div><h2>لديك قضية أو استفسار قانوني؟</h2><p>ابدأ بخطوة واضحة. تواصل مع مكتب عبدالعزيز العديني عبر الاتصال أو الواتساب.</p></div><div class="cta-buttons"><a class="btn btn-gold" href="tel:+966553878758" onclick="trackConversion('call','cta')">اتصل الآن</a><a class="btn btn-wa" href="https://wa.me/966553878758" target="_blank" rel="noopener" onclick="trackConversion('whatsapp','cta')">واتساب</a></div></div></div></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div><div class="footer-brand"><span class="brand-logo"><img src="logo-main.png" alt="شعار المكتب"></span><div class="brand-name"><strong style="color:#fff">عبدالعزيز عبدالله العديني</strong><span>للمحاماة والاستشارات القانونية</span></div></div><p class="footer-text">مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية والتوثيق بجدة. نلتزم بتقديم خدمات قانونية مهنية وحلول عملية تراعي طبيعة كل ملف.</p></div>
+      <div><h3>الخدمات</h3><div class="footer-list"><a href="criminal.html">القضايا الجنائية</a><a href="family.html">الأحوال الشخصية والتركات</a><a href="commercial.html">القضايا التجارية والشركات</a><a href="labor.html">القضايا العمالية</a><a href="realestate.html">القضايا العقارية</a><a href="notary.html">التوثيق العدلي</a></div></div>
+      <div><h3>تواصل معنا</h3><div class="footer-list"><a href="tel:+966553878758" onclick="trackConversion('call','footer')"><span class="ltr">055 387 8758</span></a><a href="https://wa.me/966553878758" target="_blank" rel="noopener" onclick="trackConversion('whatsapp','footer')">التواصل عبر واتساب</a><span>المملكة العربية السعودية — جدة</span></div><a class="map-link" href="https://share.google/mFCw4rUe7qIZIj47T" target="_blank" rel="noopener">عرض موقع المكتب على خرائط جوجل ↗</a></div>
+    </div>
+    <div class="container footer-bottom">© 2026 مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية. جميع الحقوق محفوظة.</div>
+  </footer>
+
+  <div class="floating" id="floating">
+    <a class="floating-wa" href="https://wa.me/966553878758" target="_blank" rel="noopener" onclick="trackConversion('whatsapp','floating')">واتساب</a>
+    <a class="floating-call" href="tel:+966553878758" onclick="trackConversion('call','floating')">اتصال مباشر</a>
+  </div>
+
+  <!-- نافذة الدخول -->
+  <div class="popup" id="entryPopup" aria-hidden="true">
+    <div class="popup-card" role="dialog" aria-modal="true" aria-labelledby="popupTitle">
+      <div class="popup-inner">
+        <div class="popup-badge"><i></i> تواصل مباشر مع المكتب</div>
+        <div class="popup-logo"><img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني"></div>
+        <h2 id="popupTitle">لديك قضية أو استفسار قانوني؟</h2>
+        <p class="popup-copy">شاركنا ملخص قضيتك أو استفسارك، وسنوجّهك إلى الخطوة القانونية المناسبة.</p>
+        <div class="popup-phone">هاتف المكتب <span class="ltr">055 387 8758</span></div>
+        <div class="popup-actions">
+          <a class="popup-action popup-call" href="tel:+966553878758" onclick="trackConversion('call','entry_popup')">اتصل الآن بالمكتب</a>
+          <a class="popup-action popup-wa" href="https://wa.me/966553878758" target="_blank" rel="noopener" onclick="trackConversion('whatsapp','entry_popup')">أرسل تفاصيل قضيتك عبر واتساب</a>
+          <button class="popup-action popup-close" type="button" onclick="closePopup()">متابعة تصفح الموقع</button>
+        </div>
+        <p class="popup-note">يمكنك إغلاق النافذة ومتابعة تصفح الموقع في أي وقت.</p>
+      </div>
+    </div>
+  </div>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"Attorney",
+    "name":"مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية",
+    "image":"https://landing-law.vercel.app/logo-main.png",
+    "url":"https://landing-law.vercel.app/",
+    "telephone":"+966553878758",
+    "address":{"@type":"PostalAddress","addressLocality":"جدة","addressCountry":"SA"}
+  }
+  </script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function trackConversion(type, location){
+      window.dataLayer.push({
+        event:'legal_lead_click',
+        lead_type:type,
+        lead_location:location
+      });
+    }
+
+    const floating = document.getElementById('floating');
+    window.addEventListener('scroll', function(){
+      floating.classList.toggle('show', window.scrollY > 350);
+    }, {passive:true});
+
+    const popup = document.getElementById('entryPopup');
+
+    function openPopup(){
+      if(!popup) return;
+      popup.classList.add('show');
+      popup.setAttribute('aria-hidden','false');
+      window.dataLayer.push({event:'lead_popup_view'});
+    }
+
+    function closePopup(){
+      if(!popup) return;
+      popup.classList.remove('show');
+      popup.setAttribute('aria-hidden','true');
+      try{sessionStorage.setItem('lead_popup_closed','1')}catch(e){}
+    }
+
+    popup.addEventListener('click', function(e){
+      if(e.target === popup) closePopup();
+    });
+
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closePopup();
+    });
+
+    window.addEventListener('load', function(){
+      let alreadyClosed = false;
+      try{alreadyClosed = sessionStorage.getItem('lead_popup_closed') === '1'}catch(e){}
+      if(!alreadyClosed) setTimeout(openPopup, 450);
+    });
+  </script>
+</body>
+</html>
