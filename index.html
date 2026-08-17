@@ -1,529 +1,59 @@
-<!DOCTYPE html>
-<html lang="ar" dir="rtl">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>أفضل مكتب محاماة في جدة | مكتب عبدالعزيز العديني</title>
-    <meta name="description" content="مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القضايا الجنائية، الأحوال الشخصية، والقضايا التجارية بجدة.">
-    <meta name="keywords" content="مكتب محاماة جدة، محامي معتمد، استشارات قانونية، محامي جنائي، قضايا تجارية">
+<div class="modal" id="consultationModal" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-inner">
 
-    <!-- Google Tag Manager -->
-    <script>
-        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({"gtm.start":
-        new Date().getTime(),event:"gtm.js"});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!="dataLayer"?"&l="+l:"";j.async=true;j.src=
-        "https://www.googletagmanager.com/gtm.js?id="+i+dl;f.parentNode.insertBefore(j,f);
-        })(window,document,"script","dataLayer","GTM-KKHH6SBP");
-    </script>
-    <!-- End Google Tag Manager -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+      <div class="modal-badge">
+        <i></i>
+        ابدأ التواصل بخطوة واضحة
+      </div>
 
-    <style>
-        :root {
-            --primary: #0d2c1d;
-            --primary-light: #1a4d35;
-            --gold: #c29b63;
-            --gold-light: #dab479;
-            --white: #ffffff;
-            --bg-soft: #f4f7f6;
-            --text-main: #1d1d1d;
-            --text-muted: #666666;
-            --whatsapp: #25d366;
-            --shadow-premium: 0 15px 40px rgba(0,0,0,0.08);
-            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
+      <div class="modal-logo">
+        <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
+      </div>
 
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Cairo', sans-serif; -webkit-tap-highlight-color: transparent; }
-        body { background-color: var(--white); color: var(--text-main); line-height: 1.6; overflow-x: hidden; scroll-behavior: smooth; font-size: 16px; }
+      <h3 id="modalTitle">لديك قضية أو استفسار قانوني؟</h3>
 
-        @keyframes shimmer { 0% { left: -100%; } 100% { left: 150%; } }
-        @keyframes pulse-gold { 0% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(194, 155, 99, 0); } 100% { box-shadow: 0 0 0 0 rgba(194, 155, 99, 0); } }
-        @keyframes pulse-green { 0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.5); } 70% { box-shadow: 0 0 0 15px rgba(37, 211, 102, 0); } 100% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0); } }
-        @keyframes liveBlink { 0% { opacity: 1; transform: scale(1); } 50% { opacity: 0.4; transform: scale(0.95); } 100% { opacity: 1; transform: scale(1); } }
+      <p>
+        تحدث مع مكتب عبدالعزيز العديني مباشرة لمشاركة ملخص قضيتك
+        وتحديد الخطوة القانونية المناسبة.
+      </p>
 
-        .btn-shimmer { position: relative; overflow: hidden; }
-        .btn-shimmer::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: -100%;
-            width: 60%;
-            height: 100%;
-            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.6), transparent);
-            animation: shimmer 1.8s infinite;
-        }
+      <div class="modal-phone" aria-label="رقم المكتب">
+        هاتف المكتب
+        <span class="phone-number" dir="ltr">055 387 8758</span>
+      </div>
 
-        .icon-phone { width: 16px; height: 16px; fill: currentColor; vertical-align: middle; display: inline-block; }
+      <div class="modal-actions">
 
-        header {
-            background: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 2px solid var(--gold);
-            padding: 12px 5%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 2px 15px rgba(0,0,0,0.05);
-        }
-
-        .header-brand { display: flex; align-items: center; gap: 10px; cursor: pointer; }
-        .logo-box { width: 45px; height: 45px; border-radius: 50%; border: 1.5px solid var(--gold); padding: 2px; flex-shrink: 0; overflow: hidden; background: var(--white); }
-        .logo-box img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-        .brand-info h2 { font-size: 14px; color: var(--primary); font-weight: 900; line-height: 1.2; }
-        .brand-info p { font-size: 10px; color: var(--gold); font-weight: 700; }
-
-        .header-call-btn {
-            background: var(--primary);
-            color: var(--white);
-            padding: 8px 16px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 12px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-            white-space: nowrap;
-        }
-
-        .hero {
-            padding: 70px 5% 60px;
-            background: linear-gradient(rgba(13, 44, 29, 0.88), rgba(13, 44, 29, 0.78)),
-                        url('https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
-            text-align: center;
-            color: var(--white);
-        }
-
-        .hero h1 { font-size: clamp(26px, 6vw, 44px); font-weight: 900; line-height: 1.3; margin-bottom: 15px; }
-        .hero p { font-size: clamp(15px, 3vw, 18px); color: var(--gold-light); margin-bottom: 30px; font-weight: 600; max-width: 800px; margin-left: auto; margin-right: auto; }
-
-        .hero-btns { display: flex; flex-direction: column; gap: 12px; align-items: center; justify-content: center; }
-        @media (min-width: 600px) { .hero-btns { flex-direction: row; } }
-
-        .btn-main {
-            width: 100%;
-            max-width: 280px;
-            padding: 14px 20px;
-            font-size: 15px;
-            font-weight: 900;
-            border-radius: 50px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 8px;
-            transition: var(--transition);
-        }
-        .btn-hero-call { background: var(--gold); color: var(--primary); animation: pulse-gold 2s infinite; }
-        .btn-hero-wh { background: var(--whatsapp); color: var(--white); animation: pulse-green 2s infinite; }
-
-        .trust-section { padding: 50px 5%; background: var(--bg-soft); }
-        .trust-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; max-width: 1100px; margin: 0 auto; }
-        .trust-card {
-            background: var(--white);
-            padding: 25px;
-            border-radius: 16px;
-            box-shadow: 0 5px 20px rgba(0,0,0,0.04);
-            border: 1px solid #eaeaea;
-            text-align: center;
-            transition: var(--transition);
-        }
-        .trust-card:hover { transform: translateY(-5px); border-color: var(--gold); box-shadow: var(--shadow-premium); }
-        .trust-card h3 { font-size: 18px; color: var(--primary); margin-bottom: 10px; font-weight: 900; }
-        .trust-card p { font-size: 14px; color: var(--text-muted); line-height: 1.6; }
-
-        .content-section { padding: 60px 5%; background: var(--white); text-align: right; max-width: 1100px; margin: 0 auto; }
-        .content-section h2 { font-size: 26px; color: var(--primary); font-weight: 900; margin-bottom: 15px; text-align: center; }
-        .content-section > p { font-size: 16px; color: var(--text-main); line-height: 1.8; margin-bottom: 30px; text-align: center; max-width: 800px; margin-left: auto; margin-right: auto; }
-
-        /* قسم التخصصات الاحترافي الجديد */
-        .specialties-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 25px;
-            margin-top: 30px;
-        }
-        .specialty-card {
-            background: var(--bg-soft);
-            border: 1.5px solid #eaeaea;
-            border-radius: 16px;
-            padding: 30px 25px;
-            text-align: right;
-            transition: var(--transition);
-            position: relative;
-            overflow: hidden;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-        }
-        .specialty-card::before {
-            content: "";
-            position: absolute;
-            top: 0; right: 0; width: 5px; height: 100%;
-            background: var(--gold);
-            transition: var(--transition);
-        }
-        .specialty-card:hover {
-            transform: translateY(-7px);
-            border-color: var(--gold);
-            background: var(--white);
-            box-shadow: var(--shadow-premium);
-        }
-        .specialty-icon {
-            font-size: 36px;
-            margin-bottom: 15px;
-            display: inline-block;
-        }
-        .specialty-card h3 {
-            font-size: 20px;
-            color: var(--primary);
-            font-weight: 900;
-            margin-bottom: 12px;
-        }
-        .specialty-card p {
-            font-size: 14px;
-            color: var(--text-muted);
-            line-height: 1.7;
-            margin-bottom: 20px;
-        }
-        .specialty-link {
-            color: var(--primary);
-            font-weight: 800;
-            font-size: 14px;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-        }
-        .specialty-link:hover {
-            color: var(--gold);
-            gap: 10px;
-        }
-
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 3000;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.6);
-            backdrop-filter: blur(5px);
-            animation: fadeIn 0.3s ease;
-        }
-
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-
-        .modal-content {
-            background-color: var(--white);
-            margin: 12% auto;
-            padding: 30px;
-            border-radius: 20px;
-            width: 90%;
-            max-width: 450px;
-            text-align: center;
-            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
-            animation: slideUp 0.3s ease;
-        }
-
-        @keyframes slideUp { from { transform: translateY(40px); opacity: 0; } to { transform: translateY(0); opacity: 1; } }
-
-        .modal-logo { width: 70px; height: 70px; margin: 0 auto 15px; border-radius: 50%; border: 2px solid var(--gold); padding: 2px; overflow: hidden; background: var(--white); }
-        .modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
-
-        .modal h3 { color: var(--primary); font-size: 22px; margin-bottom: 10px; font-weight: 900; }
-        .modal p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
-
-        .modal-btns { display: flex; flex-direction: column; gap: 10px; }
-        .modal-btn {
-            padding: 14px 20px;
-            border: none;
-            border-radius: 50px;
-            font-size: 15px;
-            font-weight: 900;
-            cursor: pointer;
-            text-decoration: none;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            transition: var(--transition);
-        }
-        .modal-btn-call { background: var(--gold); color: var(--primary); animation: pulse-gold 2s infinite; font-size: 16px; }
-        .modal-btn-close { background: #f4f7f6; color: var(--text-muted); margin-top: 5px; font-size: 13px; font-weight: 700; padding: 10px; }
-
-        .floating-bar {
-            position: fixed; bottom: 20px; left: 5%; right: 5%; max-width: 500px; margin: 0 auto;
-            background: rgba(13, 44, 29, 0.95); backdrop-filter: blur(10px);
-            padding: 12px 25px; border-radius: 100px;
-            display: flex; justify-content: space-around; z-index: 2000;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.2); border: 1.5px solid var(--gold);
-            transform: translateY(120px); transition: transform 0.4s ease;
-        }
-        .floating-bar.visible { transform: translateY(0); }
-        .float-link { text-decoration: none; color: var(--white); font-weight: 900; font-size: 14px; display: flex; align-items: center; gap: 6px; }
-
-        footer { background: var(--primary); padding: 30px 5%; text-align: center; color: rgba(255,255,255,0.7); border-top: 4px solid var(--gold); font-size: 13px; }
-
-        .related-section { padding: 50px 5%; background: var(--bg-soft); text-align: center; }
-        .related-title { font-size: 22px; color: var(--primary); font-weight: 900; margin-bottom: 20px; }
-        .related-links { display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; max-width: 900px; margin: 0 auto; }
-        .related-link {
-            background: var(--white);
-            color: var(--primary);
-            padding: 10px 18px;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: 800;
-            font-size: 13px;
-            border: 1.5px solid var(--gold);
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
-            transition: var(--transition);
-        }
-        .related-link:hover { background: var(--gold); color: var(--white); }
-
-        .live-status-badge {
-            background: #eafaf1;
-            border: 1px solid #27ae60;
-            color: #145a32;
-            padding: 8px 15px;
-            border-radius: 50px;
-            font-size: 13px;
-            font-weight: 800;
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            margin-bottom: 20px;
-            box-shadow: 0 4px 15px rgba(39, 174, 96, 0.15);
-        }
-        .live-dot {
-            width: 10px;
-            height: 10px;
-            background-color: #27ae60;
-            border-radius: 50%;
-            display: inline-block;
-            animation: liveBlink 1.5s infinite;
-        }
-    </style>
-</head>
-<body>
-    <!-- Google Tag Manager (noscript) -->
-    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP"
-    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-
-    <header id="mainHeader">
-        <div class="header-brand" onclick="window.location.href='index.html'">
-            <div class="logo-box">
-                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
-            </div>
-            <div class="brand-info">
-                <h2>عبدالعزيز عبدالله العديني</h2>
-                <p>للمحاماة والاستشارات القانونية بجدة</p>
-            </div>
-        </div>
-        <a href="tel:+966553878758" class="header-call-btn btn-shimmer" onclick="trackConversion('call', 'header')">
-            <svg class="icon-phone" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.19-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-            اتصل الآن: 0553878758
+        <a
+          class="modal-action modal-call"
+          href="tel:+966553878758"
+          onclick="trackConversion('call','entry_popup')">
+          اتصل الآن بالمكتب
         </a>
-    </header>
 
-    <div class="floating-bar" id="floatingBar">
-        <a href="tel:+966553878758" class="float-link" onclick="trackConversion('call', 'float')">
-            <svg class="icon-phone" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.19-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-            اتصل الآن بالمحامي مباشرة
+        <a
+          class="modal-action modal-wa"
+          href="https://wa.me/966553878758"
+          target="_blank"
+          rel="noopener"
+          onclick="trackConversion('whatsapp','entry_popup')">
+          أرسل تفاصيل قضيتك عبر واتساب
         </a>
+
+        <button
+          class="modal-action modal-close"
+          type="button"
+          onclick="closeModal()">
+          متابعة تصفح الموقع
+        </button>
+
+      </div>
+
+      <p class="modal-note">
+        يمكنك إغلاق النافذة ومتابعة تصفح الموقع في أي وقت.
+      </p>
+
     </div>
-
-    <!-- النافذة المنبثقة المحدثة للاتصال المباشر الفوري -->
-    <div id="consultationModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-logo">
-                <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
-            </div>
-            <h3>استشارة قانونية فورية</h3>
-            <p>المحامي المختص متاح الآن للرد المباشر على قضيتك وتقديم التوجيه القانوني السريع عبر الهاتف.</p>
-            <div class="modal-btns">
-                <a href="tel:+966553878758" class="modal-btn modal-btn-call btn-shimmer" onclick="trackConversion('modal_call', 'consultation')">
-                    <svg class="icon-phone" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.19-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-                    اتصل الآن بالمحامي مباشرة
-                </a>
-                <button class="modal-btn modal-btn-close" onclick="closeModal()">متابعة تصفح الموقع</button>
-            </div>
-        </div>
-    </div>
-
-    <section class="hero">
-        <div class="live-status-badge">
-            <span class="live-dot"></span>
-            المحامي المختص متاح الآن للرد الفوري على المكالمات بجدة
-        </div>
-        <h1>أفضل مكتب محاماة في جدة | حلول قانونية مبتكرة</h1>
-        <p>مكتب المحامي عبدالعزيز العديني يقدم استشارات قانونية متخصصة في القضايا الجنائية، الأحوال الشخصية، والقضايا التجارية.</p>
-        <div class="hero-btns">
-            <a href="tel:+966553878758" class="btn-main btn-hero-call btn-shimmer" onclick="trackConversion('call', 'hero')">
-                <svg class="icon-phone" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.19-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
-                اتصل الآن للاستشارة الفورية
-            </a>
-        </div>
-    </section>
-
-    <section class="trust-section">
-        <div class="trust-grid">
-            <div class="trust-card">
-                <h3>⚖️ خبرة قانونية</h3>
-                <p>سنوات طويلة من التميز والنجاح في ساحات القضاء وتقديم الاستشارات.</p>
-            </div>
-            <div class="trust-card">
-                <h3>🔒 سرية تامة</h3>
-                <p>بياناتك وقضاياك تحظى بأعلى معايير الخصوصية والأمان المطلق معنا.</p>
-            </div>
-            <div class="trust-card">
-                <h3>💼 تمثيل احترافي</h3>
-                <p>نرافع عنك بكل قوة واحترافية لتحقيق أفضل النتائج وحماية حقوقك.</p>
-            </div>
-        </div>
-    </section>
-
-    <section class="content-section">
-        <h2>خدماتنا القانونية المتكاملة</h2>
-        <p>نحن في مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية نلبي كافة احتياجاتكم القانونية والقضائية في مدينة جدة وخارجها بأعلى معايير المهنية والكفاءة والدقة.</p>
-        
-        <div class="specialties-grid">
-            <div class="specialty-card">
-                <div>
-                    <span class="specialty-icon">⚖️</span>
-                    <h3>القضايا الجنائية</h3>
-                    <p>دفاع قانوني قوي وتمثيل احترافي في مختلف القضايا الجنائية أمام الجهات القضائية بكفاءة عالية لحماية حقوقك.</p>
-                </div>
-                <a href="criminal.html" class="specialty-link">اقرأ المزيد ←</a>
-            </div>
-
-            <div class="specialty-card">
-                <div>
-                    <span class="specialty-icon">🏠</span>
-                    <h3>الأحوال الشخصية والتركات</h3>
-                    <p>معالجة قضايا الأسرة، الطلاق، الحضانة، ونظارات التركات وقسمتها بحكمة وسرية تامة لضمان الاستقرار الأسري.</p>
-                </div>
-                <a href="family.html" class="specialty-link">اقرأ المزيد ←</a>
-            </div>
-
-            <div class="specialty-card">
-                <div>
-                    <span class="specialty-icon">💼</span>
-                    <h3>القضايا التجارية والشركات</h3>
-                    <p>استشارات متكاملة للشركات، صياغة العقود التجارية، وتسوية المنازعات التجارية وحماية المصالح الاستثمارية.</p>
-                </div>
-                <a href="commercial.html" class="specialty-link">اقرأ المزيد ←</a>
-            </div>
-
-            <div class="specialty-card">
-                <div>
-                    <span class="specialty-icon">👥</span>
-                    <h3>القضايا العمالية</h3>
-                    <p>تسوية النزاعات العمالية، تمثيل العمال وأصحاب العمل، ومتابعة القضايا أمام لجان الخلافات العمالية بدقة واحترافية.</p>
-                </div>
-                <a href="labor.html" class="specialty-link">اقرأ المزيد ←</a>
-            </div>
-
-            <div class="specialty-card">
-                <div>
-                    <span class="specialty-icon">🏢</span>
-                    <h3>القضايا العقارية</h3>
-                    <p>فض النزاعات العقارية، صياغة عقود الإيجار والبيع، وتخليص المعاملات القانونية المتعلقة بالعقارات بمدينة جدة.</p>
-                </div>
-                <a href="realestate.html" class="specialty-link">اقرأ المزيد ←</a>
-            </div>
-
-            <div class="specialty-card">
-                <div>
-                    <span class="specialty-icon">📜</span>
-                    <h3>التوثيق العدلي</h3>
-                    <p>خدمات التوثيق والإفراغ وتوثيق العقود والوكالات بأعلى معايير الاعتماد الرسمي المعتمد.</p>
-                </div>
-                <a href="notary.html" class="specialty-link">اقرأ المزيد ←</a>
-            </div>
-        </div>
-    </section>
-
-    <section class="related-section">
-        <h2 class="related-title">روابط سريعة</h2>
-        <div class="related-links">
-            <a href="criminal.html" class="related-link btn-shimmer">⚖️ القضايا الجنائية</a>
-            <a href="family.html" class="related-link btn-shimmer">🏠 الأحوال الشخصية</a>
-            <a href="commercial.html" class="related-link btn-shimmer">💼 القضايا التجارية</a>
-            <a href="labor.html" class="related-link btn-shimmer">👥 القضايا العمالية</a>
-            <a href="realestate.html" class="related-link btn-shimmer">🏢 القضايا العقارية</a>
-            <a href="notary.html" class="related-link btn-shimmer">📜 التوثيق العدلي</a>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 مكتب عبدالعزيز العديني للمحاماة | جدة، السعودية</p>
-    </footer>
-
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Attorney",
-      "name": "مكتب عبدالعزيز العديني للمحاماة والاستشارات القانونية",
-      "image": "https://landing-law.vercel.app/logo-main.png",
-      "url": "https://landing-law.vercel.app/",
-      "telephone": "+966553878758",
-      "address": {
-        "@type": "PostalAddress",
-        "streetAddress": "حي الروضة، شارع صاري",
-        "addressLocality": "جدة",
-        "addressRegion": "مكة المكرمة",
-        "postalCode": "23431",
-        "addressCountry": "SA"
-      },
-      "openingHoursSpecification": [
-        {
-          "@type": "OpeningHoursSpecification",
-          "dayOfWeek": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday"],
-          "opens": "09:00",
-          "closes": "17:00"
-        }
-      ]
-    }
-    </script>
-
-    <script>
-        function trackConversion(type, location) {
-            if (typeof gtag === 'function') {
-                gtag('event', 'click', { 'event_category': 'engagement', 'event_label': type + '_' + location });
-            }
-        }
-
-        function openModal() {
-            var modal = document.getElementById('consultationModal');
-            if (modal) modal.style.display = 'block';
-        }
-
-        function closeModal() {
-            var modal = document.getElementById('consultationModal');
-            if (modal) modal.style.display = 'none';
-        }
-
-        window.addEventListener('scroll', () => {
-            const floatingBar = document.getElementById('floatingBar');
-            if (window.scrollY > 300) floatingBar.classList.add('visible');
-            else floatingBar.classList.remove('visible');
-        });
-
-        document.addEventListener('DOMContentLoaded', () => {
-            setTimeout(openModal, 1500);
-        });
-    </script>
-</body>
-</html>
+  </div>
+</div>
