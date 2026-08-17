@@ -54,8 +54,7 @@
             animation: shimmer 1.8s infinite;
         }
 
-        /* تنسيق أيقونة السماعة الاحترافية المتناسقة مع الألوان */
-        .icon-phone { width: 16px; height: 16px; fill: currentColor; vertical-align: middle; display: inline-block; }
+        .icon-phone { width: 18px; height: 18px; fill: currentColor; vertical-align: middle; display: inline-block; }
 
         header {
             background: rgba(255, 255, 255, 0.98);
@@ -175,11 +174,11 @@
 
         .modal-content {
             background-color: var(--white);
-            margin: 12% auto;
+            margin: 15% auto;
             padding: 30px;
             border-radius: 20px;
             width: 90%;
-            max-width: 450px;
+            max-width: 400px;
             text-align: center;
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
             animation: slideUp 0.3s ease;
@@ -190,27 +189,26 @@
         .modal-logo { width: 70px; height: 70px; margin: 0 auto 15px; border-radius: 50%; border: 2px solid var(--gold); padding: 2px; overflow: hidden; background: var(--white); }
         .modal-logo img { width: 100%; height: 100%; object-fit: cover; border-radius: 50%; }
 
-        .modal h3 { color: var(--primary); font-size: 22px; margin-bottom: 10px; font-weight: 900; }
-        .modal p { color: var(--text-muted); font-size: 14px; line-height: 1.6; margin-bottom: 20px; }
+        .modal h3 { color: var(--primary); font-size: 20px; margin-bottom: 8px; font-weight: 900; }
+        .modal .modal-phone { font-size: 22px; color: var(--gold); font-weight: 900; margin-bottom: 20px; direction: ltr; display: block; }
 
         .modal-btns { display: flex; flex-direction: column; gap: 10px; }
         .modal-btn {
-            padding: 12px 20px;
+            padding: 14px 20px;
             border: none;
             border-radius: 50px;
-            font-size: 14px;
+            font-size: 16px;
             font-weight: 900;
             cursor: pointer;
             text-decoration: none;
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            gap: 8px;
+            gap: 10px;
             transition: var(--transition);
         }
-        .modal-btn-call { background: var(--gold); color: var(--primary); }
-        .modal-btn-wh { background: var(--whatsapp); color: var(--white); }
-        .modal-btn-close { background: #f0f0f0; color: var(--text-main); margin-top: 5px; }
+        .modal-btn-call { background: var(--gold); color: var(--primary); animation: pulse-gold 2s infinite; }
+        .modal-btn-close { background: #f0f0f0; color: var(--text-main); margin-top: 5px; font-size: 14px; padding: 10px; }
 
         .floating-bar {
             position: fixed; bottom: 20px; left: 5%; right: 5%; max-width: 500px; margin: 0 auto;
@@ -274,20 +272,19 @@
         <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الاستفسار%20عن%20خدمات%20التوثيق%20العدلي" target="_blank" class="float-link" onclick="trackConversion('whatsapp', 'float')">💬 واتساب</a>
     </div>
 
-    <!-- النافذة المنبثقة للتحويلات -->
+    <!-- النافذة المنبثقة للاتصال فقط -->
     <div id="consultationModal" class="modal">
         <div class="modal-content">
             <div class="modal-logo">
                 <img src="logo-main.png" alt="شعار مكتب عبدالعزيز العديني">
             </div>
-            <h3>خدمات التوثيق العدلي المعتمدة</h3>
-            <p>إصدار الوكالات، توثيق العقود، والإقرارات الرسمية بسرعة ودقة تامة بجدة.</p>
+            <h3>تواصل مباشر مع الموثق</h3>
+            <span class="modal-phone">0553878758</span>
             <div class="modal-btns">
                 <a href="tel:+966553878758" class="modal-btn modal-btn-call btn-shimmer" onclick="trackConversion('modal_call', 'consultation')">
                     <svg class="icon-phone" viewBox="0 0 24 24"><path d="M20.01 15.38c-1.23 0-2.42-.19-3.53-.56a.977.977 0 00-1.01.24l-1.57 1.97c-2.83-1.35-5.48-3.9-6.89-6.83l1.95-1.66c.27-.28.35-.67.24-1.02-.37-1.11-.56-2.3-.56-3.53 0-.54-.45-.99-.99-.99H4.19C3.65 3 3 3.24 3 3.99 3 13.28 10.73 21 20.01 21c.71 0 .99-.63.99-1.18v-3.45c0-.54-.45-.99-.99-.99z"/></svg>
                     اتصل الآن
                 </a>
-                <a href="https://wa.me/966553878758?text=مرحباً%20أود%20الاستفسار%20عن%20خدمات%20التوثيق%20العدلي" target="_blank" class="modal-btn modal-btn-wh btn-shimmer" onclick="trackConversion('modal_whatsapp', 'consultation')">💬 واتساب</a>
                 <button class="modal-btn modal-btn-close" onclick="closeModal()">إغلاق</button>
             </div>
         </div>
