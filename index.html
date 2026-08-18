@@ -294,8 +294,7 @@ img{max-width:100%;height:auto}
   }
   window.addEventListener('scroll',onScroll,{passive:true});
   onScroll();
-  /* Desktop may show the contact modal after a delay; touch devices keep the prompt passive until a tap. */
-  var isTouchDevice = window.matchMedia && window.matchMedia('(pointer: coarse)').matches;
-  if(!isTouchDevice) setTimeout(function(){openContact('entry');},900);
+  /* The modal may open for orientation, but no phone action is invoked here. Calls begin only after an explicit tap on a tel link. */
+  setTimeout(function(){if(document.visibilityState === 'visible') openContact('entry');},1200);
 })();
 </script></body></html>
