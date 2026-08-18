@@ -1525,6 +1525,16 @@ transition-duration:.01ms!important;
   }
 </style>
 
+
+<style id="final-accessibility-polish">
+  :focus-visible { outline: 3px solid #e4c788; outline-offset: 4px; }
+  ::selection { background: #c9a15a; color: #09271f; }
+  .hero h1, .hero h2, .content-section h2, .related-section h2 { text-wrap: balance; }
+  .modal-number strong, .modal-phone, a[href^="tel:"] { direction: ltr; unicode-bidi: isolate; }
+  @media (max-width: 640px) {
+    .btn-main, .modal-btn, .header-call-btn { min-height: 50px; }
+  }
+</style>
 </head>
 
 <body>
