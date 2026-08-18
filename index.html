@@ -578,6 +578,39 @@
     .btn-main, .modal-btn, .header-call-btn { min-height: 50px; }
   }
 </style>
+
+<style id="visible-editorial-redesign">
+  body { background: #f5f1e9; }
+  .hero { min-height: 820px; background: linear-gradient(112deg, #08261d 0%, #123b32 56%, #d9c69b 56.2%, #f5f1e9 100%); }
+  .hero::before { opacity: .20; }
+  .hero-inner { width: min(1280px, calc(100% - 56px)); grid-template-columns: 1.08fr .92fr; gap: 92px; padding-top: 165px; }
+  .hero-copy { padding: 35px 38px; border-inline-start: 1px solid rgba(229,193,123,.35); }
+  .hero h1 { font-size: clamp(44px, 5.3vw, 78px); text-wrap: balance; }
+  .hero-art { filter: drop-shadow(0 35px 45px rgba(0,0,0,.20)); }
+  .art-frame { border-radius: 2px 30px 2px 30px; transform: rotate(-1.8deg); }
+  .trust-strip { background: #fffdf9; }
+  .trust-item { min-height: 96px; }
+  .practice { background: #eee7dc; }
+  .practice-grid { grid-template-columns: 1.12fr .94fr .94fr; align-items: stretch; }
+  .practice-card:first-child { grid-row: span 2; background: #123b32; color: #fff; border-color: #123b32; min-height: 526px; }
+  .practice-card:first-child p { color: rgba(255,255,255,.65); }
+  .practice-card:first-child .practice-link { color: #e5c17b; }
+  .practice-card:nth-child(2), .practice-card:nth-child(5) { margin-top: 22px; }
+  .practice-card { border-radius: 2px 18px 2px 18px; }
+  .practice-card:hover { transform: translateY(-9px); }
+  .process { background: #09271f; }
+  .cta-wrap { background: #fffdf9; }
+  .cta { border-radius: 2px 30px 2px 30px; box-shadow: 0 30px 75px rgba(18,59,50,.18); }
+  @media (max-width: 780px) {
+    .hero { min-height: 900px; background: linear-gradient(160deg, #08261d 0%, #123b32 72%, #d9c69b 72.2%, #f5f1e9 100%); }
+    .hero-inner { width: min(100% - 30px, 560px); display: block; padding-top: 125px; }
+    .hero-copy { padding: 12px 0 25px; border-inline-start: 0; }
+    .hero-art { margin-top: 12px; }
+    .practice-grid { grid-template-columns: 1fr; }
+    .practice-card:first-child { grid-row: auto; min-height: 255px; }
+    .practice-card:nth-child(2), .practice-card:nth-child(5) { margin-top: 0; }
+  }
+</style>
 </head>
 <body>
   <!-- Google Tag Manager (noscript) -->
