@@ -310,6 +310,23 @@ img{max-width:100%;height:auto}
   box-shadow: 0 12px 26px rgba(0,0,0,.28), 0 0 0 4px rgba(228,199,136,.1) !important;
 }
 </style>
+
+<style id="direct-scroll-motion-v11">
+/* Direct scroll-position motion: no direction timers or delayed reset. */
+.homepage-mobile-bar {
+  transition: transform .08s linear, opacity .12s ease, box-shadow .16s ease !important;
+  will-change: transform;
+}
+.homepage-mobile-bar.is-visible {
+  transform: translate3d(0, calc(-50% + var(--contact-scroll-y, 0px)), 0) !important;
+}
+.homepage-mobile-bar.contact-pulse {
+  box-shadow: 0 12px 26px rgba(0,0,0,.28), 0 0 0 4px rgba(228,199,136,.1) !important;
+}
+@media (prefers-reduced-motion: reduce) {
+  .homepage-mobile-bar { transition: opacity .12s ease !important; }
+}
+</style>
 </head><body><noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-KKHH6SBP" style="display:none;visibility:hidden" width="0"></iframe></noscript><div class="site-shell"><header class="site-header"><div class="container header-inner"><a class="brand" href="index.html"><span class="brand-mark"><img alt="شعار مكتب عبدالعزيز العديني" src="https://landing-law.vercel.app/logo-main.png"/></span><span class="brand-copy"><strong>عبدالعزيز عبدالله العديني</strong><small>للمحاماة والاستشارات القانونية</small></span></a><nav class="nav"><a href="index.html#about">عن المكتب</a><a href="index.html#services">مجالات العمل</a><a href="index.html#process">كيف نساعدك</a><a href="index.html#contact">تواصل معنا</a></nav><div class="header-actions"><a class="header-whatsapp" href="https://wa.me/966553878758" onclick="trackConversion('whatsapp','header')" rel="noopener noreferrer" target="_blank"><svg aria-hidden="true" class="chat-symbol" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.4 9.4 0 0 1-4.2-1L3 20l1.2-3.8A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"></path><path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"></path></svg><span>واتساب</span></a><a class="header-phone" href="tel:+966553878758" onclick="trackConversion('call','header')"><svg aria-hidden="true" class="phone-symbol" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.08 5.18 2 2 0 0 1 5.06 3h3a2 2 0 0 1 2 1.72c.12.9.34 1.77.65 2.6a2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 4.3 4.3l1.27-1.27a2 2 0 0 1 2.11-.45c.83.31 1.7.53 2.6.65A2 2 0 0 1 22 16.92Z"></path></svg> <span>اتصل الآن</span></a><button class="header-cta" data-contact="">اطلب استشارة ←</button></div></div></header><main><section class="specialty-hero"><div class="container"><div class="eyebrow"><i></i> مكتب عبدالعزيز عبدالله العديني · جدة</div><h1>القضايا الجنائية</h1><p>دفاع وتمثيل قانوني يحفظ حقوقك ويضع الوقائع في إطارها الصحيح منذ اللحظة الأولى.</p><div class="actions"><a class="btn gold-btn" href="tel:+966553878758" onclick="trackConversion('call','hero_cta');">تحدث مع مستشار قانوني ←</a><a class="btn ghost-btn" href="index.html#services">عودة إلى مجالات العمل</a></div></div></section><section class="specialty-section"><div class="container specialty-layout"><div><div class="eyebrow" style="color:#94753c"><i></i> مساحة قانونية متخصصة</div><h2>القضايا الجنائية<br/><em style="color:#a58140">بوضوح ومسؤولية.</em></h2><p>نقدم دفاعاً جنائياً متخصصاً، وتمثيلاً أمام الجهات المختصة، وقراءة دقيقة للوقائع والأدلة.</p><div class="specialty-list"><div>◈ الدفاع في القضايا الجنائية والجرائم المعلوماتية</div><div>◈ التمثيل أمام الشرطة والنيابة والمحاكم الجزائية</div><div>◈ إعداد المذكرات واللوائح والاعتراضات</div><div>◈ الاستشارات قبل اتخاذ أي إجراء قانوني</div></div></div><aside class="specialty-aside"><strong>ابدأ من وضوح الصورة.</strong><span>اتصالك الأول يساعدنا على فهم التفاصيل وترتيب الخطوة التالية دون مبالغة أو وعود غير واقعية.</span><a class="btn gold-btn" href="tel:+966553878758" onclick="trackConversion('call','specialty_cta');">ابدأ التواصل ←</a></aside></div></section><section class="related"><div class="container"><h2>مجالات قانونية أخرى</h2><div class="related-grid"><a href="criminal.html">القضايا الجنائية</a><a href="family.html">الأحوال الشخصية والتركات</a><a href="commercial.html">القضايا التجارية والشركات</a><a href="labor.html">القضايا العمالية</a><a href="realestate.html">القضايا العقارية</a><a href="notary.html">التوثيق العدلي</a></div></div></section></main><footer><div class="container footer-grid"><div><a class="brand" href="index.html"><span class="brand-mark"><img alt="شعار مكتب عبدالعزيز العديني" src="https://landing-law.vercel.app/logo-main.png"/></span><span class="brand-copy"><strong>عبدالعزيز عبدالله العديني</strong><small>للمحاماة والاستشارات القانونية</small></span></a><p>ممارسة قانونية مهنية في جدة، تُقدّم الوضوح والخصوصية والتمثيل المسؤول.</p></div><div><b>مجالات العمل</b><a href="criminal.html">القضايا الجنائية</a><a href="family.html">الأحوال الشخصية</a><a href="commercial.html">القضايا التجارية</a><a href="labor.html">القضايا العمالية</a></div><div><b>تواصل</b><a href="tel:+966553878758" onclick="trackConversion('call','footer')"><bdi class="phone" dir="ltr">055 387 8758</bdi></a><a href="https://wa.me/966553878758" onclick="trackConversion('whatsapp','footer')" rel="noreferrer" target="_blank">واتساب المكتب</a><span>جدة، المملكة العربية السعودية</span></div></div><div class="container" style="padding-top:18px;color:#fff6;font-size:9px">© 2026 مكتب عبدالعزيز عبدالله العديني. جميع الحقوق محفوظة.</div></footer><div aria-label="خيارات التواصل" class="prompt" id="prompt" role="dialog"><button aria-label="إغلاق" class="prompt-close" data-close-prompt="">×</button><div class="prompt-icon"><svg aria-hidden="true" class="chat-symbol" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.4 9.4 0 0 1-4.2-1L3 20l1.2-3.8A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"></path><path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"></path></svg></div><div><b>هل تبحث عن توجيه قانوني؟</b><span>اتصالك الأول مساحة لفهم موقفك، بلا التزام.</span></div><button class="prompt-action" id="promptAction" type="button">ابدأ الحديث ←</button></div><div aria-hidden="true" class="backdrop" id="contactModal"><div aria-labelledby="modalTitle" aria-modal="true" class="modal" role="dialog"><button aria-label="إغلاق" class="modal-close" id="closeModal">×</button><div class="modal-brand"><span class="brand-mark"><img alt="" src="https://landing-law.vercel.app/logo-main.png"/></span><span><strong>عبدالعزيز عبدالله العديني</strong><small>للمحاماة والاستشارات القانونية · جدة</small></span></div><div class="eyebrow" style="color:#94753c"><i></i> تواصل مباشر</div><h2 id="modalTitle">لنأخذ أول خطوة<br/><em style="color:#a58140">بوضوح واطمئنان.</em></h2><p>اختر الطريقة الأنسب لك. لا تحتاج إلى تجهيز كل التفاصيل قبل الاتصال؛ سنساعدك على ترتيب الصورة.</p><div class="modal-actions"><a href="tel:+966553878758" onclick="trackConversion('modal_call','consultation')"><svg aria-hidden="true" class="phone-symbol" viewbox="0 0 24 24"><path d="M22 16.92v3a2 2 0 0 1-2.18 2A19.8 19.8 0 0 1 3.08 5.18 2 2 0 0 1 5.06 3h3a2 2 0 0 1 2 1.72c.12.9.34 1.77.65 2.6a2 2 0 0 1-.45 2.11L9 10.7a16 16 0 0 0 4.3 4.3l1.27-1.27a2 2 0 0 1 2.11-.45c.83.31 1.7.53 2.6.65A2 2 0 0 1 22 16.92Z"></path></svg> <span>اتصال هاتفي<br/><small><bdi class="phone" dir="ltr">055 387 8758</bdi></small></span>←</a><a href="https://wa.me/966553878758" onclick="trackConversion('modal_whatsapp','consultation')" rel="noreferrer" target="_blank"><svg aria-hidden="true" class="chat-symbol" viewbox="0 0 24 24"><path d="M21 11.5a8.4 8.4 0 0 1-9 8.5 9.4 9.4 0 0 1-4.2-1L3 20l1.2-3.8A8.1 8.1 0 0 1 3 11.5 8.4 8.4 0 0 1 12 3a8.4 8.4 0 0 1 9 8.5Z"></path><path d="M8 11.5h.01M12 11.5h.01M16 11.5h.01"></path></svg> <span>محادثة واتساب<br/><small>رد أولي خلال أوقات العمل</small></span>←</a></div><small class="modal-note">معلوماتك تُعامل بسرية واحترام.</small></div></div></div><script>
 (function(){
   function trackConversion(type, location){
@@ -351,31 +368,29 @@ img{max-width:100%;height:auto}
   });
   var dock=document.getElementById('scrollContactDock');
   var mobile=document.querySelector('.homepage-mobile-bar');
-  var lastScrollY=window.scrollY;
-  var contactResetTimer;
-  function onScroll(){
-    var header=document.querySelector('.site-header');
+  var contactRaf=0;
+  var previousScroll=window.scrollY;
+  function renderContactRail(){
+    contactRaf=0;
     var currentY=window.scrollY;
-    var show=currentY>120;
-    var direction=currentY>lastScrollY?'down':(currentY<lastScrollY?'up':'still');
+    var show=currentY>80;
+    var relative=currentY-80;
+    var scrollOffset=Math.max(-20,Math.min(44,relative*0.08-20));
+    var header=document.querySelector('.site-header');
     if(header) header.classList.toggle('scrolled',currentY>24);
     if(mobile){
       mobile.classList.toggle('is-visible',show);
-      if(show && direction!=='still'){
-        mobile.style.setProperty('--contact-shift',direction==='down'?'12px':'-12px');
-        mobile.classList.add('contact-pulse');
-        clearTimeout(contactResetTimer);
-        contactResetTimer=setTimeout(function(){
-          mobile.style.setProperty('--contact-shift','0px');
-          mobile.classList.remove('contact-pulse');
-        },110);
-      }
-      if(!show){mobile.style.setProperty('--contact-shift','0px');mobile.classList.remove('contact-pulse');}
+      mobile.style.setProperty('--contact-scroll-y',scrollOffset.toFixed(2)+'px');
+      if(show && currentY!==previousScroll) mobile.classList.add('contact-pulse');
+      else mobile.classList.remove('contact-pulse');
     }
-    lastScrollY=currentY;
+    previousScroll=currentY;
+  }
+  function onScroll(){
+    if(!contactRaf) contactRaf=requestAnimationFrame(renderContactRail);
   }
   window.addEventListener('scroll',onScroll,{passive:true});
-  onScroll();
+  renderContactRail();
   /* The modal may open for orientation, but no phone action is invoked here. Calls begin only after an explicit tap on a tel link. */
   setTimeout(function(){if(document.visibilityState === 'visible') openContact('entry');},1200);
 })();
